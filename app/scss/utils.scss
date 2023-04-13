@@ -1,0 +1,33 @@
+@use "sass:math";
+@use "sass:list";
+@use "sass:map";
+
+@function px-to-rem($list) {
+  $rem-list: ();
+
+  @each $value in $list {
+    $rem-value: math.div($value, $rem-base) * 1rem;
+    $rem-value-rounded: math.div(math.round($rem-value * 1000), 1000);
+    $rem-list: append($rem-list, $rem-value-rounded);
+  }
+
+  @return #{$rem-list};
+}
+
+@mixin set-typography(
+  $font-size,
+  $line-height: $font-size,
+  $font-weight: 400,
+  $text-transform: inherit
+) {
+  font-weight: $font-weight;
+  font-size: px-to-rem($font-size);
+  line-height: px-to-rem($line-height);
+  text-transform: $text-transform;
+}
+
+@mixin set-media($type) {
+  @media (max-width: map-get($breakpoints, $type)) {
+    @content;
+  }
+}

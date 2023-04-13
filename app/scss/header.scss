@@ -1,0 +1,57 @@
+.header {
+  position: absolute;
+  top: px-to-rem(8px);
+  right: 0;
+  left: 0;
+
+  .logo {
+    margin: 0;
+
+    @include set-typography(24px, 24px, 500);
+  }
+
+  .nav-menu {
+    @include set-typography(16px, 24px, 500);
+    margin: 0 0 0 auto;
+  }
+  
+  .nav-menu ul > * {
+    margin-left: px-to-rem(32px);
+  }
+
+  .nav-menu a {
+    &:hover {
+      color: $light-gray;
+      cursor: pointer;
+    }
+  }
+
+  .login {
+    margin-left: px-to-rem(88px);
+    @include set-typography(16px, 24px, 500);
+  }
+
+  @include set-media(sm) {
+    & .nav-menu ul {
+      flex-direction: column;
+
+      li {
+        margin-left: 0;
+      }
+    }
+  }
+
+  @include set-media(md) {
+    & > * {
+      flex: 1 1 100%;
+    }
+
+    .logo {
+      margin-bottom: px-to-rem(16px);
+    }
+
+    .nav-menu {
+      margin-bottom: px-to-rem(18px);
+    }
+  }
+}

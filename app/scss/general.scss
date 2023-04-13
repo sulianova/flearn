@@ -1,0 +1,102 @@
+* {
+  box-sizing: border-box;
+}
+
+@font-face {
+  font-weight: 800;
+  font-family: TTNormsPro;
+  src: url("../fonts/TTNormsPro-EtraBold.ttf");
+}
+
+@font-face {
+  font-weight: 700;
+  font-family: TTNormsPro;
+  src: url("../fonts/TTNormsPro-Bold.ttf");
+}
+
+@font-face {
+  font-weight: 500;
+  font-family: TTNormsPro;
+  src: url("../fonts/TTNormsPro-Medium.ttf");
+}
+
+@font-face {
+  font-weight: 400;
+  font-family: TTNormsPro;
+  src: url("../fonts/TTNormsPro-Regular.ttf");
+}
+
+@font-face {
+  font-weight: 300;
+  font-family: TTNormsPro;
+  src: url("../fonts/TTNormsPro-Light.ttf");
+}
+
+html {
+  color: $black;
+  font-family: TTNormsPro, sans-serif;
+
+  background-color: $white;
+
+  @include set-typography($rem-base, 30px);
+}
+
+body,
+h1,
+h2,
+h3,
+p,
+ul,
+button {
+  margin: 0;
+  padding: 0;
+}
+
+h1 {
+  @include set-typography(80px, 88px, 800);
+
+  @include set-media(sm) {
+    @include set-typography(48px, 52.8px, 800);
+  }
+}
+
+h2 {
+  @include set-typography(56px, 67.2px, 700);
+
+  @include set-media(sm) {
+    @include set-typography(40px, 46px, 700);
+  }
+}
+
+h3 {
+  @include set-typography(48px, 55.2px, 700);
+
+  @include set-media(sm) {
+    @include set-typography(32px, 36.8px, 700);
+  }
+}
+
+ul {
+  list-style: none;
+}
+
+input,
+input::placeholder {
+  color: inherit;
+
+  // border: none;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+.container {
+
+  width: 100%;
+  max-width: px-to-rem(1296px);
+  margin: 0 auto;
+  padding: 0 px-to-rem(20px);
+}
+
