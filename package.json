@@ -1,11 +1,23 @@
 {
   "dependencies": {
     "browser-sync": "^2.29.1",
+    "del": "^7.0.0",
     "gulp": "^4.0.2",
     "gulp-cli": "^2.3.0",
     "gulp-pug": "^5.0.0",
     "gulp-sass": "^5.1.0",
     "saas": "^1.0.0",
     "sass": "^1.62.0"
+  },
+  "devDependencies": {
+    "htmlhint": "^1.1.4",
+    "pug-cli": "^1.0.0-alpha6",
+    "pug-lint": "^2.7.0",
+    "stylelint": "^15.4.0",
+    "stylelint-config-rational-order": "^0.1.2",
+    "stylelint-config-standard": "^32.0.0",
+    "stylelint-config-standard-scss": "^8.0.0",
+    "stylelint-order": "^6.0.3",
+    "stylelint-scss": "^4.6.0"
   }
 }

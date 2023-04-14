@@ -8,19 +8,24 @@
     <link rel="stylesheet" href="styles/app.css">
   </head>
   <body>
-    <header class="header container d-flex align-items-center flex-wrap">
-      <div class="logo d-flex align-items-center">
-        <p>flearn</p>
+    <header class="header">
+      <div class="container d-flex align-items-center flex-wrap">
+        <div class="logo d-flex align-items-center">
+          <p>flearn</p>
+        </div>
+        <label class="nav-toggle-label" for="nav-toggle"></label>
+        <input class="nav-toggle" type="checkbox" id="nav-toggle">
+        <nav class="nav-menu d-flex">
+          <ul class="d-flex">
+            <li><a class="active" href="#page-description">Moe обучение</a></li>
+            <li><a href="#page-description">Бесплатно</a></li>
+            <li><a href="#page-description">Статьи</a></li>
+            <li><a href="#page-description">Программы обучения</a></li>
+            <li><a class="login" href="#page-description">Войти</a></li>
+          </ul>
+        </nav>
       </div>
-      <nav class="nav-menu d-flex">
-        <ul class="d-flex">
-          <li><a class="active" href="#page-description">Moe обучение</a></li>
-          <li><a href="#page-description">Бесплатно</a></li>
-          <li><a href="#page-description">Статьи</a></li>
-          <li><a href="#page-description">Программы обучения</a></li>
-        </ul>
-      </nav>
-      <div class="login"><a>Войти</a></div>
+      <hr>
     </header>
   </body>
 </html>

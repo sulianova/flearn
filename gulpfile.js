@@ -1,6 +1,6 @@
-const { src, dest, parallel, watch } = require('gulp');
-const sass = require('gulp-sass')(require('sass'));
+const { src, dest, parallel, series, watch } = require('gulp');
 const pug = require('gulp-pug');
+const sass = require('gulp-sass')(require('sass'));
 const browserSync = require('browser-sync').create();
 
 const browserSyncJob = () => {
@@ -11,15 +11,15 @@ const browserSyncJob = () => {
   watch('app/**/*.pug', buildPug);
   watch('app/images/**/*', destImages);
   watch('app/fonts/**/*', destFonts);
-};  
+};
 
 const buildSass = () => {
-console.log('Compile SASS to CSS');
+  console.log('Compile SASS to CSS');
 
-return src('app/scss/app.scss')
-  .pipe(sass())
-  .pipe(dest('build/styles/'))
-  .pipe(browserSync.stream());
+  return src('app/scss/app.scss')
+    .pipe(sass())
+    .pipe(dest('build/styles/'))
+    .pipe(browserSync.stream());
 };
 
 const buildPug = () => {
@@ -32,8 +32,8 @@ const buildPug = () => {
 };
 
 const destImages = () => {
-return src('app/images/**/*')
-  .pipe(dest('build/images'));
+  return src('app/images/**/*')
+    .pipe(dest('build/images'));
 };
 
 const destFonts = () => {
@@ -41,5 +41,12 @@ const destFonts = () => {
     .pipe(dest('build/fonts'));
   };
 
+const startWatch = () => {
+  watch('app/**/*.pug', buildPug);
+  watch('app/scss/**/*.scss', buildSass);
+  watch('app/images/icons/*.svg', destImages);
+  watch('app/images/*', destFonts);
+};
+
 exports.server = browserSyncJob;
-exports.build = parallel(buildSass, buildPug, destImages, destFonts);
+exports.build = series(parallel(buildSass, buildPug, destImages, destFonts), startWatch);

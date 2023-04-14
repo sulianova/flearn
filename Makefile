@@ -3,7 +3,7 @@ install:
 
 lint:
 	npx stylelint --fix ./app/scss/**/*.scss
-	pug-lint ./app/**/*.pug
+	npx pug-lint ./app/**/*.pug
 
 deploy:
 	npx surge ./build/

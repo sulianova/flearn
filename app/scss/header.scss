@@ -1,13 +1,13 @@
 .header {
   position: absolute;
-  top: px-to-rem(8px);
+  top: 0;
   right: 0;
   left: 0;
 
   .logo {
-    margin: 0;
+    margin: px-to-rem(16px) 0;
 
-    @include set-typography(24px, 24px, 500);
+    @include set-typography(24px, 24px, 700);
   }
 
   .nav-menu {
@@ -15,43 +15,80 @@
     margin: 0 0 0 auto;
   }
   
+  .nav-menu ul {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+  }
+
   .nav-menu ul > * {
-    margin-left: px-to-rem(32px);
+    margin: px-to-rem(4px) 0 px-to-rem(4px) px-to-rem(32px);
   }
 
   .nav-menu a {
     &:hover {
       color: $light-gray;
+
       cursor: pointer;
     }
   }
 
   .login {
-    margin-left: px-to-rem(88px);
+    margin-left: px-to-rem(56px);
+
     @include set-typography(16px, 24px, 500);
   }
 
-  @include set-media(sm) {
-    & .nav-menu ul {
-      flex-direction: column;
+  hr {
+    margin: 0;
 
-      li {
-        margin-left: 0;
-      }
-    }
+    border: px-to-rem(0.5px) solid $black;
+    border-radius: 0;
   }
 
-  @include set-media(md) {
-    & > * {
-      flex: 1 1 100%;
-    }
+  .nav-toggle {
+    display: none;
+  }
 
-    .logo {
-      margin-bottom: px-to-rem(16px);
-    }
-
+  @include set-media(lg) {
     .nav-menu {
-      margin-bottom: px-to-rem(18px);
+      display: none;
+      width: 100%;
+    }
+
+    .nav-menu ul {
+      flex-direction: column;
+    }
+
+    .login {
+      margin-left: 0;
+    }
+
+    .nav-menu li {
+      margin-right: 0;
+      margin-left: 0;
+    }
+
+    .nav-toggle-label {
+      margin: 0 0 0 auto;
+    }
+
+    .nav-toggle-label::before {
+      display: block;
+      width: px-to-rem(68px);
+      height: px-to-rem(56px);
+  
+      background: url("../images/menu-mobile.svg") no-repeat;
+      background-size: contain;
+  
+      cursor: pointer;
+
+      content: "";
+    }
+  
+    .nav-toggle:checked + .nav-menu {
+      display: block;
+      margin-left: 0;
     }
   }
 }
