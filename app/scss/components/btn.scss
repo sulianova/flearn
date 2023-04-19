@@ -1,0 +1,31 @@
+$btn-colors: (
+  "blue": $blue,
+  "light-gray": $light-gray,
+);
+
+.btn {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  background: none;
+
+  border: none;
+  border-radius: px-to-rem(20px);
+  cursor: pointer;
+}
+
+.btn-adapt {
+  width: max-content;
+
+  @include set-media(sm) {
+    flex: 1 1 max-content;
+  }
+}
+
+@each $color-name, $color in $btn-colors {
+  .btn-#{$color-name} {
+    color: $white;
+    background: $color;
+  }
+}

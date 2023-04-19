@@ -38,7 +38,7 @@ html {
 
   background-color: $white;
 
-  @include set-typography($rem-base, 30px);
+  @include set-typography($rem-base, 30px, 500);
 }
 
 body,
@@ -55,7 +55,7 @@ button {
 h1 {
   @include set-typography(80px, 88px, 800);
 
-  @include set-media(sm) {
+  @include set-media(md) {
     @include set-typography(48px, 52.8px, 800);
   }
 }
@@ -63,7 +63,7 @@ h1 {
 h2 {
   @include set-typography(56px, 67.2px, 700);
 
-  @include set-media(sm) {
+  @include set-media(md) {
     @include set-typography(40px, 46px, 700);
   }
 }
@@ -71,9 +71,13 @@ h2 {
 h3 {
   @include set-typography(48px, 55.2px, 700);
 
-  @include set-media(sm) {
+  @include set-media(md) {
     @include set-typography(32px, 36.8px, 700);
   }
+}
+
+p {
+  @include set-typography(20px, 30px, 500);
 }
 
 ul {
@@ -92,11 +96,15 @@ a {
   text-decoration: none;
 }
 
-.container {
+main {
+  margin-top: px-to-rem(96px)
+}
 
+.container {
   width: 100%;
   max-width: px-to-rem(1296px);
-  margin: 0 auto;
-  padding: 0 px-to-rem(16px);
+  margin:  0 auto;
+  padding: px-to-rem(40px) px-to-rem(16px);
 }
+
 

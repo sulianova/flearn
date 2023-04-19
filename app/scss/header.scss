@@ -1,8 +1,17 @@
 .header {
-  position: absolute;
+  position: fixed;
   top: 0;
   right: 0;
   left: 0;
+  z-index: 1000;
+  background-color: $white;
+
+  .container {
+    width: 100%;
+    max-width: px-to-rem(1296px);
+    margin:  0 auto;
+    padding: 0 px-to-rem(16px);
+  }
 
   .logo {
     margin: px-to-rem(16px) 0;
