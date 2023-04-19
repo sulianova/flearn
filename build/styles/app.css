@@ -437,12 +437,18 @@ main {
   grid-template-columns: repeat(12, minmax(0, 1fr));
   grid-gap: 0 0.5rem;
 }
+@media (max-width: 767.98px) {
+  .modules-wrapper .modules-head {
+    display: flex;
+    flex-direction: column;
+  }
+}
 .modules-wrapper .modules-head .modules-title {
-  grid-column: 1/6;
+  grid-column: 1/-1;
   padding-bottom: 2.5rem;
 }
 .modules-wrapper .modules-head .modules-students-desc {
-  grid-column: 1/6;
+  grid-column: 1/7;
   padding-bottom: 2.5rem;
 }
 .modules-wrapper .modules-list {
@@ -453,6 +459,12 @@ main {
   display: grid;
   grid-gap: 0.5rem;
   grid-template-columns: repeat(12, minmax(0, 1fr));
+}
+@media (max-width: 767.98px) {
+  .modules-wrapper .modules-list-item {
+    display: flex;
+    flex-direction: column;
+  }
 }
 .modules-wrapper .modules-list-item-info {
   position: relative;
@@ -491,4 +503,11 @@ main {
   object-fit: cover;
   border-radius: 1.25rem;
   height: 23.625rem;
+}
+.modules-wrapper .modules-list-item-media-author {
+  padding: 1rem 2rem;
+}
+.modules-wrapper .modules-list-item-media-desc {
+  color: #C4C4C4;
+  padding: 0 2rem 2.5rem;
 }

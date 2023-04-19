@@ -154,13 +154,18 @@
     grid-template-columns: repeat(12,minmax(0,1fr));
     grid-gap: 0 px-to-rem(8px);
 
+    @include set-media(md) {
+      display: flex;
+      flex-direction: column;
+    }
+
     .modules-title {
-      grid-column: 1/6;
+      grid-column: 1/-1;
       padding-bottom: px-to-rem(40px);
     }
 
     .modules-students-desc {
-      grid-column: 1/6;
+      grid-column: 1/7;
       padding-bottom: px-to-rem(40px);
     }
   }
@@ -174,6 +179,11 @@
     display: grid;
     grid-gap: px-to-rem(8px);
     grid-template-columns: repeat(12,minmax(0,1fr));
+
+    @include set-media(md) {
+      display: flex;
+      flex-direction: column;
+    }
   }
 
   .modules-list-item-info {
@@ -220,5 +230,14 @@
     object-fit: cover;
     border-radius: px-to-rem(20px);
     height: px-to-rem(378px);
+  }
+
+  .modules-list-item-media-author {
+    padding: px-to-rem(16px) px-to-rem(32px);
+  }
+
+  .modules-list-item-media-desc {
+    color: $gray;
+    padding: 0 px-to-rem(32px) px-to-rem(40px);
   }
 }
