@@ -293,6 +293,44 @@
     }
   }
 
+}
+
+.gallery {
+  position: relative;
+  display: block;
+
+  &-btns {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: baseline;
+    padding-bottom: px-to-rem(8px);
+  }
+
+  &-paginationBtn {
+    @include set-typography(64px, 64px, 800);
+    color: $gray;
+    cursor: pointer;
+
+    border: none;
+    padding: 0;
+    background: none;
+    outline: none;
+
+    margin-right: px-to-rem(32px);
+  }
+
+  .gallery-wrapper {
+    transform: translate3d(0px, 0px, 0px);
+    transition-duration: 0ms;
+
+    position: relative;
+    top: 0;
+    height: 100%;
 
 
+    display: flex;
+    transition-property: transform;
+    box-sizing: content-box;
+    width: 100%;
+  }
 }

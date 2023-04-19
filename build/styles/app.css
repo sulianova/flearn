@@ -577,3 +577,38 @@ main {
 .author-wrapper .author-photo-link:not(:last-child) {
   padding-bottom: 0.5rem;
 }
+
+.gallery {
+  position: relative;
+  display: block;
+}
+.gallery-btns {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: baseline;
+  padding-bottom: 0.5rem;
+}
+.gallery-paginationBtn {
+  font-weight: 800;
+  font-size: 4rem;
+  line-height: 4rem;
+  text-transform: inherit;
+  color: #C4C4C4;
+  cursor: pointer;
+  border: none;
+  padding: 0;
+  background: none;
+  outline: none;
+  margin-right: 2rem;
+}
+.gallery .gallery-wrapper {
+  transform: translate3d(0px, 0px, 0px);
+  transition-duration: 0ms;
+  position: relative;
+  top: 0;
+  height: 100%;
+  display: flex;
+  transition-property: transform;
+  box-sizing: content-box;
+  width: 100%;
+}
