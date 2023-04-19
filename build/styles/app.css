@@ -427,3 +427,68 @@ main {
   text-transform: inherit;
   color: #C4C4C4;
 }
+
+.modules-wrapper {
+  display: flex;
+  flex-direction: column;
+}
+.modules-wrapper .modules-head {
+  display: grid;
+  grid-template-columns: repeat(12, minmax(0, 1fr));
+  grid-gap: 0 0.5rem;
+}
+.modules-wrapper .modules-head .modules-title {
+  grid-column: 1/6;
+  padding-bottom: 2.5rem;
+}
+.modules-wrapper .modules-head .modules-students-desc {
+  grid-column: 1/6;
+  padding-bottom: 2.5rem;
+}
+.modules-wrapper .modules-list {
+  display: grid;
+  grid-row-gap: 0.5rem;
+}
+.modules-wrapper .modules-list-item {
+  display: grid;
+  grid-gap: 0.5rem;
+  grid-template-columns: repeat(12, minmax(0, 1fr));
+}
+.modules-wrapper .modules-list-item-info {
+  position: relative;
+  display: block;
+  border-radius: 1.25rem;
+  background-color: #F3F3F3;
+  width: 100%;
+  left: 0;
+  grid-column: span 6;
+  padding: 2rem;
+}
+.modules-wrapper .modules-list-item-head {
+  position: relative;
+  padding-bottom: 0.5rem;
+  color: #C4C4C4;
+}
+.modules-wrapper .modules-list-item-title {
+  padding-bottom: 2rem;
+}
+.modules-wrapper .modules-list-item-text {
+  padding-bottom: 6.25rem;
+}
+.modules-wrapper .modules-list-item-media {
+  position: relative;
+  display: block;
+  border-radius: 1.25rem;
+  background-color: #F3F3F3;
+  width: 100%;
+  left: 0;
+  grid-column: span 6;
+}
+.modules-wrapper .modules-list-item-media-src img[data-v-desktop-2] {
+  position: relative;
+  display: block;
+  width: 100%;
+  object-fit: cover;
+  border-radius: 1.25rem;
+  height: 23.625rem;
+}
