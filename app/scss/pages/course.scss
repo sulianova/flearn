@@ -88,15 +88,6 @@
 }
 
 .description-wrapper {
-  display: grid;
-  grid-template-columns: repeat(12,minmax(0,1fr));
-  grid-gap: 0 px-to-rem(8px);
-
-  @include set-media(md) {
-    display: flex;
-    flex-direction: column;
-  }
-
   .description-title {
     margin-bottom: px-to-rem(40px);
     grid-column: span 7;
@@ -150,18 +141,9 @@
   flex-direction: column;
 
   .modules-head {
-    display: grid;
-    grid-template-columns: repeat(12,minmax(0,1fr));
-    grid-gap: 0 px-to-rem(8px);
-
-    @include set-media(md) {
-      display: flex;
-      flex-direction: column;
-    }
-
     .modules-title {
       grid-column: 1/-1;
-      padding-bottom: px-to-rem(40px);
+      padding-bottom: px-to-rem(32px);
     }
 
     .modules-students-desc {
@@ -176,14 +158,6 @@
   }
 
   .modules-list-item {
-    display: grid;
-    grid-gap: px-to-rem(8px);
-    grid-template-columns: repeat(12,minmax(0,1fr));
-
-    @include set-media(md) {
-      display: flex;
-      flex-direction: column;
-    }
   }
 
   .modules-list-item-info {
@@ -240,4 +214,85 @@
     color: $gray;
     padding: 0 px-to-rem(32px) px-to-rem(40px);
   }
+}
+
+.author-wrapper {
+
+  .author-title {
+    grid-column: span 12;
+    padding-bottom: px-to-rem(94px);
+
+    @include set-media(md) {
+      padding-bottom: px-to-rem(40px);
+    }
+  }
+
+  .author-quote {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    grid-column: 1/7;
+
+    @include set-typography(36px, 54px, 500);
+
+    @include set-media(md) {
+      @include set-typography(20px, 30px, 500);
+      padding-bottom: px-to-rem(40px);
+    }
+  }
+
+  .author-info {
+    grid-column: 9/12;
+    display: flex;
+    flex-direction: column;
+    
+    @include set-media(md) {
+      position: relative;
+      display: grid;
+      flex-direction: column;
+      background: $light-gray;
+      border-radius: px-to-rem(20px);
+      padding: px-to-rem(16px);
+      grid-template-columns: repeat(2,minmax(0,1fr));;
+      grid-column-gap: px-to-rem(16px);
+    }
+  }
+
+  .author-photo {
+    border-radius: px-to-rem(20px);
+    padding-bottom: px-to-rem(8px);
+
+    @include set-media(md) {
+      max-width: px-to-rem(140px);
+      height: auto;
+      grid-column: 1/1;
+      grid-row: 1/5;
+    }
+
+    &-name {
+      @include set-typography(16px, 24px, 700);
+      padding-bottom: px-to-rem(32px);
+
+      @include set-media(md) {
+        padding-bottom: px-to-rem(16px);
+      }
+    }
+
+    &-description {
+      @include set-typography(16px, 22.4px, 500);
+      padding-bottom: px-to-rem(16px);
+    }
+
+    &-link {
+      @include set-typography(16px, 24px, 500);
+      text-decoration: underline;
+    }
+
+    &-link:not(:last-child) {
+      padding-bottom: px-to-rem(8px);
+    }
+  }
+
+
+
 }

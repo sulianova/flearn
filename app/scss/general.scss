@@ -107,4 +107,14 @@ main {
   padding: px-to-rem(40px) px-to-rem(16px);
 }
 
+.is-grid-inner {
+  display: grid;
+  grid-template-columns: repeat(12,minmax(0,1fr));
+  grid-gap: 0 px-to-rem(8px);
+
+  @include set-media(md) {
+    display: flex;
+    flex-direction: column;
+  }
+}
 
