@@ -1,9 +1,10 @@
 .badge {
   display: flex;
   align-items: center;
-  padding: px-to-rem(2px 10px);
-  border: px-to-rem(2px) solid #222222;
-  border-radius: px-to-rem(20px);
+  padding: set-calc(2) set-calc(10);
 
-  @include set-typography(16px, 24px, 700)
+  border: px-to-rem(2px) solid #222;
+  border-radius: set-calc(20);
+
+  @include set-typography(16, 24, 700)
 }

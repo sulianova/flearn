@@ -1,6 +1,7 @@
 @use "sass:math";
 @use "sass:list";
 @use "sass:map";
+@use "sass:meta";
 
 @function px-to-rem($list) {
   $rem-list: ();
@@ -21,8 +22,8 @@
   $text-transform: inherit
 ) {
   font-weight: $font-weight;
-  font-size: px-to-rem($font-size);
-  line-height: px-to-rem($line-height);
+  font-size: calc(var(--scale)*$font-size);
+  line-height: calc(var(--scale)*$line-height);
   text-transform: $text-transform;
 }
 
@@ -31,3 +32,36 @@
     @content;
   }
 }
+
+@mixin add-scale {
+  :root {
+     --scale: 100vw/1440;
+  }
+}
+
+@mixin add-scale-md {
+  :root {
+     --scale: 100vw/414;
+  }
+}
+
+@include add-scale;
+
+@include set-media(md) {
+  @include add-scale-md;
+}
+
+@function set-calc($value) {
+  @return calc(var(--scale)*$value);
+}
+
+// @use "variables.scss" as variables;
+// @mixin add-css-variables($module) {
+//   :root {
+//    @each $name, $value in $module {
+//      --#{$name}: #{$value};
+//    }
+//   }
+// }
+// $variables: meta.module-variables('variables');
+// @include add-css-variables($variables);

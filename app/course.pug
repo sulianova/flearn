@@ -7,10 +7,13 @@ html(lang="ru")
     title course page
     link(rel="stylesheet", href="styles/app.css")
   body
-    include components/header.pug
-    main
-      include components/program-intro.pug
-      include components/description-wrapper.pug
-      include components/modules-wrapper.pug
-      include components/author-wrapper.pug
-      include components/gallery.pug
+    .page
+      include components/header.pug
+      main.page-content
+        .program-wrapper
+          include components/program-intro.pug
+          .program-blocks 
+            include components/description-wrapper.pug
+            include components/modules-wrapper.pug
+            include components/author-wrapper.pug
+            include components/gallery.pug

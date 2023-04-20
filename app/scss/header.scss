@@ -1,26 +1,28 @@
 .header {
-  position: fixed;
-  top: 0;
-  right: 0;
-  left: 0;
+  position: relative;
+  // position: fixed;
+  // top: 0;
+  // right: 0;
+  // left: 0;
   z-index: 1000;
   background-color: $white;
 
   .container {
-    width: 100%;
-    max-width: px-to-rem(1296px);
-    margin:  0 auto;
-    padding: 0 px-to-rem(16px);
+    padding: 0 set-calc(72);
+
+    @include set-media(md) {
+      padding: 0 set-calc(16);
+    }
   }
 
   .logo {
-    margin: px-to-rem(16px) 0;
+    margin: set-calc(16) 0;
 
-    @include set-typography(24px, 24px, 700);
+    @include set-typography(24, 24, 700);
   }
 
   .nav-menu {
-    @include set-typography(16px, 24px, 500);
+    @include set-typography(16, 24, 500);
     margin: 0 0 0 auto;
   }
   
@@ -31,7 +33,7 @@
   }
 
   .nav-menu ul > * {
-    margin: px-to-rem(4px) 0 px-to-rem(4px) px-to-rem(32px);
+    margin: set-calc(4) 0 set-calc(4) set-calc(32);
   }
 
   .nav-menu a {
@@ -43,9 +45,9 @@
   }
 
   .login {
-    margin-left: px-to-rem(56px);
+    margin-left: set-calc(56);
 
-    @include set-typography(16px, 24px, 500);
+    @include set-typography(16, 24, 500);
   }
 
   hr {
@@ -59,7 +61,7 @@
     display: none;
   }
 
-  @include set-media(lg) {
+  @include set-media(md) {
     .nav-menu {
       display: none;
       width: 100%;
@@ -84,8 +86,8 @@
 
     .nav-toggle-label::before {
       display: block;
-      width: px-to-rem(68px);
-      height: px-to-rem(56px);
+      width: set-calc(68);
+      height: set-calc(56);
   
       background: url("../images/menu-mobile.svg") no-repeat;
       background-size: contain;

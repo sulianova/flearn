@@ -11,7 +11,7 @@ $btn-colors: (
   background: none;
 
   border: none;
-  border-radius: px-to-rem(20px);
+  border-radius: set-calc(20);
   cursor: pointer;
 }
 
@@ -26,6 +26,7 @@ $btn-colors: (
 @each $color-name, $color in $btn-colors {
   .btn-#{$color-name} {
     color: $white;
+
     background: $color;
   }
 }
