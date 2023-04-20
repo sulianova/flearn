@@ -135,14 +135,14 @@
 
   .description-title {
     grid-column: span 7;
-    margin-bottom: px-to-rem(40px);
+    margin-bottom: set-calc(40);
   }
 
   .description-head {
     grid-column: span 6;
 
     &-text:not(:last-child) {
-      margin-bottom: px-to-rem(16px);
+      margin-bottom: set-calc(16);
     }
   }
 
@@ -155,21 +155,21 @@
     padding-top: 0;
 
     @include set-media(md) {
-      margin-top: px-to-rem(32px);
+      margin-top: set-calc(32);
     }
 
     &-item:not(:first-child) {
       @include set-media(md) {
-        margin-top: px-to-rem(56px);
+        margin-top: set-calc(56);
       }
     }
   }
 
   .point {
     @include set-typography(60, 78, 500);
-    margin-bottom: px-to-rem(8px);
+    margin-bottom: set-calc(8);
 
-    @include set-media(lg) {
+    @include set-media(md) {
       @include set-typography(40, 52, 500);
     }
   }
