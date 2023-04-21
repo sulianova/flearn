@@ -57,6 +57,14 @@
   }
 }
 
+.is-grid-outer {
+  display: grid;
+  grid-template-columns: repeat(12,minmax(0,1fr));
+  grid-column-gap: set-calc(8);
+  grid-row-gap: set-calc(8);
+  padding: 0 cset-calc(72);
+}
+
 .program-intro {
   left: 0;
 
@@ -875,6 +883,102 @@
 
     @include set-media(md) {
       height: set-calc(38);
+    }
+  }
+}
+
+.faq-wrapper {
+  padding-top: set-calc(160);
+
+  @include set-media(md) {
+    padding-top: set-calc(80);
+  }
+
+  .faq-head {
+    position: relative;
+    display: grid;
+    padding: 0;
+    grid-row-gap: 0;
+
+    @include set-media(md) {
+      position: relative;
+      display: block;
+      padding: 0;
+    }
+  }
+
+  .faq-title {
+    grid-column: span 5;
+    padding-bottom: set-calc(40);
+  }
+
+  .faq--desc {
+    grid-column: 1/6;
+
+    @include set-typography(20, 30, 500);
+
+    @include set-media(md) {
+      @include set-typography(16, 22, 500);
+    }
+
+    a {
+      color: $blue;
+      text-decoration: none;
+    }
+  }
+
+  .faq-list {
+    position: relative;
+    display: grid;
+    grid-template-columns: repeat(12,minmax(0,1fr));
+    grid-gap: set-calc(8) set-calc(8);
+    padding-top: set-calc(40);
+    left: 0;
+    width: 100%;
+
+    @include set-media(md) {
+      position: relative;
+      display: grid;
+      grid-template-columns: repeat(1,minmax(0,1fr));
+      grid-row-gap: set-calc(8);
+      width: set-calc(32, true, 100%);
+      left: set-calc(-16);
+    }
+  }
+
+  .faq-list-item {
+    height: auto;
+    padding: set-calc(32);
+    grid-column: span 6;
+
+    position: relative;
+    border-radius: set-calc(20);
+    background-color: $light-gray;
+
+    @include set-media(md) {
+      display: flex;
+      flex-direction: column;
+
+      position: relative;
+      padding: set-calc(16);
+      grid-row-gap: 0;
+    }
+
+    &-question {
+      padding-bottom: set-calc(32);
+      @include set-typography(32, 40, 500);
+
+      @include set-media(md) {
+        @include set-typography(24, 28, 500);
+      }
+    }
+
+    &-answers {
+      @include set-typography(20, 30, 500);
+
+      @include set-media(md) {
+        @include set-typography(16, 22, 500);
+      }
     }
   }
 }
