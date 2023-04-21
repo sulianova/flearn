@@ -1,0 +1,33 @@
+.decision-form-wrapper(id="decision-form")
+  .decision-form-info
+    h3.decision-form-info-title Записаться на онлайн курс
+    p.decision-form-info-subtitle Премьерный поток с авторскими проверками с 14 апреля по 14 мая
+    .decision-form-info-credit-container
+      s.decision-form-info-credit-was 14 000 ₽ 
+      .decision-form-info-credit-price 
+        span 7 000 ₽ 
+        span.decision-form-info-credit-price-discount -30%
+      p.decision-form-info-course-name Короткий курс для начинающих: “Как рисовать свободно”
+  .decision-form-container
+    h3.decision-form-title Заполните форму и я свяжусь с вами, чтобы оформить оплату
+    .decision-form
+      form(data-hs-cf-bound="true")
+        .input-field(model="name")
+          label.input-field-label(for="name2") Имя
+          input.input-field-input(id="name2" name="name2" placeholder="Имя" required="required" type="text" value)
+        .input-field(model="phone")
+          label.input-field-label(for="phone2") Телефон
+          input.input-field-input(id="phone2" name="name2" placeholder="+78888888888" required="required" type="tel" value)
+        .input-field(model="email")
+          label.input-field-label(for="email2") Почта
+          input.input-field-input(id="email2" name="email2" placeholder="email@email.com" required="required" type="email" value)
+        .decision-form-choice-agreement
+          input.decision-form-choice-agreement-checkbox(type="checkbox" id="agreement-consult" checked="checked")
+          label(for="agreement-consult")
+            img(src="./images/checkbox.svg")
+            span.decision-form-choice-agreement-text
+              | Я соглашаюсь
+              |
+              a(href="") с правилами использования
+        button.btn.decision-form-choice-submit-button(type="button")
+          span Записаться

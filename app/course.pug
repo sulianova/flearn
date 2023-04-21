@@ -13,8 +13,15 @@ html(lang="ru")
         .program-wrapper
           include components/program-intro.pug
           .program-blocks 
-            include components/description-wrapper.pug
-            include components/modules-wrapper.pug
-            include components/author-wrapper.pug
-            include components/gallery.pug
-            include components/program-promo.pug
+            .program-blocks-item
+              include components/description-wrapper.pug
+            .program-blocks-item
+              include components/modules-wrapper.pug
+            .program-blocks-item
+              include components/author-wrapper.pug
+            .program-blocks-item
+              include components/gallery.pug
+            .program-blocks-item
+              include components/program-promo.pug
+            .program-blocks-item.is-black
+              include components/decision-form-wrapper.pug

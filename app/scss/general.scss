@@ -98,14 +98,3 @@ a {
   text-decoration: none;
 }
 
-.is-grid-inner {
-  display: grid;
-  grid-template-columns: repeat(12,minmax(0,1fr));
-  grid-gap: set-calc(8);
-
-  @include set-media(md) {
-    display: flex;
-    flex-direction: column;
-  }
-}
-
