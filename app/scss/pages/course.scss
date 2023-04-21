@@ -8,7 +8,7 @@
 }
 
 .page-content {
-  margin-top: set-calc(40);
+  margin-top: set-calc(24);
   padding-top: 0;
 }
 
@@ -24,12 +24,20 @@
 }
 
 .program-intro {
-  position: relative;
-  left: set-calc(-15);
-
-  display: block;
   grid-column: span 12;
-  width: calc(100% + var(--scale) * 30);
+  min-height: set-calc(-150, true, 100vh);
+  left: 0;
+  width: 100%;
+
+  @include set-media(md) {
+    position: relative;
+    display: block;
+
+    grid-column: span 12;
+    left: set-calc(-15);
+    width: set-calc(30, true, 100%);
+  }
+
 }
 
 .program-intro-inner {
@@ -39,7 +47,7 @@
   flex-direction: column;
   height: 100%;
   margin-bottom: set-calc(40);
-  padding: set-calc(24) set-calc(24) set-calc(192);
+  padding: set-calc(24) set-calc(24);
   overflow: hidden;
 
   background: $light-gray;
@@ -214,6 +222,12 @@
 
     background-color: $light-gray;
     border-radius: set-calc(20);
+
+    @include set-media(md) {
+      width: calc(100% + var(--scale)*32);
+      left: calc(var(--scale)*-16);
+      padding: set-calc(16);
+    }
   }
 
   .modules-list-item-head {
@@ -243,6 +257,11 @@
 
     background-color: $light-gray;
     border-radius: set-calc(20);
+
+    @include set-media(md) {
+      width: calc(100% + var(--scale)*32);
+      left: calc(var(--scale)*-16);
+    }
   }
 
   .modules-list-item-media-src {
@@ -250,7 +269,7 @@
 
     display: block;
     width: 100%;
-    height: set-calc(340);
+    height: calc(var(--scale) * 340);
   }
 
   .modules-list-item-media-src  img[data-v-desktop-2]{
@@ -266,12 +285,20 @@
 
   .modules-list-item-media-author {
     padding: set-calc(16) set-calc(32);
+
+    @include set-media(md) {
+      padding: set-calc(16) set-calc(16);
+    }
   }
 
   .modules-list-item-media-desc {
-    padding: 0 set-calc(32) set-calc(40);
+    padding: 0 set-calc(32) set-calc(32);
 
     color: $gray;
+
+    @include set-media(md) {
+      padding: 0 set-calc(16) set-calc(16);
+    }
   }
 }
 
@@ -412,13 +439,13 @@
   &-container {
     left: set-calc(-72);
 
-    width: calc(100% + var(--scale) * 144);
+    width: set-calc(144, true, 100%);
     padding: 0 set-calc(72);
 
     @include set-media(md) {
       left: set-calc(-16);
 
-      width: calc(100% + var(--scale) * 30);
+      width: set-calc(30, true, 100%);
       margin-top: set-calc(40);
       padding: 0 set-calc(8);
     }
@@ -476,5 +503,108 @@
     height: 100%;
 
     transition-property: transform;
+  }
+
+  &-caption {
+    display: flex;
+    flex-wrap: wrap;
+    padding-top: set-calc(24);
+
+    @include set-typography(16, 24, 500);
+  }
+}
+
+.program-promo {
+  display: grid;
+  grid-template-columns: repeat(12,minmax(0,1fr));
+  grid-column-gap: set-calc(8);
+  width: 100%;
+  left: 0;
+  padding-top: set-calc(80);
+
+  @include set-media(md) {
+    position: relative;
+    display: block;
+  }
+
+  &-title {
+    grid-column: span 5;
+    padding-bottom: set-calc(40);
+  }
+
+  .content-block-embed {
+    grid-column: span 7;
+    width: 100%;
+    left: 0;
+  }
+
+  .VideoPlayer {
+    border-radius: set-calc(20);
+    overflow: hidden;
+  }
+
+  .plyr {
+    -moz-osx-font-smoothing: grayscale;
+    -webkit-font-smoothing: antialiased;
+    align-items: center;
+    direction: ltr;
+    display: flex;
+    flex-direction: column;
+    font-family: inherit;
+    font-variant-numeric: tabular-nums;
+    font-weight: 400;
+    height: 100%;
+    line-height: 1.7;
+    max-width: 100%;
+    min-width: px-to-rem(200px);
+    position: relative;
+    text-shadow: none;
+    transition: box-shadow .3s ease;
+    z-index: 0;
+
+    &-video {
+      border-radius: set-calc(20);
+      overflow: hidden;
+
+      background: $black;
+      overflow: hidden;
+    }
+  
+    &-full-ui {
+      box-sizing: border-box;
+    }
+
+
+    &-video-embed {
+      height: 0;
+      padding-bottom: 56.25%;
+    }
+
+    &-video-wrapper {
+      background: $black;
+      height: 100%;
+      margin: auto;
+      overflow: hidden;
+      position: relative;
+      width: 100%;
+    }
+  }
+
+  .content-block-embed iframe {
+    border-radius: set-calc(20);
+    max-width: 100%;
+  }
+
+  .plyr-video-embed iframe {
+    border: 0;
+    left: 0;
+    position: absolute;
+    top: 0;
+  }
+
+  .plyr iframe {
+    display: block;
+    height: 100%;
+    width: 100%;
   }
 }

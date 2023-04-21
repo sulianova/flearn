@@ -51,8 +51,14 @@
   @include add-scale-md;
 }
 
-@function set-calc($value) {
-  @return calc(var(--scale)*$value);
+@function set-calc(
+  $value,
+  $bollean: false,
+  $value2: 0%
+  ) {
+    @if $bollean {
+      @return calc($value2 + var(--scale) * $value);
+    } @else { @return calc(var(--scale) * $value) }
 }
 
 // @use "variables.scss" as variables;

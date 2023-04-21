@@ -16,7 +16,7 @@
   }
 
   .logo {
-    margin: set-calc(16) 0;
+    margin: set-calc(8) 0;
 
     @include set-typography(24, 24, 700);
   }
@@ -86,8 +86,8 @@
 
     .nav-toggle-label::before {
       display: block;
-      width: set-calc(68);
-      height: set-calc(56);
+      width: calc(100vw/414 * 68);
+      height: calc(100vw/414 * 56);
   
       background: url("../images/menu-mobile.svg") no-repeat;
       background-size: contain;
