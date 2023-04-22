@@ -96,5 +96,7 @@ input::placeholder {
 a {
   color: inherit;
   text-decoration: none;
+  cursor: pointer;
+  transition: opacity 0.2s ease 0s, color ease 0s;
 }
 

@@ -37,8 +37,9 @@
   }
 
   .nav-menu a {
+    transition: $d-hover color;
     &:hover {
-      color: $light-gray;
+      color: $gray;
 
       cursor: pointer;
     }

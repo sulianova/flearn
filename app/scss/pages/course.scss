@@ -148,9 +148,15 @@
       margin: 0 px-to-rem(4px) px-to-rem(4px) 0;
       padding: px-to-rem(4px) px-to-rem(40px);
 
+      transition: background-color $d-hover;
+
       @include set-media(sm) {
         @include set-typography(20, 40, 500);
       }
+    }
+
+    &-btn:hover {
+      background-color: $blue-hover;
     }
   
     &-discount {
@@ -877,7 +883,7 @@
     background-color: $blue;
     color: $white;
     cursor: pointer;
-    transition: color var(--d-hover),background-color var(--d-hover),opacity var(--d-hover);
+    transition: color $d-hover,background-color $d-hover,opacity $d-hover;
 
     @include set-typography(20, 20, 500);
 
@@ -885,6 +891,11 @@
       height: set-calc(38);
     }
   }
+
+  .decision-form-choice-submit-button:hover {
+    background-color: $blue-hover;
+  }
+  
 }
 
 .faq-wrapper {
