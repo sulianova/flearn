@@ -29,27 +29,30 @@
 }
 
 .is-black {
-  width: set-calc(144, true, 100%);
-  left: set-calc(-72);
-  padding: set-calc(54) set-calc(72);
 
   position: relative;
-  border-radius: set-calc(20);
-  background-color: $black;
+  left: set-calc(-72);
+
+  width: set-calc(144, true, 100%);
   margin-top: set-calc(80);
+  padding: set-calc(54) set-calc(72);
+
+  background-color: $black;
+  border-radius: set-calc(20);
 
   @include set-media(md) {
-    display: block;
-    padding: set-calc(40) 0;
-    width: set-calc(32, true, 100%);
     left: set-calc(-16);
+
+    display: block;
+    width: set-calc(32, true, 100%);
+    padding: set-calc(40) 0;
   }
 }
 
 .is-grid-inner {
   display: grid;
-  grid-template-columns: repeat(12,minmax(0,1fr));
   grid-gap: set-calc(8);
+  grid-template-columns: repeat(12,minmax(0,1fr));
 
   @include set-media(md) {
     display: flex;
@@ -59,9 +62,8 @@
 
 .is-grid-outer {
   display: grid;
+  grid-gap: set-calc(8) set-calc(8);
   grid-template-columns: repeat(12,minmax(0,1fr));
-  grid-column-gap: set-calc(8);
-  grid-row-gap: set-calc(8);
   padding: 0 cset-calc(72);
 }
 
@@ -118,8 +120,9 @@
     align-items: center;
   
     padding: 0 set-calc(16);
-    border-radius: set-calc(20);
+
     border: set-calc(2) solid #222;
+    border-radius: set-calc(20);
   }
 
   .program-intro-title {
@@ -159,6 +162,7 @@
   
     &-discount {
       padding: px-to-rem(4px) px-to-rem(16px);
+
       color: $black;
     }
   }
@@ -185,8 +189,8 @@
 
   .description-title {
     grid-column: span 7;
-    padding-bottom: set-calc(40);
     margin-bottom: set-calc(-8);
+    padding-bottom: set-calc(40);
   }
 
   .description-head {
@@ -249,32 +253,34 @@
   .modules-head {
     .modules-title {
       grid-column: 1/-1;
-      padding-bottom: set-calc(40);
       margin-bottom: set-calc(-8);
+      padding-bottom: set-calc(40);
     }
 
     .modules-students-desc {
       grid-column: 1/7;
-      padding-bottom: set-calc(24);
       margin-bottom: set-calc(-8);
+      padding-bottom: set-calc(24);
     }
 
     .modules-menu-wrapper {
       position: relative;
+
       display: flex;
       flex-wrap: wrap;
+      grid-column: span 12;
 
       padding-bottom: set-calc(24);
-      grid-column: span 12;
     }
 
     .modules-menu-item {
-      display: block;
       position: relative;
 
-      padding: set-calc(2) set-calc(16) set-calc(4);
-      margin-bottom: set-calc(8);
+      display: block;
       margin-right: set-calc(8);
+      margin-bottom: set-calc(8);
+
+      padding: set-calc(2) set-calc(16) set-calc(4);
 
       background: $light-gray;
       border-radius: set-calc(20);
@@ -310,7 +316,9 @@
 
   .modules-list-item-head {
     position: relative;
+
     padding-bottom: set-calc(8);
+
     color: $gray;
   }
 
@@ -400,17 +408,18 @@
   }
 
   .explain-quote {
-    grid-column: span 6;
     display: flex;
     flex-direction: column;
+    grid-column: span 6;
     justify-content: center;
-    padding-bottom: set-calc(40);
     padding-right: set-calc(48);
+    padding-bottom: set-calc(40);
 
     @include set-typography(28, 42, 500);
 
     @include set-media(md) {
       padding-right: set-calc(0);
+
       @include set-typography(20, 30, 500);
     }
   }
@@ -501,9 +510,11 @@
 
   .video-describtion {
     position: relative;
+
     display: block;
-    color: $gray;
     padding-top: set-calc(16);
+
+    color: $gray;
   }
   
 }
@@ -521,26 +532,29 @@
 
   .author-list {
     position: relative;
-    display: grid;
-    background: $light-gray;
-    border-radius: set-calc(20);
-    grid-template-columns: repeat(12,minmax(0,1fr));
-    grid-gap: set-calc(8);
     left: 0;
+
+    display: grid;
+    grid-gap: set-calc(8);
+    grid-template-columns: repeat(12,minmax(0,1fr));
     width: 100%;
 
+    background: $light-gray;
+    border-radius: set-calc(20);
+
     @include set-media(md) {
-      width: set-calc(32, true, 100%);
       left: set-calc(-16);
+
+      width: set-calc(32, true, 100%);
     }
   }
 
   .author-list-item {
     display: grid;
     grid-column: span 12;
-    grid-template-columns: set-calc(181) set-calc(376) auto;
-    grid-template-rows: auto 1fr;
     grid-column-gap: set-calc(40);
+    grid-template-rows: auto 1fr;
+    grid-template-columns: set-calc(181) set-calc(376) auto;
     min-height: set-calc(214);
     padding: set-calc(32);
     
@@ -549,8 +563,8 @@
 
       display: grid;
       grid-column-gap: set-calc(16);
-      min-height: set-calc(170);
       grid-template-columns: repeat(2,minmax(0,1fr));
+      min-height: set-calc(170);
       padding: set-calc(16);
 
       background: $light-gray;
@@ -559,9 +573,10 @@
 
     &-photo {
       position: relative;
+
       display: block;
-      grid-column: 1;
       grid-row: 1/3;
+      grid-column: 1;
 
       width: set-calc(181);
       height: set-calc(251);
@@ -588,8 +603,8 @@
     }
 
     &-name {
-      padding-bottom: set-calc(16);
       grid-column: 2/2;
+      padding-bottom: set-calc(16);
 
       @include set-media(md) {
         padding-bottom: set-calc(8);
@@ -604,9 +619,10 @@
     &-link {
       display: flex;
       flex-direction: column-reverse;
+      grid-column: 3/3;
       align-items: flex-end;
       justify-content: space-between;
-      grid-column: 3/3;
+
       text-transform: uppercase;
 
       @include set-media(md) {
@@ -619,6 +635,7 @@
 
 .gallery {
   position: relative;
+
   display: block;
 
   &-btns {
@@ -824,45 +841,50 @@
 
   .video-describtion {
     position: relative;
+
     display: block;
-    color: $gray;
     padding-top: set-calc(16);
+
+    color: $gray;
   }
 }
 
 .decision-form-wrapper {
   display: grid;
+  grid-gap: set-calc(8);
   grid-column: span 12;
   grid-template-columns: repeat(12,minmax(0,1fr));
-  grid-gap: set-calc(8);
 
   @include set-media(md) {
     display: block;
   }
 
   .decision-form-info {
-    grid-column: span 6;
-
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
 
     position: relative;
     left: 0;
+
+    display: flex;
+    flex-direction: column;
+    grid-column: span 6;
+    justify-content: space-between;
     width: 100%;
 
     padding: set-calc(24);
     padding-right: set-calc(64);
 
-    border-radius: set-calc(20);
     background: $light-gray;
+
+    border-radius: set-calc(20);
 
     @include set-media(md) {
       position: relative;
+
       display: block;
-      border-radius: set-calc(20);
       padding: set-calc(16);
       padding-right: set-calc(8);
+
+      border-radius: set-calc(20);
     }
 
     &-title {
@@ -870,8 +892,8 @@
     }
 
     &-subtitle {
-      padding-bottom: set-calc(32);
       width: set-calc(435);
+      padding-bottom: set-calc(32);
 
       @include set-media(md) {
         width: set-calc(382);
@@ -880,10 +902,11 @@
 
     &-credit-container {
       position: relative;
+
       display: flex;
+      flex-basis: 100%;
       flex-direction: column;
       align-items: flex-start;
-      flex-basis: 100%;
     }
 
     &-credit-was {
@@ -894,51 +917,58 @@
 
     &-credit-price {
       position: relative;
+
       display: inline-block;
+
       color: $blue;
+      letter-spacing: -0.05em;
 
       @include set-typography(40, 50, 500);
-      letter-spacing: -0.05em;
     }
 
     &-credit-price-discount {
-      display: block;
-      padding: set-calc(10);
 
       position: absolute;
-      right: set-calc(-70);
       top: set-calc(-24);
+      right: set-calc(-70);
+
+      display: block;
       height: set-calc(41);
+      padding: set-calc(10);
+
+      color: $white;
 
       background: $blue;
       border-radius: set-calc(20);
-      color: $white;
 
       @include set-typography(16, 20, 500);
     }
 
     &-course-name {
-      display: block;
       position: relative;
-      color: $gray;
+
+      display: block;
 
       padding-top: set-calc(90);
+
+      color: $gray;
     }
   }
 
   .decision-form-container {
-    grid-column: span 6;
+    position: relative;
 
     display: block;
-    position: relative;
+    grid-column: span 6;
     width: 100%;
-    overflow: hidden;
 
     margin: 0;
     padding: set-calc(24);
+    overflow: hidden;
+
+    background: $light-gray;
 
     border-radius: set-calc(20);
-    background: $light-gray;
 
     @include set-media(md) {
       margin-top: set-calc(8);
@@ -951,11 +981,13 @@
 
   .decision-form {
     position: relative;
+
     display: block;
   }
 
   .input-field {
     position: relative;
+
     display: flex;
     flex-direction: column;
     margin-bottom: set-calc(32);
@@ -967,22 +999,27 @@
 
   .input-field-input {
     position: relative;
+
+    width: 100%;
+    padding: cset-calc(4) 0 set-calc(8);
+
+    color: $gray;
+
     background: none;
     border: none;
     border-bottom: px-to-rem(2px) solid $white;
     border-radius: 0;
-    box-shadow: none;
     outline: none;
-    padding: cset-calc(4) 0 set-calc(8);
-    width: 100%;
-    color: $gray;
+    box-shadow: none;
   }
 
   .decision-form-choice-agreement {
-    padding: 0 0 set-calc(30);
+    position: relative;
+
     display: flex;
     align-items: center;
-    position: relative;
+    padding: 0 0 set-calc(30);
+
     color: $gray;
 
     &-checkbox {
@@ -991,13 +1028,15 @@
 
     label {
       position: relative;
+
       display: flex;
       align-items: center;
+
       cursor: pointer;
 
       img {
-        height: set-calc(18);
         width: set-calc(18);
+        height: set-calc(18);
       }
 
       a {
@@ -1006,37 +1045,44 @@
     }
 
     &-text {
-      cursor: pointer;
       padding-left: set-calc(4);
+
+      cursor: pointer;
     }
   }
 
   input[type="checkbox" i] {
-    background-color: initial;
-    cursor: default;
-    appearance: auto;
     box-sizing: border-box;
     margin: px-to-rem(3px) px-to-rem(3px) px-to-rem(3px) px-to-rem(4px);
     padding: initial;
+
+    background-color: initial;
     border: initial;
+    cursor: default;
+
+    appearance: auto;
   }
 
   .decision-form-choice-submit-button {
+
+    position: relative;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
     height: set-calc(68);
     padding: 0 set-calc(40);
 
-    position: relative;
-    display: flex;
-    width: 100%;
-    border-radius: set-calc(20);
-    align-items: center;
-    justify-content: center;
-    background-color: $blue;
     color: $white;
-    cursor: pointer;
-    transition: color $d-hover,background-color $d-hover,opacity $d-hover;
 
     font-family: $font-family!important;
+
+    background-color: $blue;
+    border-radius: set-calc(20);
+    cursor: pointer;
+
+    transition: color $d-hover,background-color $d-hover,opacity $d-hover;
 
     @include set-media(md) {
       height: set-calc(38);
@@ -1058,12 +1104,14 @@
 
   .faq-head {
     position: relative;
+
     display: grid;
-    padding: 0;
     grid-row-gap: 0;
+    padding: 0;
 
     @include set-media(md) {
       position: relative;
+
       display: block;
       padding: 0;
     }
@@ -1074,7 +1122,7 @@
     padding-bottom: set-calc(40);
   }
 
-  .faq--desc {
+  .faq-desc {
     grid-column: 1/6;
 
     a {
@@ -1085,39 +1133,44 @@
 
   .faq-list {
     position: relative;
-    display: grid;
-    grid-template-columns: repeat(12,minmax(0,1fr));
-    grid-gap: set-calc(8) set-calc(8);
-    padding-top: set-calc(40);
     left: 0;
+
+    display: grid;
+    grid-gap: set-calc(8) set-calc(8);
+    grid-template-columns: repeat(12,minmax(0,1fr));
     width: 100%;
+    padding-top: set-calc(40);
 
     @include set-media(md) {
       position: relative;
-      display: grid;
-      grid-template-columns: repeat(1,minmax(0,1fr));
-      grid-row-gap: set-calc(8);
-      width: set-calc(32, true, 100%);
       left: set-calc(-16);
+
+      display: grid;
+      grid-row-gap: set-calc(8);
+      grid-template-columns: repeat(1,minmax(0,1fr));
+      width: set-calc(32, true, 100%);
     }
   }
 
   .faq-list-item {
-    height: auto;
-    padding: set-calc(32);
-    grid-column: span 6;
 
     position: relative;
-    border-radius: set-calc(20);
+
+    grid-column: span 6;
+    height: auto;
+    padding: set-calc(32);
+
     background-color: $light-gray;
+    border-radius: set-calc(20);
 
     @include set-media(md) {
-      display: flex;
-      flex-direction: column;
 
       position: relative;
-      padding: set-calc(16);
+
+      display: flex;
+      flex-direction: column;
       grid-row-gap: 0;
+      padding: set-calc(16);
     }
 
     &-question {
