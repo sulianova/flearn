@@ -38,7 +38,9 @@ html {
 
   background-color: $white;
 
-  @include set-typography($rem-base, 30px, 500);
+  font-size: set-calc(18);
+  line-height: set-calc(28);
+  font-weight: 500;
   -ms-text-size-adjust: 100%;
   -webkit-text-size-adjust: 100%;
   -moz-osx-font-smoothing: grayscale;
@@ -81,7 +83,11 @@ h3 {
 }
 
 p {
-  @include set-typography(20, 30, 500);
+  @include set-typography(24, 32, 500);
+
+  @include set-media(md) {
+    @include set-typography(20, 28, 500)
+  }
 }
 
 ul {
@@ -100,3 +106,18 @@ a {
   transition: opacity 0.2s ease 0s, color ease 0s;
 }
 
+.s-text-24 {
+  @include set-typography(24, 32, 500);
+
+  @include set-media(md) {
+    @include set-typography(20, 28, 500)
+  }
+}
+
+.s-text-18 {
+  @include set-typography(18, 24, 500);
+
+  @include set-media(md) {
+    @include set-typography(16, 22, 500)
+  }
+}

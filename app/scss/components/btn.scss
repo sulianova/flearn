@@ -3,6 +3,10 @@ $btn-colors: (
   "light-gray": $light-gray,
 );
 
+$btn-colors-hover: (
+  "blue": $blue-hover,
+);
+
 .btn {
   display: flex;
   align-items: center;
@@ -27,6 +31,12 @@ $btn-colors: (
   .btn-#{$color-name} {
     color: $white;
 
-    background: $color;
+    background-color: $color;
+  }
+}
+
+@each $color-name, $color in $btn-colors-hover {
+  .btn-#{$color-name}:hover {
+    background-color: $color;
   }
 }
