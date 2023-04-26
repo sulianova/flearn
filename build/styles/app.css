@@ -500,8 +500,8 @@ button {
 }
 
 .page-content {
-  padding-top: calc(var(--scale) * 16);
   margin-top: calc(var(--scale) * 56);
+  padding-top: calc(var(--scale) * 16);
 }
 
 .program-wrapper {
@@ -535,8 +535,8 @@ button {
     left: calc(var(--scale) * -16);
     display: block;
     width: calc(100% + var(--scale) * 32);
-    padding: calc(var(--scale) * 40) 0;
     margin-top: calc(var(--scale) * 120);
+    padding: calc(var(--scale) * 40) 0;
   }
 }
 
@@ -590,8 +590,8 @@ button {
 }
 @media (max-width: 767.98px) {
   .program-intro-inner {
-    padding: calc(var(--scale) * 16) calc(var(--scale) * 16) 0;
     height: calc(var(--scale) * 660);
+    padding: calc(var(--scale) * 16) calc(var(--scale) * 16) 0;
   }
 }
 .program-intro-inner .program-intro-categories {
@@ -599,21 +599,21 @@ button {
   display: flex;
   flex-wrap: wrap;
   max-width: calc(var(--scale) * 620);
-  padding-bottom: calc(var(--scale) * 80);
   margin-bottom: cset-calc(-8);
+  padding-bottom: calc(var(--scale) * 80);
 }
 .program-intro-inner .program-intro-categories > div:not(:last-child) {
   margin-right: calc(var(--scale) * 4);
 }
 @media (max-width: 767.98px) {
   .program-intro-inner .program-intro-categories {
-    padding-bottom: calc(var(--scale) * 32);
     margin-bottom: cset-calc(-8);
+    padding-bottom: calc(var(--scale) * 32);
   }
 }
 .program-intro-inner .program-intro-categories-item {
-  padding: 0 calc(var(--scale) * 16);
   margin-bottom: calc(var(--scale) * 8);
+  padding: 0 calc(var(--scale) * 16);
   border: calc(var(--scale) * 2) solid #222;
   border-radius: calc(var(--scale) * 20);
 }
@@ -643,9 +643,9 @@ button {
   flex-wrap: wrap;
 }
 .program-intro-inner .program-intro-actions-btn {
+  height: calc(var(--scale) * 40);
   margin: 0 calc(var(--scale) * 4) calc(var(--scale) * 4) 0;
   padding: 0 calc(var(--scale) * 48);
-  height: calc(var(--scale) * 40);
 }
 @media (max-width: 767.98px) {
   .program-intro-inner .program-intro-actions-btn {
@@ -653,8 +653,8 @@ button {
   }
 }
 .program-intro-inner .program-intro-actions-discount {
-  padding: 0 calc(var(--scale) * 48);
   height: calc(var(--scale) * 40);
+  padding: 0 calc(var(--scale) * 48);
   color: #222;
 }
 @media (max-width: 767.98px) {
@@ -1057,10 +1057,10 @@ button {
   justify-content: space-between;
 }
 .teachers-wrapper .teachers-list-item-link a {
-  display: block;
-  text-align: right;
-  font-family: TTInterphasesPro, sans-serif;
   position: relative;
+  display: block;
+  font-family: TTInterphasesPro, sans-serif;
+  text-align: right;
 }
 .teachers-wrapper .teachers-list-item-link a:hover {
   color: #C4C4C4;
@@ -1088,8 +1088,8 @@ button {
 }
 .gallery-paginationBtn {
   padding: 0;
-  font-family: TTInterphasesPro, sans-serif;
   color: #C4C4C4;
+  font-family: TTInterphasesPro, sans-serif;
   background: none;
   border: none;
   outline: none;
@@ -1330,11 +1330,11 @@ button {
   position: absolute;
   top: calc(var(--scale) * -24);
   right: calc(var(--scale) * -70);
-  letter-spacing: 0rem;
   display: block;
   height: calc(var(--scale) * 41);
   padding: calc(var(--scale) * 8);
   color: #fff;
+  letter-spacing: 0;
   background: #1F59F5;
   border-radius: calc(var(--scale) * 20);
 }

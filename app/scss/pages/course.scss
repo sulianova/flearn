@@ -8,8 +8,8 @@
 }
 
 .page-content {
-  padding-top: set-calc(16);
   margin-top: set-calc(56);
+  padding-top: set-calc(16);
 }
 
 .program-wrapper {
@@ -33,7 +33,7 @@
   position: relative;
   left: set-calc(-$padding-x-desk-page);
 
-  width: set-calc(2*$padding-x-desk-page, true, 100%);
+  width: set-calc(2 * $padding-x-desk-page, true, 100%);
   margin-top: set-calc(120);
   padding: set-calc(90) set-calc($padding-x-desk-page);
 
@@ -45,8 +45,8 @@
 
     display: block;
     width: set-calc(32, true, 100%);
-    padding: set-calc(40) 0;
     margin-top: set-calc(120);
+    padding: set-calc(40) 0;
   }
 }
 
@@ -83,7 +83,7 @@
 
     display: block;
     grid-column: span 12;
-    width: set-calc(2*$padding-x-mob-page, true, 100%);
+    width: set-calc(2 * $padding-x-mob-page, true, 100%);
     min-height: 100%;
   }
 
@@ -102,8 +102,8 @@
   border-radius: set-calc(20);
 
   @include set-media(md) {
-    padding: set-calc($padding-x-mob-page) set-calc($padding-x-mob-page) 0;
     height: set-calc(660);
+    padding: set-calc($padding-x-mob-page) set-calc($padding-x-mob-page) 0;
   }
 
   .program-intro-categories {
@@ -112,22 +112,22 @@
     display: flex;
     flex-wrap: wrap;
     max-width: set-calc(620);
-    padding-bottom: set-calc(80);
     margin-bottom: cset-calc(-8);
+    padding-bottom: set-calc(80);
 
     & > div:not(:last-child) {
       margin-right: set-calc(4);
     }
 
     @include set-media(md) {
-      padding-bottom: set-calc(32);
       margin-bottom: cset-calc(-8);
+      padding-bottom: set-calc(32);
     }
   }
 
-  .program-intro-categories-item {  
+  .program-intro-categories-item {
+    margin-bottom: set-calc(8);  
     padding: 0 set-calc($padding-x-mob-page);
-    margin-bottom: set-calc(8);
 
     border: set-calc(2) solid $black;
     border-radius: set-calc(20);
@@ -162,9 +162,9 @@
     flex-wrap: wrap;
 
     &-btn {
+      height: set-calc(40);
       margin: 0 set-calc(4) set-calc(4) 0;
       padding: 0 set-calc(48);
-      height: set-calc(40);
 
       @include set-media(md) {
         height: set-calc(38);
@@ -172,8 +172,9 @@
     }
   
     &-discount {
-      padding: 0 set-calc(48);
       height: set-calc(40);
+      padding: 0 set-calc(48);
+
       color: $black;
 
       @include set-media(md) {
@@ -358,7 +359,7 @@
     @include set-media(md) {
       left: set-calc(-$padding-x-mob-page);
 
-      width: set-calc(2*$padding-x-mob-page, true, 100%);
+      width: set-calc(2 * $padding-x-mob-page, true, 100%);
     }
   }
 
@@ -411,6 +412,7 @@
 
   @include set-media(md) {
     position: relative;
+
     display: block;
 
     padding-top: set-calc(80);
@@ -527,6 +529,7 @@
 
     display: block;
     padding-top: set-calc(16);
+
     color: $gray;
 
     @include set-media(md) {
@@ -566,7 +569,7 @@
     @include set-media(md) {
       left: set-calc(-$padding-x-mob-page);
 
-      width: set-calc(2*$padding-x-mob-page, true, 100%);
+      width: set-calc(2 * $padding-x-mob-page, true, 100%);
     }
   }
 
@@ -645,10 +648,12 @@
 
 
       a {
-        display: block;
-        text-align: right;
-        font-family: $font-family;
         position: relative;
+
+        display: block;
+
+        font-family: $font-family;
+        text-align: right;
       }
 
       a:hover {
@@ -665,6 +670,7 @@
 
 .gallery {
   position: relative;
+
   display: block;
 
   &-btns {
@@ -680,9 +686,9 @@
 
   &-paginationBtn {
     padding: 0;
-    font-family: $font-family;
 
     color: $gray;
+    font-family: $font-family;
 
     background: none;
 
@@ -706,13 +712,13 @@
   &-container {
     left: set-calc(-$padding-x-desk-page);
 
-    width: set-calc(2*$padding-x-desk-page, true, 100%);
+    width: set-calc(2 * $padding-x-desk-page, true, 100%);
     padding: 0 set-calc($padding-x-desk-page);
 
     @include set-media(md) {
       left: set-calc(-$padding-x-mob-page);
 
-      width: set-calc(2*$padding-x-mob-page, true, 100%);
+      width: set-calc(2 * $padding-x-mob-page, true, 100%);
       margin-top: set-calc(16);
       padding: 0 set-calc(8);
     }
@@ -794,6 +800,7 @@
 
   @include set-media(md) {
     position: relative;
+
     display: block;
 
     padding-top: set-calc(80);
@@ -963,6 +970,7 @@
 
     &-credit-price {
       position: relative;
+
       display: inline-block;
 
       color: $blue;
@@ -974,13 +982,13 @@
       position: absolute;
       top: set-calc(-24);
       right: set-calc(-70);
-      letter-spacing: 0rem;
 
       display: block;
       height: set-calc(41);
       padding: set-calc(8);
 
       color: $white;
+      letter-spacing: 0;
 
       background: $blue;
       border-radius: set-calc(20);
@@ -988,6 +996,7 @@
 
     &-course-name {
       position: relative;
+
       display: block;
 
       padding: set-calc(100) 0 set-calc(5);
@@ -1027,6 +1036,7 @@
 
   .decision-form {
     position: relative;
+
     display: block;
   }
 
@@ -1109,6 +1119,7 @@
 
     input[type="checkbox"]:not(:checked )+ label #checkmark {
       display: none;
+
       transition: display $d-hover linear;
     }
   }
@@ -1202,7 +1213,7 @@
 
       display: flex;
       flex-direction: column;
-      width: set-calc(2*$padding-x-mob-page, true, 100%);
+      width: set-calc(2 * $padding-x-mob-page, true, 100%);
 
       padding-top: set-calc(32);
     }
