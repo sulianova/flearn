@@ -1495,6 +1495,9 @@ button {
   color: #1F59F5;
   text-decoration: none;
 }
+.faq-wrapper .faq-desc a:hover {
+  color: rgba(31, 89, 245, 0.5);
+}
 .faq-wrapper .faq-list {
   position: relative;
   left: 0;
