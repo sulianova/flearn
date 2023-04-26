@@ -8,18 +8,18 @@
 }
 
 .page-content {
-  margin-top: set-calc(16);
-  padding-top: 0;
+  padding-top: set-calc(16);
+  margin-top: set-calc(56);
 }
 
 .program-wrapper {
   display: grid;
-  grid-gap: 0 set-calc(8);
+  grid-gap: 0 set-calc($s-gap);
   grid-template-columns: repeat(12,minmax(0,1fr));;
-  padding: 0 set-calc(72);
+  padding: 0 set-calc($padding-x-desk-page);
 
   @include set-media(md) {
-    padding: 0 set-calc(16);
+    padding: 0 set-calc($padding-x-mob-page);
   }
 }
 
@@ -31,43 +31,46 @@
 .is-black {
 
   position: relative;
-  left: set-calc(-72);
+  left: set-calc(-$padding-x-desk-page);
 
-  width: set-calc(144, true, 100%);
-  margin-top: set-calc(80);
-  padding: set-calc(54) set-calc(72);
+  width: set-calc(2*$padding-x-desk-page, true, 100%);
+  margin-top: set-calc(120);
+  padding: set-calc(90) set-calc($padding-x-desk-page);
 
   background-color: $black;
   border-radius: set-calc(20);
 
   @include set-media(md) {
-    left: set-calc(-16);
+    left: set-calc(-$padding-x-mob-page);
 
     display: block;
     width: set-calc(32, true, 100%);
     padding: set-calc(40) 0;
+    margin-top: set-calc(120);
   }
 }
 
 .is-grid-inner {
   display: grid;
-  grid-gap: set-calc(8);
+  grid-gap: set-calc(64) set-calc($s-gap);
   grid-template-columns: repeat(12,minmax(0,1fr));
 
   @include set-media(md) {
     display: flex;
     flex-direction: column;
+    grid-gap: set-calc($s-gap);
   }
 }
 
 .is-grid-outer {
   display: grid;
-  grid-gap: set-calc(8) set-calc(8);
+  grid-gap: set-calc($s-gap) set-calc($s-gap);
   grid-template-columns: repeat(12,minmax(0,1fr));
-  padding: 0 cset-calc(72);
+  padding: 0 cset-calc($padding-x-desk-page);
 }
 
 .program-intro {
+  position: relative;
   left: 0;
 
   grid-column: span 12;
@@ -76,12 +79,12 @@
 
   @include set-media(md) {
     position: relative;
-    left: set-calc(-15);
+    left: set-calc(-$padding-x-mob-page);
 
     display: block;
-
     grid-column: span 12;
-    width: set-calc(30, true, 100%);
+    width: set-calc(2*$padding-x-mob-page, true, 100%);
+    min-height: 100%;
   }
 
 }
@@ -92,7 +95,6 @@
   display: flex;
   flex-direction: column;
   height: 100%;
-  margin-bottom: set-calc(40);
   padding: set-calc(32);
   overflow: hidden;
 
@@ -100,7 +102,8 @@
   border-radius: set-calc(20);
 
   @include set-media(md) {
-    padding: set-calc(24) set-calc(16);
+    padding: set-calc($padding-x-mob-page) set-calc($padding-x-mob-page) 0;
+    height: set-calc(660);
   }
 
   .program-intro-categories {
@@ -108,20 +111,25 @@
 
     display: flex;
     flex-wrap: wrap;
-    padding-bottom: set-calc(64);
+    max-width: set-calc(620);
+    padding-bottom: set-calc(80);
+    margin-bottom: cset-calc(-8);
 
     & > div:not(:last-child) {
-      margin-right: set-calc(8);
+      margin-right: set-calc(4);
+    }
+
+    @include set-media(md) {
+      padding-bottom: set-calc(32);
+      margin-bottom: cset-calc(-8);
     }
   }
 
-  .program-intro-categories-item {
-    display: flex;
-    align-items: center;
-  
-    padding: 0 set-calc(16);
+  .program-intro-categories-item {  
+    padding: 0 set-calc($padding-x-mob-page);
+    margin-bottom: set-calc(8);
 
-    border: set-calc(2) solid #222;
+    border: set-calc(2) solid $black;
     border-radius: set-calc(20);
   }
 
@@ -129,45 +137,52 @@
     z-index: 200;;
 
     max-width: set-calc(620);
-    padding-bottom: set-calc(48);
+    padding-bottom: set-calc(32);
 
     @include set-media(md) {
-      padding-bottom: set-calc(40);;
+      padding-bottom: set-calc(32);;
     }
   }
 
   .program-intro-block {
     z-index: 200;
 
-    max-width: set-calc(511);
-    padding-bottom: set-calc(48);
+    max-width: set-calc(620);
+    padding-bottom: set-calc(32);
 
     @include set-media(md) {
-      padding-bottom: set-calc(40);
+      padding-bottom: set-calc(32);
     }
   }
 
   .program-intro-actions {
-    z-index: 200;
+    z-index: 300;
 
     display: flex;
     flex-wrap: wrap;
 
     &-btn {
-      margin: 0 px-to-rem(4px) px-to-rem(4px) 0;
-      padding: px-to-rem(4px) px-to-rem(40px);
+      margin: 0 set-calc(4) set-calc(4) 0;
+      padding: 0 set-calc(48);
+      height: set-calc(40);
 
-      transition: background-color $d-hover;
+      @include set-media(md) {
+        height: set-calc(38);
+      }
     }
   
     &-discount {
-      padding: px-to-rem(4px) px-to-rem(16px);
-
+      padding: 0 set-calc(48);
+      height: set-calc(40);
       color: $black;
+
+      @include set-media(md) {
+        height: set-calc(38);
+      }
     }
   }
 
-  .program-intro-cover img[data-v-desktop]{
+  .program-intro-cover img {
     position: absolute;
     top: 0;
     left: 0;
@@ -185,12 +200,15 @@
 }
 
 .description-wrapper {
-  padding-top: set-calc(80);
+  padding-top: set-calc(140);
+
+  @include set-media(md) {
+    padding-top: set-calc(80);
+  }
 
   .description-title {
     grid-column: span 7;
-    margin-bottom: set-calc(-8);
-    padding-bottom: set-calc(40);
+    padding-bottom: set-calc(32);
   }
 
   .description-head {
@@ -211,56 +229,47 @@
 
     @include set-media(md) {
       display: none;
-      margin-top: set-calc(32);
     }
 
-    &-item:not(:first-child) {
-      @include set-media(md) {
-        margin-top: set-calc(56);
-      }
-    }
   }
 
   .point {
-    @include set-typography(60, 78, 500);
-    margin-bottom: set-calc(8);
-
-    @include set-media(md) {
-      @include set-typography(40, 52, 500);
-    }
+    padding-bottom: set-calc(8);
   }
 
   .point-description {
     color: $gray;
-  }
-
-  .point-number {
-    @include set-typography(60, 78, 500);
-    margin-bottom: set-calc(8);
-    font-variant-caps: all-small-caps;
-
-    @include set-media(md) {
-      @include set-typography(40, 52, 500);
-    }
   }
 }
 
 .modules-wrapper {
   display: flex;
   flex-direction: column;
-  padding-top: set-calc(80);
+  padding-top: set-calc(140);
+
+  @include set-media(md) {
+    padding-top: set-calc(80);
+  }
 
   .modules-head {
+    grid-row-gap: 0;
+
     .modules-title {
       grid-column: 1/-1;
-      margin-bottom: set-calc(-8);
-      padding-bottom: set-calc(40);
+      padding-bottom: set-calc(60);
+
+      @include set-media(md) {
+        padding-bottom: set-calc(32);
+      }
     }
 
     .modules-students-desc {
       grid-column: 1/7;
-      margin-bottom: set-calc(-8);
-      padding-bottom: set-calc(24);
+      padding-bottom: set-calc(32);
+
+      @include set-media(md) {
+        padding-bottom: set-calc(16);
+      }
     }
 
     .modules-menu-wrapper {
@@ -270,7 +279,11 @@
       flex-wrap: wrap;
       grid-column: span 12;
 
-      padding-bottom: set-calc(24);
+      padding-bottom: set-calc(32);
+
+      @include set-media(md) {
+        padding-bottom: set-calc(16);
+      }
     }
 
     .modules-menu-item {
@@ -290,7 +303,7 @@
 
   .modules-list {
     display: grid;
-    grid-row-gap: set-calc(8);
+    grid-row-gap: set-calc($s-gap);
   }
 
   .modules-list-item-info {
@@ -307,10 +320,10 @@
     border-radius: set-calc(20);
 
     @include set-media(md) {
-      left: set-calc(-16);
+      left: set-calc(-$padding-x-mob-page);
 
       width: set-calc(32, true, 100%);
-      padding: set-calc(16);
+      padding: set-calc($padding-x-mob-page) set-calc($padding-x-mob-page);
     }
   }
 
@@ -327,7 +340,7 @@
   }
 
   .modules-list-item-text {
-    padding-bottom: set-calc(100);
+    padding-bottom: set-calc(16);
   }
 
   .modules-list-item-media {
@@ -343,9 +356,9 @@
     border-radius: set-calc(20);
 
     @include set-media(md) {
-      left: set-calc(-16);
+      left: set-calc(-$padding-x-mob-page);
 
-      width: set-calc(32, true, 100%);
+      width: set-calc(2*$padding-x-mob-page, true, 100%);
     }
   }
 
@@ -369,20 +382,20 @@
   }
 
   .modules-list-item-media-author {
-    padding: set-calc(16) set-calc(32);
+    padding: set-calc(20) set-calc(32) set-calc(40);
 
     @include set-media(md) {
-      padding: set-calc(16) set-calc(16);
+      padding: set-calc(8) set-calc($padding-x-mob-page) set-calc(20);
     }
   }
 
   .modules-list-item-media-desc {
-    padding: 0 set-calc(32) set-calc(32);
+    padding: 0 set-calc(32) set-calc(48);
 
     color: $gray;
 
     @include set-media(md) {
-      padding: 0 set-calc(16) set-calc(16);
+      padding: 0 set-calc($padding-x-mob-page) set-calc(16);
     }
   }
 }
@@ -391,20 +404,25 @@
   left: 0;
 
   display: grid;
-  grid-column-gap: set-calc(8);
+  grid-column-gap: set-calc($s-gap);
   grid-template-columns: repeat(12,minmax(0,1fr));
   width: 100%;
-  padding-top: set-calc(80);
+  padding-top: set-calc(140);
 
   @include set-media(md) {
     position: relative;
-
     display: block;
+
+    padding-top: set-calc(80);
   }
 
   .explain-title {
     grid-column: span 12;
-    padding-bottom: set-calc(40);
+    padding-bottom: set-calc(60);
+
+    @include set-media(md) {
+      padding-bottom: set-calc(32);
+    }
   }
 
   .explain-quote {
@@ -415,12 +433,8 @@
     padding-right: set-calc(48);
     padding-bottom: set-calc(40);
 
-    @include set-typography(28, 42, 500);
-
     @include set-media(md) {
       padding-right: set-calc(0);
-
-      @include set-typography(20, 30, 500);
     }
   }
 
@@ -513,29 +527,36 @@
 
     display: block;
     padding-top: set-calc(16);
-
     color: $gray;
+
+    @include set-media(md) {
+      padding-top: set-calc(8);
+    }
   }
   
 }
 
-.author-wrapper {
-  padding-top: set-calc(80);
+.teachers-wrapper {
+  padding-top: set-calc(140);
 
-  .author-title {
-    padding-bottom: set-calc(40);
+  @include set-media(md) {
+    padding-top: set-calc(80);
+  }
+
+  .teachers-title {
+    padding-bottom: set-calc(60);
 
     @include set-media(md) {
-      padding-bottom: set-calc(40);
+      padding-bottom: set-calc(32);
     }
   }
 
-  .author-list {
+  .teachers-list {
     position: relative;
     left: 0;
 
     display: grid;
-    grid-gap: set-calc(8);
+    grid-gap: set-calc($s-gap);
     grid-template-columns: repeat(12,minmax(0,1fr));
     width: 100%;
 
@@ -543,13 +564,13 @@
     border-radius: set-calc(20);
 
     @include set-media(md) {
-      left: set-calc(-16);
+      left: set-calc(-$padding-x-mob-page);
 
-      width: set-calc(32, true, 100%);
+      width: set-calc(2*$padding-x-mob-page, true, 100%);
     }
   }
 
-  .author-list-item {
+  .teachers-list-item {
     display: grid;
     grid-column: span 12;
     grid-column-gap: set-calc(40);
@@ -563,9 +584,9 @@
 
       display: grid;
       grid-column-gap: set-calc(16);
-      grid-template-columns: repeat(2,minmax(0,1fr));
+      grid-template-columns: set-calc(130) 1fr;
       min-height: set-calc(170);
-      padding: set-calc(16);
+      padding: set-calc($padding-x-mob-page) set-calc($padding-x-mob-page);
 
       background: $light-gray;
       border-radius: set-calc(20);
@@ -613,7 +634,6 @@
 
     &-description {
       grid-column: 2/2;
-      padding-bottom: set-calc(16);
     }
 
     &-link {
@@ -623,7 +643,17 @@
       align-items: flex-end;
       justify-content: space-between;
 
-      text-transform: uppercase;
+
+      a {
+        display: block;
+        text-align: right;
+        font-family: $font-family;
+        position: relative;
+      }
+
+      a:hover {
+        color: $gray;
+      }
 
       @include set-media(md) {
         display: none;
@@ -635,14 +665,13 @@
 
 .gallery {
   position: relative;
-
   display: block;
 
   &-btns {
     display: flex;
     flex-wrap: wrap;
     align-items: baseline;
-    padding: set-calc(80) set-calc(16) set-calc(8);
+    padding: set-calc(60) 0 set-calc(8);
 
     @include set-media(md) {
       display: none;
@@ -650,8 +679,8 @@
   }
 
   &-paginationBtn {
-    @include set-typography(64, 64, 800);
     padding: 0;
+    font-family: $font-family;
 
     color: $gray;
 
@@ -662,8 +691,12 @@
     cursor: pointer;
   }
 
+  &-paginationBtn:hover {
+    opacity: 0.5;
+  }
+
   .swiper-btn-prev {
-    margin-right: set-calc(32);
+    margin-right: set-calc(16);
   }
 
   .swiper-btn-next {
@@ -671,16 +704,16 @@
   }
 
   &-container {
-    left: set-calc(-72);
+    left: set-calc(-$padding-x-desk-page);
 
-    width: set-calc(144, true, 100%);
-    padding: 0 set-calc(72);
+    width: set-calc(2*$padding-x-desk-page, true, 100%);
+    padding: 0 set-calc($padding-x-desk-page);
 
     @include set-media(md) {
-      left: set-calc(-16);
+      left: set-calc(-$padding-x-mob-page);
 
-      width: set-calc(30, true, 100%);
-      margin-top: set-calc(40);
+      width: set-calc(2*$padding-x-mob-page, true, 100%);
+      margin-top: set-calc(16);
       padding: 0 set-calc(8);
     }
   }
@@ -743,6 +776,10 @@
     display: flex;
     flex-wrap: wrap;
     padding-top: set-calc(16);
+
+    @include set-media(md) {
+      padding-top: set-calc(8);
+    }
   }
 }
 
@@ -750,20 +787,21 @@
   left: 0;
 
   display: grid;
-  grid-column-gap: set-calc(8);
+  grid-column-gap: set-calc($s-gap);
   grid-template-columns: repeat(12,minmax(0,1fr));
   width: 100%;
-  padding-top: set-calc(80);
+  padding-top: set-calc(140);
 
   @include set-media(md) {
     position: relative;
-
     display: block;
+
+    padding-top: set-calc(80);
   }
 
   &-title {
     grid-column: span 5;
-    padding-bottom: set-calc(40);
+    padding-bottom: set-calc(32);
   }
 
   .content-block-embed {
@@ -846,12 +884,16 @@
     padding-top: set-calc(16);
 
     color: $gray;
+
+    @include set-media(md) {
+      padding-top: set-calc(8);
+    }
   }
 }
 
 .decision-form-wrapper {
   display: grid;
-  grid-gap: set-calc(8);
+  grid-gap: set-calc($s-gap);
   grid-column: span 12;
   grid-template-columns: repeat(12,minmax(0,1fr));
 
@@ -870,8 +912,8 @@
     justify-content: space-between;
     width: 100%;
 
-    padding: set-calc(24);
-    padding-right: set-calc(64);
+    padding: set-calc(32);
+    padding-right: set-calc(72);
 
     background: $light-gray;
 
@@ -881,22 +923,26 @@
       position: relative;
 
       display: block;
-      padding: set-calc(16);
-      padding-right: set-calc(8);
+      padding: set-calc($padding-x-mob-page) set-calc($padding-x-mob-page);
 
       border-radius: set-calc(20);
     }
 
     &-title {
-      padding-bottom: set-calc(24);
+      padding-bottom: set-calc(32);
+
+      @include set-media(md) {
+        padding-bottom: set-calc(24);
+      }
     }
 
     &-subtitle {
       width: set-calc(435);
-      padding-bottom: set-calc(32);
+      padding-bottom: set-calc(40);
 
       @include set-media(md) {
         width: set-calc(382);
+        padding-bottom: set-calc(32);
       }
     }
 
@@ -912,18 +958,15 @@
     &-credit-was {
       @include set-typography(20, 25, 500, line-through);
       color: $gray;
-      letter-spacing: -0.05em;
+      letter-spacing: -0.05rem;
     }
 
     &-credit-price {
       position: relative;
-
       display: inline-block;
 
       color: $blue;
-      letter-spacing: -0.05em;
-
-      @include set-typography(40, 50, 500);
+      letter-spacing: -0.05rem;
     }
 
     &-credit-price-discount {
@@ -931,27 +974,29 @@
       position: absolute;
       top: set-calc(-24);
       right: set-calc(-70);
+      letter-spacing: 0rem;
 
       display: block;
       height: set-calc(41);
-      padding: set-calc(10);
+      padding: set-calc(8);
 
       color: $white;
 
       background: $blue;
       border-radius: set-calc(20);
-
-      @include set-typography(16, 20, 500);
     }
 
     &-course-name {
       position: relative;
-
       display: block;
 
-      padding-top: set-calc(90);
+      padding: set-calc(100) 0 set-calc(5);
 
       color: $gray;
+
+      @include set-media(md) {
+        padding: set-calc(32) 0 0;
+      }
     }
   }
 
@@ -963,7 +1008,7 @@
     width: 100%;
 
     margin: 0;
-    padding: set-calc(24);
+    padding: set-calc(32);
     overflow: hidden;
 
     background: $light-gray;
@@ -972,16 +1017,16 @@
 
     @include set-media(md) {
       margin-top: set-calc(8);
+      padding: set-calc($padding-x-mob-page);
     }
   }
 
   .decision-form-title {
-    padding-bottom: set-calc(16);
+    padding-bottom: set-calc(32);
   }
 
   .decision-form {
     position: relative;
-
     display: block;
   }
 
@@ -1007,7 +1052,7 @@
 
     background: none;
     border: none;
-    border-bottom: px-to-rem(2px) solid $white;
+    border-bottom: set-calc(2) solid $white;
     border-radius: 0;
     outline: none;
     box-shadow: none;
@@ -1018,7 +1063,7 @@
 
     display: flex;
     align-items: center;
-    padding: 0 0 set-calc(30);
+    padding: 0 0 set-calc(32);
 
     color: $gray;
 
@@ -1034,7 +1079,7 @@
 
       cursor: pointer;
 
-      img {
+      svg {
         width: set-calc(18);
         height: set-calc(18);
       }
@@ -1049,18 +1094,23 @@
 
       cursor: pointer;
     }
-  }
 
-  input[type="checkbox" i] {
-    box-sizing: border-box;
-    margin: px-to-rem(3px) px-to-rem(3px) px-to-rem(3px) px-to-rem(4px);
-    padding: initial;
+    input[type="checkbox"] {
+      box-sizing: border-box;
+      margin: set-calc(3) set-calc(3) set-calc(3) set-calc(4);
+      padding: initial;
+  
+      background-color: initial;
+      border: initial;
+      cursor: default;
+  
+      appearance: auto;
+    }
 
-    background-color: initial;
-    border: initial;
-    cursor: default;
-
-    appearance: auto;
+    input[type="checkbox"]:not(:checked )+ label #checkmark {
+      display: none;
+      transition: display $d-hover linear;
+    }
   }
 
   .decision-form-choice-submit-button {
@@ -1119,7 +1169,11 @@
 
   .faq-title {
     grid-column: span 5;
-    padding-bottom: set-calc(40);
+    padding-bottom: set-calc(60);
+
+    @include set-media(md) {
+      padding-bottom: set-calc(32);
+    }
   }
 
   .faq-desc {
@@ -1136,24 +1190,25 @@
     left: 0;
 
     display: grid;
-    grid-gap: set-calc(8) set-calc(8);
+    grid-gap: set-calc($s-gap) set-calc($s-gap);
     grid-template-columns: repeat(12,minmax(0,1fr));
     width: 100%;
-    padding-top: set-calc(40);
+
+    padding-top: set-calc(60);
 
     @include set-media(md) {
       position: relative;
-      left: set-calc(-16);
+      left: set-calc(-$padding-x-mob-page);
 
-      display: grid;
-      grid-row-gap: set-calc(8);
-      grid-template-columns: repeat(1,minmax(0,1fr));
-      width: set-calc(32, true, 100%);
+      display: flex;
+      flex-direction: column;
+      width: set-calc(2*$padding-x-mob-page, true, 100%);
+
+      padding-top: set-calc(32);
     }
   }
 
   .faq-list-item {
-
     position: relative;
 
     grid-column: span 6;
@@ -1164,13 +1219,12 @@
     border-radius: set-calc(20);
 
     @include set-media(md) {
-
       position: relative;
 
       display: flex;
       flex-direction: column;
       grid-row-gap: 0;
-      padding: set-calc(16);
+      padding: set-calc(16) set-calc($padding-x-mob-page);
     }
 
     &-question {

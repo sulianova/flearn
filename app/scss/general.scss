@@ -32,9 +32,39 @@
   src: url("../fonts/TTNormsPro-Light.ttf");
 }
 
+@font-face {
+  font-weight: 800;
+  font-family: TTInterphasesPro;
+  src: url("../fonts/TTInterphasesPro-EtraBold.ttf");
+}
+
+@font-face {
+  font-weight: 700;
+  font-family: TTInterphasesPro;
+  src: url("../fonts/TTInterphasesPro-Bold.ttf");
+}
+
+@font-face {
+  font-weight: 500;
+  font-family: TTInterphasesPro;
+  src: url("../fonts/TTInterphasesPro-Medium.ttf");
+}
+
+@font-face {
+  font-weight: 400;
+  font-family: TTInterphasesPro;
+  src: url("../fonts/TTInterphasesPro-Regular.ttf");
+}
+
+@font-face {
+  font-weight: 300;
+  font-family: TTInterphasesPro;
+  src: url("../fonts/TTInterphasesPro-Light.ttf");
+}
+
 html {
   color: $black;
-  font-family: TTNormsPro, sans-serif;
+  font-family: $font-family;
 
   background-color: $white;
 
@@ -59,18 +89,20 @@ button {
 }
 
 h1 {
-  @include set-typography(80, 88, 800);
+  @include set-typography(88, 96, 700);
+  letter-spacing: -.01rem;
 
   @include set-media(md) {
-    @include set-typography(48, 52.8, 800);
+    @include set-typography(48, 52, 700)
   }
 }
 
 h2 {
-  @include set-typography(56, 67.2, 700);
+  @include set-typography(56, 61, 700);
+  letter-spacing: -.01rem;
 
   @include set-media(md) {
-    @include set-typography(40, 46, 700);
+    @include set-typography(40, 44, 700)
   }
 }
 
@@ -103,21 +135,18 @@ a {
   color: inherit;
   text-decoration: none;
   cursor: pointer;
-  transition: opacity 0.2s ease 0s, color ease 0s;
+  transition: background-color $d-hover, color $d-hover;
 }
 
-.s-text-24 {
-  @include set-typography(24, 32, 500);
+button {
+  word-spacing: 1px;
+  border: none;
+  padding: 0;
+  background: none;
+  outline: none;
 
-  @include set-media(md) {
-    @include set-typography(20, 28, 500)
-  }
-}
-
-.s-text-18 {
-  @include set-typography(18, 24, 500);
-
-  @include set-media(md) {
-    @include set-typography(16, 22, 500)
-  }
+  -ms-text-size-adjust: 100%;
+  -webkit-text-size-adjust: 100%;
+  -moz-osx-font-smoothing: grayscale;
+  -webkit-font-smoothing: antialiased;
 }

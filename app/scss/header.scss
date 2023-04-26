@@ -1,28 +1,30 @@
 .header {
-  position: relative;
-  // position: fixed;
-  // top: 0;
-  // right: 0;
-  // left: 0;
+  position: fixed;
+  top: 0;
+  right: 0;
+  left: 0;
   z-index: 1000;
   background-color: $white;
 
-  .container {
-    padding: 0 set-calc(72);
+  &-wrapper {
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    padding: 0 set-calc($padding-x-desk-page);
 
     @include set-media(md) {
-      padding: 0 set-calc(16);
+      padding: 0 set-calc($padding-x-mob-page);
     }
   }
 
   .logo {
+    display: flex;
     margin: set-calc(8) 0;
-
-    @include set-typography(24, 24, 700);
+    align-items: center;
   }
 
   .nav-menu {
-    @include set-typography(16, 24, 500);
+    display: flex;
     margin: 0 0 0 auto;
   }
   
@@ -37,18 +39,16 @@
   }
 
   .nav-menu a {
-    transition: $d-hover color;
     &:hover {
       color: $gray;
 
       cursor: pointer;
     }
+    transition: $d-hover color;
   }
 
   .login {
     margin-left: set-calc(56);
-
-    @include set-typography(16, 24, 500);
   }
 
   .nav-toggle {

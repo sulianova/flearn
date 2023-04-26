@@ -13,9 +13,9 @@ $btn-colors-hover: (
 
   background: none;
 
-  border: none;
   border-radius: set-calc(20);
   cursor: pointer;
+  transition: background-color $d-hover, color $d-hover;
 }
 
 .btn-adapt {

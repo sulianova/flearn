@@ -1,15 +1,15 @@
 .decision-form-wrapper(id="decision-form")
   .decision-form-info
-    h3.decision-form-info-title Записаться на онлайн курс
+    h1.decision-form-info-title.s-text-56 Записаться на онлайн курс
     .decision-form-info-subtitle.s-text-24 Премьерный поток с авторскими проверками с 14 апреля по 14 мая
     .decision-form-info-credit-container
       s.decision-form-info-credit-was 14 000 ₽ 
-      .decision-form-info-credit-price 
+      .decision-form-info-credit-price.s-text-56-medium 
         span 7 000 ₽ 
-        span.decision-form-info-credit-price-discount -30%
+        span.decision-form-info-credit-price-discount.s-text-18 -30%
       .decision-form-info-course-name.s-text-24 Короткий курс для начинающих: “Как рисовать свободно”
   .decision-form-container
-    h3.decision-form-title.s-text-24 Заполните форму и я свяжусь с вами, чтобы оформить оплату
+    h1.decision-form-title.s-text-24 Заполните форму и я свяжусь с вами, чтобы оформить оплату
     .decision-form
       form(data-hs-cf-bound="true")
         .input-field(model="name")
@@ -24,7 +24,13 @@
         .decision-form-choice-agreement
           input.decision-form-choice-agreement-checkbox(type="checkbox" id="agreement-consult" checked="checked")
           label(for="agreement-consult")
-            img(src="./images/checkbox.svg")
+            svg(width="17" height="18" viewBox="0 0 17 18" fill="none" xmlns="http://www.w3.org/2000/svg")
+              g(id="checkmark" clip-path="url(#clip0_1024_2304)")
+                path(d="M2 2.5L8.5 15.5L15 2.5" stroke="#C4C4C4" stroke-width="2" stroke-linecap="round")
+              rect(x="1" y="1.5" width="15" height="15" stroke="#C4C4C4" stroke-width="2")
+              defs
+                clipPath(id="clip0_1024_2304")
+                  rect(y="0.5" width="17" height="17" fill="white")
             span.decision-form-choice-agreement-text.s-text-18
               | Я соглашаюсь
               |

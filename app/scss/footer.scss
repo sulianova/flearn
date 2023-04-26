@@ -3,14 +3,17 @@
   display: block;
   background: $black;
   color: $white;
-  @include set-typography(16, 19, 500);
-  padding: set-calc(32) set-calc(72);
+  padding: set-calc(32) set-calc($padding-x-desk-page);
   margin-top: set-calc(80);
 
   border-bottom: px-to-rem(1px) solid rgb(70, 70, 70);
 
   @include set-media(md) {
-    padding: set-calc(32) set-calc(16);
+    padding: set-calc(32) set-calc($padding-x-mob-page);
+  }
+
+  a:hover {
+    opacity: 0.5;
   }
 
   &-inner {
@@ -54,8 +57,7 @@
   }
 
   &-row {
-    @include set-media(md) {
-    }
+    display: block;
   }
 
   &-row-item {
@@ -66,7 +68,8 @@
     padding-bottom: set-calc(8);
   }
 
-  .logo-title {
-    @include set-typography(24, 24, 500);
+  .logo {
+    display: flex;
+    align-items: center;
   }
 }

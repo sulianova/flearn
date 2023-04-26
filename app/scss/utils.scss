@@ -60,14 +60,3 @@
       @return calc($value2 + var(--scale) * $value);
     } @else { @return calc(var(--scale) * $value) }
 }
-
-// @use "variables.scss" as variables;
-// @mixin add-css-variables($module) {
-//   :root {
-//    @each $name, $value in $module {
-//      --#{$name}: #{$value};
-//    }
-//   }
-// }
-// $variables: meta.module-variables('variables');
-// @include add-css-variables($variables);
