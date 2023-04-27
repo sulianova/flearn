@@ -47,6 +47,11 @@
   src: url("../fonts/TTInterphasesPro-Bold.ttf");
 }
 @font-face {
+  font-weight: 600;
+  font-family: TTInterphasesPro;
+  src: url("../fonts/TTInterphasesPro-DemiBold.ttf");
+}
+@font-face {
   font-weight: 500;
   font-family: TTInterphasesPro;
   src: url("../fonts/TTInterphasesPro-Medium.ttf");
@@ -176,14 +181,14 @@ button {
 }
 
 .s-text-16 {
-  font-weight: 500;
+  font-weight: 600;
   font-size: calc(var(--scale) * 16);
   line-height: calc(var(--scale) * 22);
   text-transform: inherit;
 }
 @media (max-width: 767.98px) {
   .s-text-16 {
-    font-weight: 500;
+    font-weight: 600;
     font-size: calc(var(--scale) * 14);
     line-height: calc(var(--scale) * 19);
     text-transform: inherit;
@@ -191,22 +196,37 @@ button {
 }
 
 .s-text-18 {
-  font-weight: 500;
+  font-weight: 600;
   font-size: calc(var(--scale) * 18);
   line-height: calc(var(--scale) * 24);
   text-transform: inherit;
 }
 @media (max-width: 767.98px) {
   .s-text-18 {
-    font-weight: 500;
+    font-weight: 600;
     font-size: calc(var(--scale) * 16);
     line-height: calc(var(--scale) * 22);
     text-transform: inherit;
   }
 }
 
+.s-text-21 {
+  font-weight: 600;
+  font-size: calc(var(--scale) * 21);
+  line-height: calc(var(--scale) * 28);
+  text-transform: inherit;
+}
+@media (max-width: 767.98px) {
+  .s-text-21 {
+    font-weight: 600;
+    font-size: calc(var(--scale) * 14);
+    line-height: calc(var(--scale) * 19);
+    text-transform: inherit;
+  }
+}
+
 .s-text-21-uppercase {
-  font-weight: 500;
+  font-weight: 600;
   font-size: calc(var(--scale) * 21);
   line-height: calc(var(--scale) * 28);
   text-transform: inherit;
@@ -214,7 +234,7 @@ button {
 }
 @media (max-width: 767.98px) {
   .s-text-21-uppercase {
-    font-weight: 500;
+    font-weight: 600;
     font-size: calc(var(--scale) * 14);
     line-height: calc(var(--scale) * 19);
     text-transform: inherit;
@@ -222,14 +242,14 @@ button {
 }
 
 .s-text-24 {
-  font-weight: 500;
+  font-weight: 600;
   font-size: calc(var(--scale) * 24);
   line-height: calc(var(--scale) * 32);
   text-transform: inherit;
 }
 @media (max-width: 767.98px) {
   .s-text-24 {
-    font-weight: 500;
+    font-weight: 600;
     font-size: calc(var(--scale) * 20);
     line-height: calc(var(--scale) * 28);
     text-transform: inherit;
@@ -237,14 +257,14 @@ button {
 }
 
 .s-text-28 {
-  font-weight: 500;
+  font-weight: 600;
   font-size: calc(var(--scale) * 28);
   line-height: calc(var(--scale) * 37);
   text-transform: inherit;
 }
 @media (max-width: 767.98px) {
   .s-text-28 {
-    font-weight: 500;
+    font-weight: 600;
     font-size: calc(var(--scale) * 20);
     line-height: calc(var(--scale) * 28);
     text-transform: inherit;
@@ -252,14 +272,14 @@ button {
 }
 
 .s-text-36 {
-  font-weight: 700;
+  font-weight: 600;
   font-size: calc(var(--scale) * 36);
   line-height: calc(var(--scale) * 39);
   text-transform: inherit;
 }
 @media (max-width: 767.98px) {
   .s-text-36 {
-    font-weight: 700;
+    font-weight: 600;
     font-size: calc(var(--scale) * 24);
     line-height: calc(var(--scale) * 26);
     text-transform: inherit;
@@ -267,7 +287,7 @@ button {
 }
 
 .s-text-56 {
-  font-weight: 700;
+  font-weight: 600;
   font-size: calc(var(--scale) * 56);
   line-height: calc(var(--scale) * 61);
   text-transform: inherit;
@@ -275,23 +295,7 @@ button {
 }
 @media (max-width: 767.98px) {
   .s-text-56 {
-    font-weight: 700;
-    font-size: calc(var(--scale) * 40);
-    line-height: calc(var(--scale) * 44);
-    text-transform: inherit;
-  }
-}
-
-.s-text-56-medium {
-  font-weight: 500;
-  font-size: calc(var(--scale) * 56);
-  line-height: calc(var(--scale) * 61);
-  text-transform: inherit;
-  letter-spacing: -0.01rem;
-}
-@media (max-width: 767.98px) {
-  .s-text-56-medium {
-    font-weight: 500;
+    font-weight: 600;
     font-size: calc(var(--scale) * 40);
     line-height: calc(var(--scale) * 44);
     text-transform: inherit;
@@ -299,7 +303,7 @@ button {
 }
 
 .s-text-88 {
-  font-weight: 700;
+  font-weight: 600;
   font-size: calc(var(--scale) * 88);
   line-height: calc(var(--scale) * 96);
   text-transform: inherit;
@@ -307,7 +311,7 @@ button {
 }
 @media (max-width: 767.98px) {
   .s-text-88 {
-    font-weight: 700;
+    font-weight: 600;
     font-size: calc(var(--scale) * 48);
     line-height: calc(var(--scale) * 52);
     text-transform: inherit;
@@ -398,7 +402,7 @@ button {
 
 .footer {
   display: block;
-  background: #222;
+  background: #131313;
   color: #fff;
   padding: calc(var(--scale) * 32) calc(var(--scale) * 72);
   margin-top: calc(var(--scale) * 80);
@@ -527,7 +531,7 @@ button {
   width: calc(100% + var(--scale) * 144);
   margin-top: calc(var(--scale) * 120);
   padding: calc(var(--scale) * 90) calc(var(--scale) * 72);
-  background-color: #222;
+  background-color: #131313;
   border-radius: calc(var(--scale) * 20);
 }
 @media (max-width: 767.98px) {
@@ -1313,10 +1317,7 @@ button {
   align-items: flex-start;
 }
 .decision-form-wrapper .decision-form-info-credit-was {
-  font-weight: 500;
-  font-size: calc(var(--scale) * 20);
-  line-height: calc(var(--scale) * 25);
-  text-transform: line-through;
+  text-decoration: line-through;
   color: #C4C4C4;
   letter-spacing: -0.05rem;
 }

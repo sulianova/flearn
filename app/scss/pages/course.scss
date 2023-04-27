@@ -37,7 +37,7 @@
   margin-top: set-calc(120);
   padding: set-calc(90) set-calc($padding-x-desk-page);
 
-  background-color: $black;
+  background-color: $black-new;
   border-radius: set-calc(20);
 
   @include set-media(md) {
@@ -963,7 +963,7 @@
     }
 
     &-credit-was {
-      @include set-typography(20, 25, 500, line-through);
+      text-decoration: line-through;
       color: $gray;
       letter-spacing: -0.05rem;
     }

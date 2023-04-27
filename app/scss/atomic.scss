@@ -1,76 +1,75 @@
 //xxs
 .s-text-16 {
-  @include set-typography(16, 22, 500);
+  @include set-typography(16, 22, 600);
 
   @include set-media(md) {
-    @include set-typography(14, 19, 500)
+    @include set-typography(14, 19, 600)
   }
 }
 //xs
 .s-text-18 {
-  @include set-typography(18, 24, 500);
+  @include set-typography(18, 24, 600);
 
   @include set-media(md) {
-    @include set-typography(16, 22, 500)
+    @include set-typography(16, 22, 600)
   }
 }
-//buttons with arrow
+
+.s-text-21  {
+  @include set-typography(21, 28, 600);
+
+  @include set-media(md) {
+    @include set-typography(14, 19, 600)
+  }
+}
+//buttons & headers
 .s-text-21-uppercase  {
-  @include set-typography(21, 28, 500);
+  @include set-typography(21, 28, 600);
   text-transform: uppercase;
 
   @include set-media(md) {
-    @include set-typography(14, 19, 500)
+    @include set-typography(14, 19, 600)
   }
 }
 //s
 .s-text-24 {
-  @include set-typography(24, 32, 500);
+  @include set-typography(24, 32, 600);
 
   @include set-media(md) {
-    @include set-typography(20, 28, 500)
+    @include set-typography(20, 28, 600)
   }
 }
 //cards
 .s-text-28 {
-  @include set-typography(28, 37, 500);
+  @include set-typography(28, 37, 600);
 
   @include set-media(md) {
-    @include set-typography(20, 28, 500)
+    @include set-typography(20, 28, 600)
   }
 }
-//cards-bold
+//cards
 .s-text-36 {
-  @include set-typography(36, 39, 700);
+  @include set-typography(36, 39, 600);
 
   @include set-media(md) {
-    @include set-typography(24, 26, 700)
+    @include set-typography(24, 26, 600)
   }
 }
 //h2
 .s-text-56 {
-  @include set-typography(56, 61, 700);
+  @include set-typography(56, 61, 600);
   letter-spacing: -.01rem;
 
   @include set-media(md) {
-    @include set-typography(40, 44, 700)
-  }
-}
-//price
-.s-text-56-medium {
-  @include set-typography(56, 61, 500);
-  letter-spacing: -.01rem;
-
-  @include set-media(md) {
-    @include set-typography(40, 44, 500)
+    @include set-typography(40, 44, 600)
   }
 }
 //h1
 .s-text-88 {
-  @include set-typography(88, 96, 700);
+  @include set-typography(88, 96, 600);
   letter-spacing: -.01rem;
 
   @include set-media(md) {
-    @include set-typography(48, 52, 700)
+    @include set-typography(48, 52, 600)
   }
 }
