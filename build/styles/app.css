@@ -180,6 +180,13 @@ button {
   -webkit-font-smoothing: antialiased;
 }
 
+.s-text-14 {
+  font-weight: 600;
+  font-size: calc(var(--scale) * 14);
+  line-height: calc(var(--scale) * 19);
+  text-transform: inherit;
+}
+
 .s-text-16 {
   font-weight: 600;
   font-size: calc(var(--scale) * 16);
@@ -206,6 +213,22 @@ button {
     font-weight: 600;
     font-size: calc(var(--scale) * 16);
     line-height: calc(var(--scale) * 22);
+    text-transform: inherit;
+  }
+}
+
+.s-text-20-uppercase {
+  font-weight: 600;
+  font-size: calc(var(--scale) * 20);
+  line-height: calc(var(--scale) * 26);
+  text-transform: inherit;
+  text-transform: uppercase;
+}
+@media (max-width: 767.98px) {
+  .s-text-20-uppercase {
+    font-weight: 600;
+    font-size: calc(var(--scale) * 18);
+    line-height: calc(var(--scale) * 24);
     text-transform: inherit;
   }
 }
@@ -358,7 +381,7 @@ button {
   transition: 0.2s color;
 }
 .header .nav-menu a:hover {
-  color: #C4C4C4;
+  color: #969696;
   cursor: pointer;
 }
 .header .login {
@@ -486,7 +509,7 @@ button {
   background-color: #1F59F5;
 }
 
-.btn-light-gray {
+.btn-beige {
   color: #fff;
   background-color: #F3F3F3;
 }
@@ -1067,7 +1090,7 @@ button {
   text-align: right;
 }
 .teachers-wrapper .teachers-list-item-link a:hover {
-  color: #C4C4C4;
+  color: #969696;
 }
 @media (max-width: 767.98px) {
   .teachers-wrapper .teachers-list-item-link {
@@ -1092,7 +1115,7 @@ button {
 }
 .gallery-paginationBtn {
   padding: 0;
-  color: #C4C4C4;
+  color: #aaa;
   font-family: TTInterphasesPro, sans-serif;
   background: none;
   border: none;
@@ -1386,7 +1409,7 @@ button {
 .decision-form-wrapper .input-field-input {
   position: relative;
   width: 100%;
-  padding: cset-calc(4) 0 calc(var(--scale) * 8);
+  padding: calc(var(--scale) * 4) 0 calc(var(--scale) * 8);
   color: #C4C4C4;
   background: none;
   border: none;

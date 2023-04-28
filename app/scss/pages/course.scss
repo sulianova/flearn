@@ -98,7 +98,7 @@
   padding: set-calc(32);
   overflow: hidden;
 
-  background: $light-gray;
+  background: $beige;
   border-radius: set-calc(20);
 
   @include set-media(md) {
@@ -239,7 +239,7 @@
   }
 
   .point-description {
-    color: $gray;
+    color: $text-grey;
   }
 }
 
@@ -296,7 +296,7 @@
 
       padding: set-calc(2) set-calc(16) set-calc(4);
 
-      background: $light-gray;
+      background: $beige;
       border-radius: set-calc(20);
       cursor: pointer;
     }
@@ -317,7 +317,7 @@
     width: 100%;
     padding: set-calc(32);
 
-    background-color: $light-gray;
+    background-color: $beige;
     border-radius: set-calc(20);
 
     @include set-media(md) {
@@ -333,7 +333,7 @@
 
     padding-bottom: set-calc(8);
 
-    color: $gray;
+    color: $text-grey;
   }
 
   .modules-list-item-title {
@@ -353,7 +353,7 @@
     grid-column: span 6;
     width: 100%;
 
-    background-color: $light-gray;
+    background-color: $beige;
     border-radius: set-calc(20);
 
     @include set-media(md) {
@@ -393,7 +393,7 @@
   .modules-list-item-media-desc {
     padding: 0 set-calc(32) set-calc(48);
 
-    color: $gray;
+    color: $text-grey;
 
     @include set-media(md) {
       padding: 0 set-calc($padding-x-mob-page) set-calc(16);
@@ -530,7 +530,7 @@
     display: block;
     padding-top: set-calc(16);
 
-    color: $gray;
+    color: $text-grey;
 
     @include set-media(md) {
       padding-top: set-calc(8);
@@ -563,7 +563,7 @@
     grid-template-columns: repeat(12,minmax(0,1fr));
     width: 100%;
 
-    background: $light-gray;
+    background: $beige;
     border-radius: set-calc(20);
 
     @include set-media(md) {
@@ -591,7 +591,7 @@
       min-height: set-calc(170);
       padding: set-calc($padding-x-mob-page) set-calc($padding-x-mob-page);
 
-      background: $light-gray;
+      background: $beige;
       border-radius: set-calc(20);
     }
 
@@ -657,7 +657,7 @@
       }
 
       a:hover {
-        color: $gray;
+        color: $grey-hover;
       }
 
       @include set-media(md) {
@@ -687,7 +687,7 @@
   &-paginationBtn {
     padding: 0;
 
-    color: $gray;
+    color: $grey;
     font-family: $font-family;
 
     background: none;
@@ -890,7 +890,7 @@
     display: block;
     padding-top: set-calc(16);
 
-    color: $gray;
+    color: $text-grey;
 
     @include set-media(md) {
       padding-top: set-calc(8);
@@ -922,7 +922,7 @@
     padding: set-calc(32);
     padding-right: set-calc(72);
 
-    background: $light-gray;
+    background: $beige;
 
     border-radius: set-calc(20);
 
@@ -964,7 +964,7 @@
 
     &-credit-was {
       text-decoration: line-through;
-      color: $gray;
+      color: $text-grey;
       letter-spacing: -0.05rem;
     }
 
@@ -1001,7 +1001,7 @@
 
       padding: set-calc(100) 0 set-calc(5);
 
-      color: $gray;
+      color: $text-grey;
 
       @include set-media(md) {
         padding: set-calc(32) 0 0;
@@ -1020,7 +1020,7 @@
     padding: set-calc(32);
     overflow: hidden;
 
-    background: $light-gray;
+    background: $beige;
 
     border-radius: set-calc(20);
 
@@ -1056,9 +1056,9 @@
     position: relative;
 
     width: 100%;
-    padding: cset-calc(4) 0 set-calc(8);
+    padding: set-calc(4) 0 set-calc(8);
 
-    color: $gray;
+    color: $text-grey;
 
     background: none;
     border: none;
@@ -1075,7 +1075,7 @@
     align-items: center;
     padding: 0 0 set-calc(32);
 
-    color: $gray;
+    color: $text-grey;
 
     &-checkbox {
       display: none;
@@ -1230,7 +1230,7 @@
     height: auto;
     padding: set-calc(32);
 
-    background-color: $light-gray;
+    background-color: $beige;
     border-radius: set-calc(20);
 
     @include set-media(md) {
