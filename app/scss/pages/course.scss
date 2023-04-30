@@ -8,7 +8,7 @@
 }
 
 .page-content {
-  margin-top: set-calc(56);
+  margin-top: set-calc(16);
   padding-top: set-calc(16);
 }
 
@@ -52,8 +52,9 @@
 
 .is-grid-inner {
   display: grid;
-  grid-gap: set-calc(64) set-calc($s-gap);
+  grid-gap: 0 set-calc(4 * $s-gap);
   grid-template-columns: repeat(12,minmax(0,1fr));
+  grid-template-rows: repeat(4, auto);
 
   @include set-media(md) {
     display: flex;
@@ -208,38 +209,33 @@
   }
 
   .description-title {
-    grid-column: span 7;
-    padding-bottom: set-calc(32);
+    padding-bottom: set-calc(60);
+
+    @include set-media(md) {
+      padding-bottom: set-calc(32);
+    }
   }
 
   .description-head {
-    grid-column: span 6;
-
-    &-text:not(:last-child) {
-      margin-bottom: set-calc(16);
-    }
-  }
-
-  .description-list {
-    display: flex;
-    flex-direction: column;
-    grid-column: 8/-1;
-    justify-content: space-between;
-    height: 100%;
-    padding-top: 0;
-
-    @include set-media(md) {
-      display: none;
+    &-question {
+      grid-column: span 6;
+      border-top: set-calc(calc($s-gap / 2)) solid $black-new;
+      padding-top: set-calc(8);
     }
 
-  }
+    &-answear {
+      grid-column: span 6;
+      border-top: set-calc(calc($s-gap / 2)) solid $black-new;
+      padding-top: set-calc(8);
+    }
 
-  .point {
-    padding-bottom: set-calc(8);
-  }
+    &-answear:not(:last-child) {
+      margin-bottom: set-calc(80);
 
-  .point-description {
-    color: $text-grey;
+      @include set-media(md) {
+        margin-bottom: set-calc(40);
+      }
+    }
   }
 }
 

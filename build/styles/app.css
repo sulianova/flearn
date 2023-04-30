@@ -230,6 +230,7 @@ button {
     font-size: calc(var(--scale) * 18);
     line-height: calc(var(--scale) * 24);
     text-transform: inherit;
+    text-transform: uppercase;
   }
 }
 
@@ -261,6 +262,7 @@ button {
     font-size: calc(var(--scale) * 14);
     line-height: calc(var(--scale) * 19);
     text-transform: inherit;
+    text-transform: uppercase;
   }
 }
 
@@ -342,10 +344,7 @@ button {
 }
 
 .header {
-  position: fixed;
-  top: 0;
-  right: 0;
-  left: 0;
+  position: relative;
   z-index: 1000;
   background-color: #fff;
 }
@@ -527,7 +526,7 @@ button {
 }
 
 .page-content {
-  margin-top: calc(var(--scale) * 56);
+  margin-top: calc(var(--scale) * 16);
   padding-top: calc(var(--scale) * 16);
 }
 
@@ -569,8 +568,9 @@ button {
 
 .is-grid-inner {
   display: grid;
-  grid-gap: calc(var(--scale) * 64) calc(var(--scale) * 8);
+  grid-gap: 0 calc(var(--scale) * 32);
   grid-template-columns: repeat(12, minmax(0, 1fr));
+  grid-template-rows: repeat(4, auto);
 }
 @media (max-width: 767.98px) {
   .is-grid-inner {
@@ -713,33 +713,30 @@ button {
   }
 }
 .description-wrapper .description-title {
-  grid-column: span 7;
-  padding-bottom: calc(var(--scale) * 32);
-}
-.description-wrapper .description-head {
-  grid-column: span 6;
-}
-.description-wrapper .description-head-text:not(:last-child) {
-  margin-bottom: calc(var(--scale) * 16);
-}
-.description-wrapper .description-list {
-  display: flex;
-  flex-direction: column;
-  grid-column: 8/-1;
-  justify-content: space-between;
-  height: 100%;
-  padding-top: 0;
+  padding-bottom: calc(var(--scale) * 60);
 }
 @media (max-width: 767.98px) {
-  .description-wrapper .description-list {
-    display: none;
+  .description-wrapper .description-title {
+    padding-bottom: calc(var(--scale) * 32);
   }
 }
-.description-wrapper .point {
-  padding-bottom: calc(var(--scale) * 8);
+.description-wrapper .description-head-question {
+  grid-column: span 6;
+  border-top: calc(var(--scale) * 4) solid #131313;
+  padding-top: calc(var(--scale) * 8);
 }
-.description-wrapper .point-description {
-  color: #C4C4C4;
+.description-wrapper .description-head-answear {
+  grid-column: span 6;
+  border-top: calc(var(--scale) * 4) solid #131313;
+  padding-top: calc(var(--scale) * 8);
+}
+.description-wrapper .description-head-answear:not(:last-child) {
+  margin-bottom: calc(var(--scale) * 80);
+}
+@media (max-width: 767.98px) {
+  .description-wrapper .description-head-answear:not(:last-child) {
+    margin-bottom: calc(var(--scale) * 40);
+  }
 }
 
 .modules-wrapper {
