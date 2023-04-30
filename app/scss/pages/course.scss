@@ -53,8 +53,8 @@
 .is-grid-inner {
   display: grid;
   grid-gap: 0 set-calc(4 * $s-gap);
-  grid-template-columns: repeat(12,minmax(0,1fr));
   grid-template-rows: repeat(4, auto);
+  grid-template-columns: repeat(12,minmax(0,1fr));
 
   @include set-media(md) {
     display: flex;
@@ -219,14 +219,16 @@
   .description-head {
     &-question {
       grid-column: span 6;
-      border-top: set-calc(calc($s-gap / 2)) solid $black-new;
       padding-top: set-calc(8);
+
+      border-top: set-calc(calc($s-gap / 2)) solid $black-new;
     }
 
     &-answear {
       grid-column: span 6;
-      border-top: set-calc(calc($s-gap / 2)) solid $black-new;
       padding-top: set-calc(8);
+
+      border-top: set-calc(calc($s-gap / 2)) solid $black-new;
     }
 
     &-answear:not(:last-child) {
@@ -959,9 +961,9 @@
     }
 
     &-credit-was {
-      text-decoration: line-through;
       color: $text-grey;
       letter-spacing: -0.05rem;
+      text-decoration: line-through;
     }
 
     &-credit-price {

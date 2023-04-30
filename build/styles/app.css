@@ -569,8 +569,8 @@ button {
 .is-grid-inner {
   display: grid;
   grid-gap: 0 calc(var(--scale) * 32);
-  grid-template-columns: repeat(12, minmax(0, 1fr));
   grid-template-rows: repeat(4, auto);
+  grid-template-columns: repeat(12, minmax(0, 1fr));
 }
 @media (max-width: 767.98px) {
   .is-grid-inner {
@@ -722,13 +722,13 @@ button {
 }
 .description-wrapper .description-head-question {
   grid-column: span 6;
-  border-top: calc(var(--scale) * 4) solid #131313;
   padding-top: calc(var(--scale) * 8);
+  border-top: calc(var(--scale) * 4) solid #131313;
 }
 .description-wrapper .description-head-answear {
   grid-column: span 6;
-  border-top: calc(var(--scale) * 4) solid #131313;
   padding-top: calc(var(--scale) * 8);
+  border-top: calc(var(--scale) * 4) solid #131313;
 }
 .description-wrapper .description-head-answear:not(:last-child) {
   margin-bottom: calc(var(--scale) * 80);
@@ -1337,9 +1337,9 @@ button {
   align-items: flex-start;
 }
 .decision-form-wrapper .decision-form-info-credit-was {
-  text-decoration: line-through;
   color: #C4C4C4;
   letter-spacing: -0.05rem;
+  text-decoration: line-through;
 }
 .decision-form-wrapper .decision-form-info-credit-price {
   position: relative;
