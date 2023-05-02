@@ -1,4 +1,4 @@
-//navigation
+//baidge in cards
 .s-text-14 {
   @include set-typography(14, 19, 600);
 }
@@ -18,7 +18,7 @@
     @include set-typography(16, 22, 600)
   }
 }
-
+// tabs
 .s-text-20-uppercase  {
   @include set-typography(20, 26, 600);
   text-transform: uppercase;
@@ -28,21 +28,21 @@
     text-transform: uppercase;
   }
 }
-
+//text in table
 .s-text-21  {
   @include set-typography(21, 28, 600);
 
   @include set-media(md) {
-    @include set-typography(14, 19, 600)
+    @include set-typography(16, 22, 600)
   }
 }
-//buttons & headers
+//links & headers in table
 .s-text-21-uppercase  {
   @include set-typography(21, 28, 600);
   text-transform: uppercase;
 
   @include set-media(md) {
-    @include set-typography(14, 19, 600);
+    @include set-typography(16, 22, 600);
     text-transform: uppercase;
   }
 }
@@ -62,7 +62,7 @@
     @include set-typography(20, 28, 600)
   }
 }
-//cards
+//cards – important
 .s-text-36 {
   @include set-typography(36, 39, 600);
 
