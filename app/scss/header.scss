@@ -48,6 +48,14 @@
     transition: $d-hover color;
   }
 
+  @include set-media(md) {
+    .nav-menu a:active {
+      color: $grey-hover;
+    }
+    
+    transition: $d-hover color;
+  }
+
   .login {
     margin-left: set-calc(56);
   }

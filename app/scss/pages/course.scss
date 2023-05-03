@@ -50,10 +50,21 @@
   }
 }
 
-.is-grid-inner {
+.is-grid-4 {
   display: grid;
-  grid-gap: 0 set-calc(4 * $s-gap);
-  grid-template-rows: repeat(4, auto);
+  grid-gap: 0 set-calc(2 * $s-gap);
+  grid-template-columns: repeat(4,minmax(0,1fr));
+
+  @include set-media(md) {
+    display: flex;
+    flex-direction: column;
+    grid-gap: set-calc($s-gap);
+  }
+}
+
+.is-grid-12 {
+  display: grid;
+  grid-gap: 0 set-calc($s-gap);
   grid-template-columns: repeat(12,minmax(0,1fr));
 
   @include set-media(md) {
@@ -65,9 +76,9 @@
 
 .is-grid-outer {
   display: grid;
-  grid-gap: set-calc($s-gap) set-calc($s-gap);
+  grid-gap: set-calc($s-gap);
   grid-template-columns: repeat(12,minmax(0,1fr));
-  padding: 0 cset-calc($padding-x-desk-page);
+  padding: 0 set-calc($padding-x-desk-page);
 }
 
 .program-intro {
@@ -216,26 +227,25 @@
     }
   }
 
-  .description-head {
-    &-question {
-      grid-column: span 6;
-      padding-top: set-calc(8);
+  .description-list {
+    .description-list-item {
+      grid-column: span 4;
+      margin-bottom: set-calc(40);
 
-      border-top: set-calc(calc($s-gap / 2)) solid $black-new;
-    }
+      &-question {
+        grid-column: span 6;
+        padding-top: set-calc(calc($s-gap / 2));
+        grid-column: span 2;
 
-    &-answear {
-      grid-column: span 6;
-      padding-top: set-calc(8);
+        border-top: set-calc(calc($s-gap / 2)) solid $black-new;
+      }
+  
+      &-answear {
+        grid-column: span 6;
+        padding-top: set-calc(calc($s-gap / 2));
+        grid-column: span 2;
 
-      border-top: set-calc(calc($s-gap / 2)) solid $black-new;
-    }
-
-    &-answear:not(:last-child) {
-      margin-bottom: set-calc(80);
-
-      @include set-media(md) {
-        margin-bottom: set-calc(40);
+        border-top: set-calc(calc($s-gap / 2)) solid $black-new;
       }
     }
   }
@@ -1146,10 +1156,16 @@
     @include set-media(md) {
       height: set-calc(38);
     }
-  }
 
-  .decision-form-choice-submit-button:hover {
-    background-color: $blue-hover;
+    &:hover {
+      background-color: $blue-hover;
+    }
+
+    @include set-media(md) {
+      &:active {
+        background-color: $blue-hover;
+      }
+    }
   }
   
 }
@@ -1195,6 +1211,12 @@
 
     a:hover {
       color: $blue-hover;
+    }
+
+    @include set-media(md) {
+      a:active {
+        color: $blue-hover;
+      }
     }
   }
 

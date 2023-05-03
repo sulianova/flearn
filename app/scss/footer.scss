@@ -16,6 +16,12 @@
     opacity: 0.5;
   }
 
+  @include set-media(md) {
+    a:active {
+      opacity: 0.5;
+    }
+  }
+
   &-inner {
     display: grid;
     grid-column: span 12;
