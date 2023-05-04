@@ -8,8 +8,11 @@
 }
 
 .page-content {
-  margin-top: set-calc(16);
   padding-top: set-calc(16);
+
+  @include set-media(md) {
+    padding-top: 0;
+  }
 }
 
 .program-wrapper {
@@ -180,6 +183,10 @@
 
       @include set-media(md) {
         height: set-calc(38);
+      }
+
+      &:hover {
+        opacity: 1;
       }
     }
   

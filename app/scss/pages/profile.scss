@@ -1,0 +1,52 @@
+.profile-wrapper {
+  padding: 0 set-calc($padding-x-desk-page);
+
+  @include set-media(md) {
+    padding: 0 set-calc($padding-x-mob-page);
+  }
+
+  .title-wrapper {
+    position: relative;
+    display: block;
+  
+    padding-bottom: set-calc(16);
+  }
+
+  .profile-menu {
+    position: relative;
+    display: grid;
+    grid-template-columns: repeat(8,minmax(0,1fr));
+    grid-column-gap: set-calc(1.5 * $s-gap);
+    padding-bottom: set-calc(140);
+
+    border-top: set-calc(calc($s-gap/2)) solid $black-new;
+
+    &-link-wrapper {
+      padding-top: set-calc($s-gap);
+      position: relative;
+      grid-column: span 4;
+
+      &::after {
+        content: "";
+        position: absolute;
+        top: -1px;
+        right: 0;
+        display: block;
+        width: set-calc(calc($s-gap/2));
+        height: set-calc(30);
+        background-color: $black-new;
+      }
+    }
+
+    &-link {
+      text-decoration: none;
+      transition: $d-hover color;
+    }
+
+    .nuxt-link-exact-active {
+      cursor: default;
+      pointer-events: none;
+      color: $orange !important;
+    }
+  }
+}

@@ -7,6 +7,8 @@
   z-index: 1000;
   background-color: $white;
 
+  @include set-typography(18, 24, 600);
+
   &-wrapper {
     display: flex;
     align-items: center;
@@ -14,7 +16,7 @@
     padding: 0 set-calc($padding-x-desk-page);
 
     @include set-media(md) {
-      padding: 0 set-calc($padding-x-mob-page);
+      padding: 0 set-calc($padding-x-mob-page) set-calc(16);
     }
   }
 
@@ -41,19 +43,16 @@
 
   .nav-menu a {
     &:hover {
-      color: $grey-hover;
+      opacity: 0.5;
 
       cursor: pointer;
     }
-    transition: $d-hover color;
   }
 
   @include set-media(md) {
     .nav-menu a:active {
-      color: $grey-hover;
+      opacity: 0.5;
     }
-    
-    transition: $d-hover color;
   }
 
   .login {
@@ -81,6 +80,7 @@
     .nav-menu li {
       margin-right: 0;
       margin-left: 0;
+      padding-bottom: set-calc(8);
     }
 
     .nav-toggle-label {

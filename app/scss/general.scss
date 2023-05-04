@@ -3,71 +3,10 @@
 }
 
 @font-face {
-  font-weight: 800;
-  font-family: TTNormsPro;
-  src: url("../fonts/TTNormsPro-EtraBold.ttf");
-}
-
-@font-face {
-  font-weight: 700;
-  font-family: TTNormsPro;
-  src: url("../fonts/TTNormsPro-Bold.ttf");
-}
-
-@font-face {
-  font-weight: 500;
-  font-family: TTNormsPro;
-  src: url("../fonts/TTNormsPro-Medium.ttf");
-}
-
-@font-face {
-  font-weight: 400;
-  font-family: TTNormsPro;
-  src: url("../fonts/TTNormsPro-Regular.ttf");
-}
-
-@font-face {
-  font-weight: 300;
-  font-family: TTNormsPro;
-  src: url("../fonts/TTNormsPro-Light.ttf");
-}
-
-@font-face {
-  font-weight: 800;
-  font-family: TTInterphasesPro;
-  src: url("../fonts/TTInterphasesPro-EtraBold.ttf");
-}
-
-@font-face {
-  font-weight: 700;
-  font-family: TTInterphasesPro;
-  src: url("../fonts/TTInterphasesPro-Bold.ttf");
-}
-
-@font-face {
   font-weight: 600;
   font-family: TTInterphasesPro;
   src: url("../fonts/TTInterphasesPro-DemiBold.ttf");
 }
-
-@font-face {
-  font-weight: 500;
-  font-family: TTInterphasesPro;
-  src: url("../fonts/TTInterphasesPro-Medium.ttf");
-}
-
-@font-face {
-  font-weight: 400;
-  font-family: TTInterphasesPro;
-  src: url("../fonts/TTInterphasesPro-Regular.ttf");
-}
-
-@font-face {
-  font-weight: 300;
-  font-family: TTInterphasesPro;
-  src: url("../fonts/TTInterphasesPro-Light.ttf");
-}
-
 
 
 html {
@@ -143,8 +82,14 @@ a {
   color: inherit;
   text-decoration: none;
   cursor: pointer;
-  transition: background-color $d-hover, color $d-hover;
+  transition: background-color $d-hover, color $d-hover, opacity $d-hover;
+
+  &:hover {
+    opacity: 0.5;
+  }
 }
+
+
 
 button {
   word-spacing: 1px;

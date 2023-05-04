@@ -1,15 +1,12 @@
 
 .footer {
   display: block;
-  background: $black-new;
-  color: $white;
-  padding: set-calc(32) set-calc($padding-x-desk-page);
-  margin-top: set-calc(80);
+  padding: set-calc(140) set-calc($padding-x-desk-page) set-calc(32);
 
   border-bottom: px-to-rem(1px) solid rgb(70, 70, 70);
 
   @include set-media(md) {
-    padding: set-calc(32) set-calc($padding-x-mob-page);
+    padding: set-calc(80) set-calc($padding-x-mob-page) set-calc(1.5 * $padding-x-mob-page);
   }
 
   a:hover {
@@ -27,12 +24,16 @@
     grid-column: span 12;
     grid-template-columns: repeat(12, minmax(0, 1fr));
     grid-gap: set-calc(32) set-calc(8);
+    border-top: set-calc(calc($s-gap / 2)) solid $black-new;
+    padding-top: set-calc(16);
 
     @include set-media(md) {
       position: relative;
   
       display: flex;
       flex-direction: column;
+
+      padding-top: set-calc(8);
     }
   }
 
