@@ -7,7 +7,7 @@ html(lang="ru")
     title course page
     link(rel="stylesheet", href="styles/app.css")
   body
-    .page
+    .page(id="#profile")
       include components/header.pug
       main.page-content
         .profile-wrapper
@@ -18,4 +18,44 @@ html(lang="ru")
               a(href="#" aria-current="page").profile-menu-link-wrapper-link.s-text-20-uppercase.nuxt-link-exact-active.isActive Профиль
             .profile-menu-link-wrapper
               a(href="#" aria-current="page").profile-menu-link-wrapper-link.s-text-20-uppercase Настройки
+          .profile 
+            .profile-course-group.is-grid-4
+              .profile-course-group-title.s-text-21-uppercase ваши курсы
+              .course-card.is-grid-4 
+                a(href="#" target="_blank").course-card-title-link.s-text-21-uppercase
+                  span.inline-link-text Как рисовать свободно
+                .course-card-img
+                  img(src="./images/draw-free-card.png" alt decoding="async")
+                .course-card-date.s-text-21-uppercase
+                  span доступ до 5 мая 2023 года
+                  a(href="#").course-card-date-link
+                    span.inline-link-text продлить
+                    span.inline-link-arrow →
+              .course-card.is-grid-4 
+                  a(href="#" target="_blank").course-card-title-link.s-text-21-uppercase
+                    span.inline-link-text Как рисовать свободно
+                  .course-card-img
+                    img(src="./images/draw-free-card.png" alt decoding="async")
+                  .course-card-date.s-text-21-uppercase
+                    span доступ до 5 мая 2023 года
+                    a(href="#").course-card-date-link
+                      span.inline-link-text продлить
+                      span.inline-link-arrow →
+            .settings 
+              .settings-block.is-grid-4.is-big
+                .settings-block-title.s-text-21-uppercase Аккаунт
+                form(method="post").settings-block-form
+                  .input-field
+                    label(for="email").input-field-label.s-text-21.is-active Почта
+                    input(id="email" name="email" readonly="readonly" type="email" placeholder="email@email.com").input-field-input.is-disabled.s-text-21
+                  .input-field(model="name")
+                    label(for="name").input-field-label.s-text-21.is-active Имя и фамилия
+                    input(id="name" name="name" type="text" placeholder="Имя и фамилия").input-field-input.s-text-21
+                  .input-field(model="phone")
+                    label(for="phone").input-field-label.s-text-21.is-active Телефон
+                    input(id="phone" name="phone" type="tel" placeholder="+79998888888").input-field-input.s-text-21
+              .settings-block.is-grid-4.is-big 
+                .settings-block-logout-btn
+                  a.inline-link.s-text-21-uppercase
+                    span.inline-link-text Выйти из профиля →
       include components/footer.pug

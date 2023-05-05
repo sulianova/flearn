@@ -8,7 +8,7 @@
     <link rel="stylesheet" href="styles/app.css">
   </head>
   <body>
-    <div class="page">
+    <div class="page" id="#profile">
       <header class="header">
         <div class="header-wrapper">
           <div class="logo">
@@ -18,7 +18,7 @@
           <input class="nav-toggle" type="checkbox" id="nav-toggle">
           <nav class="nav-menu">
             <ul>
-              <li><a class="active" href="#page-description">Moe обучение</a></li>
+              <li><a class="active" href="profile.html#profile">Moe обучение</a></li>
               <li><a href="#page-description">Бесплатно</a></li>
               <li><a href="#page-description">Программы обучения</a></li>
               <li><a class="login" href="#page-description">Войти</a></li>
@@ -34,6 +34,41 @@
           <div class="profile-menu">
             <div class="profile-menu-link-wrapper"><a class="profile-menu-link-wrapper-link s-text-20-uppercase nuxt-link-exact-active isActive" href="#" aria-current="page">Профиль</a></div>
             <div class="profile-menu-link-wrapper"><a class="profile-menu-link-wrapper-link s-text-20-uppercase" href="#" aria-current="page">Настройки</a></div>
+          </div>
+          <div class="profile"> 
+            <div class="profile-course-group is-grid-4">
+              <div class="profile-course-group-title s-text-21-uppercase">ваши курсы</div>
+              <div class="course-card is-grid-4"> <a class="course-card-title-link s-text-21-uppercase" href="#" target="_blank"><span class="inline-link-text">Как рисовать свободно</span></a>
+                <div class="course-card-img"><img src="./images/draw-free-card.png" alt decoding="async"></div>
+                <div class="course-card-date s-text-21-uppercase"><span>доступ до 5 мая 2023 года</span><a class="course-card-date-link" href="#"><span class="inline-link-text">продлить</span><span class="inline-link-arrow">→</span></a></div>
+              </div>
+              <div class="course-card is-grid-4"> <a class="course-card-title-link s-text-21-uppercase" href="#" target="_blank"><span class="inline-link-text">Как рисовать свободно</span></a>
+                <div class="course-card-img"><img src="./images/draw-free-card.png" alt decoding="async"></div>
+                <div class="course-card-date s-text-21-uppercase"><span>доступ до 5 мая 2023 года</span><a class="course-card-date-link" href="#"><span class="inline-link-text">продлить</span><span class="inline-link-arrow">→</span></a></div>
+              </div>
+            </div>
+            <div class="settings"> 
+              <div class="settings-block is-grid-4 is-big">
+                <div class="settings-block-title s-text-21-uppercase">Аккаунт</div>
+                <form class="settings-block-form" method="post">
+                  <div class="input-field">
+                    <label class="input-field-label s-text-21 is-active" for="email">Почта</label>
+                    <input class="input-field-input is-disabled s-text-21" id="email" name="email" readonly="readonly" type="email" placeholder="email@email.com">
+                  </div>
+                  <div class="input-field" model="name">
+                    <label class="input-field-label s-text-21 is-active" for="name">Имя и фамилия</label>
+                    <input class="input-field-input s-text-21" id="name" name="name" type="text" placeholder="Имя и фамилия">
+                  </div>
+                  <div class="input-field" model="phone">
+                    <label class="input-field-label s-text-21 is-active" for="phone">Телефон</label>
+                    <input class="input-field-input s-text-21" id="phone" name="phone" type="tel" placeholder="+79998888888">
+                  </div>
+                </form>
+              </div>
+              <div class="settings-block is-grid-4 is-big"> 
+                <div class="settings-block-logout-btn"><a class="inline-link s-text-21-uppercase"><span class="inline-link-text">Выйти из профиля →</span></a></div>
+              </div>
+            </div>
           </div>
         </div>
       </main>
