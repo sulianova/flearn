@@ -749,42 +749,18 @@
 
   .content-block-embed {
     left: 0;
-
     grid-column: span 7;
     width: 100%;
   }
 
   .video-player {
     overflow: hidden;
-
     border-radius: set-calc(20);
   }
 
-  .plyr {
-    position: relative;
-    z-index: 0;
-
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    min-width: px-to-rem(200px);
-    max-width: 100%;
-    height: 100%;
-
-    &-video {
-      overflow: hidden;
-
-      background: $black;
-      border-radius: set-calc(20);
-    }
-  
-    &-full-ui {
-      box-sizing: border-box;
-    }
-
-
+  .plyr { 
+         
     &-video-embed {
-      height: 0;
       padding-bottom: 56.25%;
     }
 
@@ -800,17 +776,10 @@
     }
   }
 
-  .content-block-embed iframe {
-    max-width: 100%;
-
-    border-radius: set-calc(20);
-  }
-
   .plyr-video-embed iframe {
     position: absolute;
     top: 0;
     left: 0;
-
     border: 0;
   }
 

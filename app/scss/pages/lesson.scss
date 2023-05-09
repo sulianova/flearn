@@ -47,13 +47,92 @@
     }
 
     &-duration {
-      
+      display: flex;
+      align-items: center;
+      margin-top: set-calc(16);
+
+      svg {
+        width: set-calc(20);
+        height: set-calc(20);
+      }
+
+      span {
+        margin-left: set-calc(4);
+      }
     }
   }
+  .lesson-content-content-section {
 
-  .lesson-content-section {
-    .lesson-content-section-video {
+    .video-section {
+      margin: set-calc(16) 0 set-calc(80);
 
+      .video-player {
+        left: 0;
+        grid-column: 1/3;
+        width: 100%;
+        border-radius: set-calc(20);
+        overflow: hidden;
+      }
+
+      .plyr { 
+         
+        &-video-embed {
+          padding-bottom: 56.25%;
+        }
+    
+        &-video-wrapper {
+          position: relative;
+    
+          width: 100%;
+          height: 100%;
+          margin: auto;
+          overflow: hidden;
+    
+          background: $black;
+        }
+      }
+    
+      .plyr-video-embed iframe {
+        position: absolute;
+        top: 0;
+        left: 0;
+        border: 0;
+      }
+    
+      .plyr iframe {
+        display: block;
+        width: 100%;
+        height: 100%;
+      }
+    }
+
+    .text-section {
+      padding: set-calc(8) 0 0;
+      margin: 0 0 set-calc(80);
+
+      border-top: set-calc(calc($s-gap/2)) solid $black-new;
+
+      &-title {
+        grid-column: 1;
+        padding-bottom: 0;
+      }
+
+      &-content {
+        grid-column: 3/5;
+
+        p:not(:last-child) {
+          padding-bottom: set-calc(16);
+        }
+
+        a {
+          display: block;
+          color: $text-grey;
+        }
+
+        a:not(:last-child) {
+          padding-bottom: set-calc(16);
+        }
+      }
     }
   }
 }

@@ -18,7 +18,7 @@ html(lang="ru")
             .lesson-header-lesson
               .lesson-header-lesson-number.s-text-21 Урок 1
               .lesson-header-lesson-nav
-                a.inline-link.lesson-header-lesson-nav-link.s-text-21-uppercase
+                a.inline-link.lesson-header-lesson-nav-link.s-text-21-uppercase(href="lessons.html")
                   span.inline-link-text Все уроки
                   span.inline-link-arrow →
                 a.inline-link.lesson-header-lesson-nav-link.s-text-21-uppercase.blue
@@ -26,5 +26,38 @@ html(lang="ru")
                   span.inline-link-arrow →
           .lesson-content 
             h2.lesson-content-title.s-text-56 Тема первая
-            span.lesson-content-duration.s-text-18 00:20:01
+            .lesson-content-duration
+              svg(width="15" height="15" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg")
+                circle(cx="7.5" cy="7.5" r="7" stroke="#131313")
+                path(d="M11 7.5L5.75 10.5311V4.46891L11 7.5Z" fill="#131313")
+              span.s-text-18 00:20:01
+            .lesson-content-content-section
+              section.video-section.is-grid-4
+                .video-player
+                      .plyr
+                        .plyr-video-wrapper.plyr-video-embed
+                          iframe(src="https://www.youtube.com/embed/ag6PuGjJdbU?loop=1" title="YouTube video player" frameborder="0" allow="accelerometer; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen)
+              section.text-section.is-grid-4 
+                h2.text-section-title.s-text-21-uppercase таймкоды
+                .text-section-content
+                  p.s-text-21  00:47 — Эффекты 3D.
+                  p.s-text-21  02:23 — Настройки освещения.
+                  p.s-text-21  4:30 — Настройка Map Art.
+                  p.s-text-21  09:03 — Эффект построения по сечению (Revolve).
+                  p.s-text-21  10:54 — Эффект «Повернуть фигуру» (Rotate).
+                  p.s-text-21  12:14 — Панель оформления.
+              section.text-section.is-grid-4 
+                h2.text-section-title.s-text-21-uppercase описание
+                .text-section-content
+                  p.s-text-21  Поговорим о свободе в рисунке, сделаем упражнения и 3-4 законченные работы. Будем анализировать рисовальный опыт, отмечать, что вызывает сопротивление, скуку, интерес.
+              section.text-section.is-grid-4 
+                h2.text-section-title.s-text-21-uppercase узнать больше
+                .text-section-content
+                  a.inline-link.s-text-21  Ссылка 1
+                  a.inline-link.s-text-21  Ссылка 2
+                  a.inline-link.s-text-21  Ссылка 3
+              section.text-section.is-grid-4 
+                h2.text-section-title.s-text-21-uppercase материалы
+                .text-section-content
+                  a.inline-link.s-text-21  Скавать презентацию
       include components/footer.pug
