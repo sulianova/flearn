@@ -7,6 +7,10 @@
     --scale: 100vw/414;
   }
 }
+.blue {
+  color: #1F59F5;
+}
+
 * {
   box-sizing: border-box;
 }
@@ -219,6 +223,13 @@ button {
   padding: 0 calc(var(--scale) * 72);
 }
 
+.inline-link {
+  transition: 0.2s color;
+  cursor: pointer;
+}
+.inline-link:hover {
+  opacity: 0.5;
+}
 .inline-link-text {
   display: inline;
   vertical-align: top;
@@ -724,19 +735,24 @@ button {
 }
 .description-wrapper .description-list .description-list-item {
   grid-column: span 4;
-  margin-bottom: calc(var(--scale) * 40);
 }
 .description-wrapper .description-list .description-list-item-question {
-  grid-column: span 6;
   padding-top: calc(var(--scale) * 4);
-  grid-column: span 2;
+  grid-column: span 3;
   border-top: calc(var(--scale) * 4) solid #131313;
 }
 .description-wrapper .description-list .description-list-item-answear {
-  grid-column: span 6;
   padding-top: calc(var(--scale) * 4);
-  grid-column: span 2;
+  grid-column: 4/-1;
   border-top: calc(var(--scale) * 4) solid #131313;
+}
+.description-wrapper .description-list .description-list-item:not(:last-child) {
+  margin-bottom: calc(var(--scale) * 60);
+}
+@media (max-width: 767.98px) {
+  .description-wrapper .description-list .description-list-item:not(:last-child) {
+    margin-bottom: calc(var(--scale) * 40);
+  }
 }
 
 .modules-wrapper {
@@ -1723,4 +1739,122 @@ button {
   position: relative;
   display: flex;
   justify-content: flex-end;
+}
+
+.lessons-wrapper {
+  padding: 0 calc(var(--scale) * 72);
+}
+@media (max-width: 767.98px) {
+  .lessons-wrapper {
+    padding: 0 calc(var(--scale) * 16);
+  }
+}
+.lessons-wrapper .lessons-header {
+  padding: calc(var(--scale) * 4) 0 calc(var(--scale) * 8);
+  border-top: calc(var(--scale) * 4) solid #131313;
+  border-bottom: 0;
+}
+.lessons-wrapper .lessons-header-title {
+  grid-column: 1/3;
+}
+.lessons-wrapper .lessons-content {
+  padding-bottom: calc(var(--scale) * 140);
+}
+@media (max-width: 767.98px) {
+  .lessons-wrapper .lessons-content {
+    padding-bottom: calc(var(--scale) * 80);
+  }
+}
+.lessons-wrapper .lessons-content-date {
+  border-top: calc(var(--scale) * 4) solid #131313;
+  grid-column: 1/3;
+  padding-top: calc(var(--scale) * 4);
+}
+@media (max-width: 767.98px) {
+  .lessons-wrapper .lessons-content-date {
+    padding-bottom: calc(var(--scale) * 56);
+  }
+}
+.lessons-wrapper .lessons-content-list {
+  grid-column: 3/5;
+  margin-top: 0;
+}
+.lessons-wrapper .lessons-list {
+  counter-reset: lessonsCounter;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+.lessons-wrapper .lessons-list-item {
+  position: relative;
+  border-top: calc(var(--scale) * 4) solid #131313;
+  counter-increment: lessonsCounter;
+  padding: calc(var(--scale) * 8) 0;
+}
+.lessons-wrapper .lessons-list-item:before {
+  top: calc(var(--scale) * 8);
+  left: calc(var(--scale) * -48);
+  text-align: right;
+  min-width: calc(var(--scale) * 24);
+  content: counter(lessonsCounter);
+  position: absolute;
+}
+.lessons-wrapper .lessons-chat {
+  padding-bottom: calc(var(--scale) * 140);
+  border-top: calc(var(--scale) * 4) solid #131313;
+}
+@media (max-width: 767.98px) {
+  .lessons-wrapper .lessons-chat {
+    padding-bottom: calc(var(--scale) * 80);
+  }
+}
+.lessons-wrapper .lessons-chat-title {
+  grid-column: 1/3;
+  padding-top: calc(var(--scale) * 4);
+}
+.lessons-wrapper .lessons-chat-link {
+  grid-column: 3/5;
+  padding-top: calc(var(--scale) * 4);
+  color: #C4C4C4;
+}
+
+.lesson-wrapper {
+  padding: 0 calc(var(--scale) * 72);
+}
+@media (max-width: 767.98px) {
+  .lesson-wrapper {
+    padding: 0 calc(var(--scale) * 16);
+  }
+}
+.lesson-wrapper .lesson-header {
+  padding: calc(var(--scale) * 4) 0 calc(var(--scale) * 8);
+  border-top: calc(var(--scale) * 4) solid #131313;
+  border-bottom: calc(var(--scale) * 4) solid #131313;
+}
+.lesson-wrapper .lesson-header-title {
+  grid-column: 1/3;
+}
+.lesson-wrapper .lesson-header-title-col {
+  grid-column: 1/3;
+}
+.lesson-wrapper .lesson-header-lesson {
+  grid-column: 3/5;
+  display: flex;
+  flex-direction: row;
+  align-items: flex-start;
+  justify-content: space-between;
+}
+.lesson-wrapper .lesson-header-lesson-nav {
+  margin-top: 0;
+  margin-left: auto;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: flex-start;
+}
+.lesson-wrapper .lesson-header-lesson-nav-link {
+  margin-left: calc(var(--scale) * 24);
+}
+.lesson-wrapper .lesson-content-title {
+  margin: calc(var(--scale) * 8) 0;
 }

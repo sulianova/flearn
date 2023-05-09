@@ -1,0 +1,29 @@
+doctype html
+html(lang="ru")
+  head
+    meta(charset="UTF-8")
+    meta(name="viewport", content="width=device-width, initial-scale=1.0")
+    meta(http-equiv="X-UA-Compatible", content="IE=edge")
+    title lessons
+    link(rel="stylesheet", href="styles/app.css")
+  body
+    .page
+      include components/header.pug
+      main.page-content
+        section.lesson-wrapper
+          .lesson-header.is-grid-4
+            .lesson-header-title-col 
+              h1.lesson-header-title.s-text-21 Как рисовать свободно
+              .s-text-21 23 мая — 23 июня
+            .lesson-header-lesson
+              .lesson-header-lesson-number.s-text-21 Урок 1
+              .lesson-header-lesson-nav
+                a.inline-link.lesson-header-lesson-nav-link.s-text-21-uppercase
+                  span.inline-link-text Все уроки
+                  span.inline-link-arrow →
+                a.inline-link.lesson-header-lesson-nav-link.s-text-21-uppercase.blue
+                  span.inline-link-text Следующий урок
+                  span.inline-link-arrow →
+          .lesson-content 
+            h2.lesson-content-title.s-text-56 Тема первая
+      include components/footer.pug

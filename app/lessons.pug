@@ -1,0 +1,38 @@
+doctype html
+html(lang="ru")
+  head
+    meta(charset="UTF-8")
+    meta(name="viewport", content="width=device-width, initial-scale=1.0")
+    meta(http-equiv="X-UA-Compatible", content="IE=edge")
+    title lessons
+    link(rel="stylesheet", href="styles/app.css")
+  body
+    .page
+      include components/header.pug
+      main.page-content
+        section.lessons-wrapper
+          .lessons-header.is-grid-4
+            h1.lessons-header-title.s-text-56 Как рисовать свободно
+          .lessons-content.is-grid-4
+            .lessons-content-date.s-text-21-uppercase
+              span 23 мая — 23 июня
+            .lessons-content-list 
+              ol.lessons-list
+                li.lessons-list-item
+                  a.inline-link.s-text-21 Урок 1. Первая тема
+                li.lessons-list-item
+                  a.inline-link.s-text-21  Задание недели
+                li.lessons-list-item
+                  a.inline-link.s-text-21 Урок 2. Вторая тема. Без интересного дополнения
+                li.lessons-list-item
+                  a.inline-link.s-text-21  Задание недели
+                li.lessons-list-item
+                  a.inline-link.s-text-21  Урок 3. Третья тема
+                li.lessons-list-item
+                  a.inline-link.s-text-21 Задание недели
+          .lessons-chat.is-grid-4
+            .lessons-chat-title.s-text-21-uppercase
+              span Учебная группа
+            .lessons-chat-link
+              a.inline-link.s-text-21 Ссылка на группу в Телеграм
+      include components/footer.pug

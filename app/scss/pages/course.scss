@@ -151,22 +151,29 @@
   .description-list {
     .description-list-item {
       grid-column: span 4;
-      margin-bottom: set-calc(40);
 
       &-question {
-        grid-column: span 6;
         padding-top: set-calc(calc($s-gap / 2));
-        grid-column: span 2;
+        grid-column: span 3;
 
         border-top: set-calc(calc($s-gap / 2)) solid $black-new;
       }
   
       &-answear {
-        grid-column: span 6;
         padding-top: set-calc(calc($s-gap / 2));
-        grid-column: span 2;
+        grid-column: 4/-1;
 
         border-top: set-calc(calc($s-gap / 2)) solid $black-new;
+      }
+    }
+
+    .description-list-item:not(:last-child) {
+      margin-bottom: set-calc(60);
+    }
+
+    @include set-media(md) {
+      .description-list-item:not(:last-child) {
+        margin-bottom: set-calc(40);
       }
     }
   }

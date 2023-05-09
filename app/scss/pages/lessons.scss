@@ -1,0 +1,85 @@
+.lessons-wrapper {
+  padding: 0 set-calc($padding-x-desk-page);
+
+  @include set-media(md) {
+    padding: 0 set-calc($padding-x-mob-page);
+  }
+
+  .lessons-header {
+    padding: set-calc(calc($s-gap/2)) 0 set-calc(calc($s-gap));
+
+    border-top: set-calc(calc($s-gap/2)) solid $black-new;
+    border-bottom: 0;
+
+    &-title {
+      grid-column: 1/3;
+    }
+  }
+
+  .lessons-content {
+    padding-bottom: set-calc(140);
+
+    @include set-media(md) {
+      padding-bottom: set-calc(80);
+    }
+
+    &-date {
+      border-top: set-calc(calc($s-gap/2)) solid $black-new;
+      grid-column: 1/3;
+      padding-top: set-calc(calc($s-gap/2));
+
+      @include set-media(md) {
+        padding-bottom: set-calc(56);
+      }
+    }
+
+    &-list {
+      grid-column: 3/5;
+      // margin-top: set-calc(80);
+      margin-top: 0;
+    }
+  }
+
+  .lessons-list {
+    counter-reset: lessonsCounter;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+
+    &-item {
+      position: relative;
+      border-top: set-calc(calc($s-gap/2)) solid $black-new;
+      counter-increment: lessonsCounter;
+      padding: set-calc(8) 0;
+    }
+
+    &-item:before {
+      top: set-calc(8);
+      left: set-calc(-48);
+      text-align: right;
+      min-width: set-calc(24);
+      content: counter(lessonsCounter);
+      position: absolute;
+    }
+  }
+
+  .lessons-chat {
+    padding-bottom: set-calc(140);
+    border-top: set-calc(calc($s-gap/2)) solid $black-new;
+
+    @include set-media(md) {
+      padding-bottom: set-calc(80);
+    }
+
+    &-title {
+      grid-column: 1/3;
+      padding-top: set-calc(calc($s-gap/2));
+    }
+
+    &-link {
+      grid-column: 3/5;
+      padding-top: set-calc(calc($s-gap/2));
+      color: $text-grey;
+    }
+  }
+}

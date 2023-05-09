@@ -3,6 +3,10 @@
 @use "sass:map";
 @use "sass:meta";
 
+$colors: (
+  "blue": $blue,
+);
+
 @function px-to-rem($list) {
   $rem-list: ();
 
@@ -59,4 +63,10 @@
     @if $bollean {
       @return calc($value2 + var(--scale) * $value);
     } @else { @return calc(var(--scale) * $value) }
+}
+
+@each $color-name, $color in $colors {
+  .#{$color-name} {
+    color: $color;
+  }
 }

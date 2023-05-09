@@ -191,6 +191,13 @@ button {
 }
 
 .inline-link {
+  transition: $d-hover color;
+  cursor: pointer;
+
+  &:hover {
+    opacity: 0.5;
+  }
+
   &-text {
     display: inline;
     vertical-align: top;
