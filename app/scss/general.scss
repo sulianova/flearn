@@ -117,7 +117,7 @@ button {
   margin-top: set-calc(16);
 
   @include set-media(md) {
-    margin-top: 0;
+    margin-top: set-calc(72);
   }
 }
 
@@ -195,6 +195,10 @@ button {
   cursor: pointer;
 
   &:hover {
+    opacity: 0.5;
+  }
+
+  &:active {
     opacity: 0.5;
   }
 
