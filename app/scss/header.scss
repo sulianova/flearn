@@ -1,9 +1,8 @@
 .header {
   position: relative;
   z-index: 1000;
-  background-color: $white;
 
-  @include set-typography(16, 22, 600);
+  @include set-typography(18, 24, 600);
 
   @include set-media(md) {
     position: absolute;
@@ -11,26 +10,27 @@
     left: 0;
     width: 100%;
     transition: top .5s,transform .5s;
+    @include set-typography(20, 28, 600);
   }
 
   .header-desk {
     position: relative;
     display: flex;
     justify-content: space-between;
-    padding: set-calc($s-gap) set-calc($padding-x-desk-page) set-calc(8);
+    padding: set-calc(4) set-calc($padding-x-desk-page) set-calc(8);
+    background-color: rgba(255, 255, 255, 0);
 
     @include set-media(md) {
       flex-wrap: wrap;
       flex-direction: row;
       grid-gap: 0;
       align-items: center;
-      padding: set-calc($s-gap) set-calc($padding-x-mob-page) set-calc(8);
+      padding: 0 set-calc($padding-x-mob-page) set-calc(8);
     }
   }
 
   .header-logo {
     grid-column: span 1;
-    padding-top: set-calc(4);
 
     @include set-media(md) {
       position: relative;
@@ -55,6 +55,7 @@
     grid-column: 2/12;
     position: relative;
     display: flex;
+    align-items: center;
     justify-content: center;
     padding-top: set-calc(4);
 
@@ -70,6 +71,7 @@
   .header-nav-login {
     display: flex;
     justify-content: flex-end;
+    align-items: center;
     padding-top: set-calc(4);
     grid-column: 12;
 

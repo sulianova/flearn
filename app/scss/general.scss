@@ -98,10 +98,23 @@ button {
   background: none;
   outline: none;
 
+  cursor: pointer;
+  transition: color $d-hover,background-color $d-hover,opacity $d-hover;
+
   -ms-text-size-adjust: 100%;
   -webkit-text-size-adjust: 100%;
   -moz-osx-font-smoothing: grayscale;
   -webkit-font-smoothing: antialiased;
+
+  &:hover {
+    opacity: 0.5;
+  }
+
+  @include set-media(md) {
+    &:active {
+      opacity: 0.5;
+    }
+  }
 }
 
 .page {
@@ -117,7 +130,7 @@ button {
   margin-top: set-calc(16);
 
   @include set-media(md) {
-    margin-top: set-calc(72);
+    margin-top: set-calc(64);
   }
 }
 
@@ -132,9 +145,14 @@ button {
   }
 }
 
+.program-blocks {
+  grid-column: span 12;
+}
+
 .program-blocks-item {
   display: block;
   padding: 0;
+  position: relative;
 }
 
 .is-black {
@@ -144,7 +162,7 @@ button {
 
   width: set-calc(2 * $padding-x-desk-page, true, 100%);
   margin-top: set-calc(120);
-  padding: set-calc(90) set-calc($padding-x-desk-page);
+  padding: set-calc(72) set-calc($padding-x-desk-page);
 
   background-color: $black-new;
   border-radius: set-calc(20);
@@ -217,5 +235,15 @@ button {
       @include set-media(md) {
         line-height: set-calc(22);
       }
+  }
+}
+
+.s-hoverable {
+  cursor: pointer;
+  transition: opacity, color;
+  transition-duration: $d-hover;
+
+  &:hover {
+    opacity: 0.5;
   }
 }

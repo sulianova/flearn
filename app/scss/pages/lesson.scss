@@ -6,6 +6,7 @@
   }
 
   .lesson-header {
+    margin-top: set-calc(40);
     padding: set-calc(calc($s-gap / 2)) 0 set-calc(calc($s-gap));
 
     border-top: set-calc(calc($s-gap / 2)) solid $black-new;
@@ -13,6 +14,7 @@
 
     @include set-media(md) {
       grid-gap: 0;
+      margin-top: 0;
     }
 
     &-title {
@@ -21,6 +23,10 @@
 
     &-title-col {
       grid-column: 1 / 3;
+
+      @include set-media(md) {
+        display: none;
+      }
     }
 
     &-lesson {
@@ -32,6 +38,12 @@
 
       @include set-media(md) {
         display: block;
+      }
+
+      &-number {
+        @include set-media(md) {
+          display: none;
+        }
       }
 
       &-nav {
@@ -47,7 +59,7 @@
         }
 
         @include set-media(md) {
-          margin-top: set-calc(16);
+          margin-top: 0;
           margin-left: 0;
 
           .lesson-header-lesson-nav-link:last-child {
@@ -79,94 +91,575 @@
         margin-left: set-calc(4);
       }
     }
-  }
 
-  .lesson-content-content-section {
-    .video-section {
-      margin: set-calc(16) 0 set-calc(80);
-
-      .video-player {
-        left: 0;
-
+    &-upload {
+      display: grid;
+      grid-template-columns: repeat(8,minmax(0,1fr));
+      grid-column-gap: set-calc($s-gap * 1.5);
+      margin: set-calc(64) 0 set-calc(16);
+  
+      @include set-media(md) {
+        display: flex;
+        flex-direction: column;
+        margin: set-calc(40) 0 set-calc(24);
+      }
+  
+      &-deadline {
         grid-column: 1 / 3;
-        width: 100%;
-        overflow: hidden;
-
-        border-radius: set-calc(20);
-      }
-
-      .plyr { 
-        &-video-embed {
-          padding-bottom: 56.25%;
-        }
-    
-        &-video-wrapper {
-          position: relative;
-    
-          width: 100%;
-          height: 100%;
-          margin: auto;
-          overflow: hidden;
-    
-          background: $black;
+        
+        @include set-media(md) {
+          padding-bottom: set-calc(16);
         }
       }
-    
-      .plyr-video-embed iframe {
-        position: absolute;
-        top: 0;
-        left: 0;
-
-        border: 0;
-      }
-    
-      .plyr iframe {
-        display: block;
-        width: 100%;
-        height: 100%;
+  
+      &-btn {
+        grid-column: 7 / 9;
+        max-height: set-calc(48);
+        width: auto;
+        position: relative;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        background: $black-new;
+        color: $white;
+        border-radius: set-calc(30);
+  
+        @include set-media(md) {
+  
+          min-height: set-calc(48);
+        }
       }
     }
 
-    .text-section {
-      margin: 0 0 set-calc(140);
-      padding: set-calc(8) 0 0;
+    &-content-section {
+      .video-section {
+        margin: set-calc(16) 0 set-calc(80);
+  
+        .video-player {
+          left: 0;
+  
+          grid-column: 1 / 3;
+          width: 100%;
+          overflow: hidden;
+  
+          border-radius: set-calc(20);
+        }
+  
+        .plyr { 
+          &-video-embed {
+            padding-bottom: 56.25%;
+          }
+      
+          &-video-wrapper {
+            position: relative;
+      
+            width: 100%;
+            height: 100%;
+            margin: auto;
+            overflow: hidden;
+      
+            background: $black;
+          }
+        }
+      
+        .plyr-video-embed iframe {
+          position: absolute;
+          top: 0;
+          left: 0;
+  
+          border: 0;
+        }
+      
+        .plyr iframe {
+          display: block;
+          width: 100%;
+          height: 100%;
+        }
+      }
+  
+      .text-section {
+        margin: 0 0 set-calc(140);
+        padding: set-calc(8) 0 0;
+  
+        border-top: set-calc(calc($s-gap / 2)) solid $black-new;
+  
+        @include set-media(md) {
+          margin: 0 0 set-calc(80);
+        }
+  
+        &-title {
+          grid-column: 1;
+          padding-bottom: set-calc(8);
+        }
+  
+        &-content {
+          grid-column: 3 / 5;
+  
+          p:not(:last-child) {
+            padding-bottom: set-calc(16);
+          }
+  
+          a {
+            display: block;
+  
+            color: $text-grey;
+          }
+  
+          a:not(:last-child) {
+            padding-bottom: set-calc(16);
+          }
+        }
+      }
+  
+      .lesson-chat {
+        margin: 0 0 set-calc(80);
+        padding: set-calc(8) 0 0;
+  
+        border-top: set-calc(calc($s-gap / 2)) solid $black-new;
+  
+        &-link {
+          grid-column: 4 / 5;
+          margin-right: 0;
+          margin-left: auto;
+        }
+      }
+    }
+  
+  }
 
-      border-top: set-calc(calc($s-gap / 2)) solid $black-new;
+  .lesson-upload {
+
+    &-form {
+      display: flex;
+      position: relative;
+      flex-direction: column;
+      color: $beige;
+      min-height: 100vh;
+
+      @include set-media(md) {
+        padding: set-calc(2 * $padding-x-mob-page) set-calc($padding-x-mob-page);
+      }
+
+      &-inner {
+        display: flex;
+        position: relative;
+
+        @include set-media(md) {
+          flex-direction: column;
+        }
+      }
+    }
+
+    &-fields {
+      display: flex;
+      flex-flow: column;
+      flex: 1;
+      padding-right: set-calc(88);
+
+      @include set-media(md) {
+        padding: 0;
+      }
 
       &-title {
-        grid-column: 1;
-        padding-bottom: set-calc(8);
+        padding-bottom: set-calc(56);
+
+        @include set-media(md) {
+          padding-bottom: set-calc(40);
+        }
+      }
+
+      &-inner {
+        margin-bottom: set-calc(56);
+      }
+
+      .text-area {
+        border-bottom: set-calc(2) solid $grey;
+        text-align: left;
+        padding-bottom: set-calc(16);
+  
+        &-content {
+          position: relative;
+          display: flex;
+  
+          label {
+            width: set-calc(210);
+            margin-right: set-calc(4);
+            color: $grey;
+  
+            @include set-media(md) {
+              display: none;
+            }
+          }
+  
+          &-inner {
+            max-width: set-calc(-210, true, 100%);
+            overflow: hidden;
+            flex: 1;
+            display: grid;
+  
+            @include set-media(md) {
+              min-width: 100%;
+            }
+          }
+  
+          &-inner::after {
+            padding: 0;
+            grid-area: 1 / 1 / 2 / 2;
+            content: attr(data-replicated-value) " ";
+            white-space: pre-wrap;
+            visibility: hidden;
+          }
+  
+          textarea {
+            resize: none;
+            overflow: hidden;
+            padding: 0;
+            grid-area: 1 / 1 / 2 / 2;
+            background: none;
+            border: none;
+            margin: 0;
+            outline: none;
+            color: $beige;
+            font: inherit;
+          }
+  
+          textarea::placeholder {
+            color: $grey;
+            
+            @include set-typography(18, 24, 600);
+  
+            @include set-media(md) {
+              @include set-typography(16, 22, 600)
+            }
+          }
+        }
+      }
+  
+      .input {
+        margin-top: set-calc(24);
+        border-bottom: set-calc(2) solid $grey;
+        text-align: left;
+        padding-bottom: set-calc(16);
+  
+        &-content {
+          position: relative;
+          display: flex;
+  
+          @include set-media(md) {
+            min-width: 100%;
+          }
+  
+          label {
+            width: set-calc(210);
+            margin-right: set-calc(4);
+            color: $grey;
+  
+            @include set-media(md) {
+              display: none;
+            }
+          }
+  
+          input {
+            flex: 1;
+            background: none;
+            border: none;
+            padding: 0;
+            margin: 0;
+            outline: none;
+            font: inherit;
+            color: $beige;
+          }
+  
+          input::placeholder {
+            color: $grey;
+  
+            @include set-typography(18, 24, 600);
+  
+            @include set-media(md) {
+              @include set-typography(16, 22, 600)
+            }
+          }
+        }
+      }
+    }
+
+    &-submit {
+      margin-top: auto;
+
+      @include set-media(md) {
+        padding: 0 set-calc($padding-x-mob-page);
+        width: auto;
+        order: 3;
+        margin-top: set-calc(40);
+      }
+
+      &-btn {
+        padding: set-calc(4) set-calc(40);
+        border-radius: set-calc(20);
+
+        background: $grey-inactive;
+        color: $black;
+        pointer-events: none;
+
+        position: relative;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        min-height: set-calc(48);
+
+        @include set-media(md) {
+          width: 100%;
+        }
+      }
+
+      &-description {
+        width: set-calc(440);
+        margin-top: set-calc(16);
+        color: $grey;
+
+        @include set-media(md) {
+          text-align: center;
+          width: 100%;
+        }
+      }
+    }
+
+    &-files {
+      display: flex;
+      flex-flow: column;
+      overflow: hidden;
+      width: 520px;
+
+      @include set-media(md) {
+        width: 100%;
+        flex-direction: column;
+        padding: 0;
+      }
+
+      &-header {
+        display: flex;
+        justify-content: space-between;
+        margin-bottom: set-calc(56);
+
+        @include set-media(md) {
+          width: 100%;
+          flex-direction: column;
+          margin-bottom: set-calc(40);
+        }
+
+        &-title {
+          @include set-media(md) {
+            padding-bottom: set-calc(40);
+          }
+        }
+
+        &-btn {
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          border: set-calc(1) solid $beige;
+          color: $beige;
+          padding: set-calc(4) set-calc(30);
+          text-align: center;
+          border-radius: set-calc(30);
+          max-height: set-calc(48);
+        }
       }
 
       &-content {
-        grid-column: 3 / 5;
+        display: flex;
+        flex-wrap: wrap;
+        overflow: auto;
+        flex: 1;
 
-        p:not(:last-child) {
-          padding-bottom: set-calc(16);
+        .lesson-upload-file {
+          width: set-calc(-20, true, 50%);
+          margin: 0 set-calc(20) set-calc(20) 0;
+        }
+    
+        .file {
+          &-preview {
+            max-height: set-calc(300);
+            margin-bottom: set-calc(16);
+            border-radius: set-calc(8);
+
+            @include set-media(md) {
+              height: set-calc(250);
+            }
+    
+            display: block;
+            width: 100%;
+            object-fit: cover;
+            object-position: center;
+          }
+    
+          &-name {
+            color: $beige;
+          }
+    
+          &-remove {
+            color: $grey-inactive;
+          }
+        }
+      }
+
+      .lesson-uppload-empty {
+        display: flex;
+        flex-flow: column;
+        height: 100%;
+        margin: 0 auto;
+        align-items: center;
+        justify-content: center;
+        color: $grey;
+        text-align: center;
+      }
+    }
+  }
+
+  .lesson-works {
+    padding: set-calc(140) 0;
+
+    @include set-media(md) {
+      padding: set-calc(80) 0;
+    }
+
+    &-wrapper {
+      position: relative;
+    }
+
+    &-own {
+      grid-column: span 2;
+
+      &-title {
+        padding-bottom: set-calc(40);
+
+        @include set-media(md) {
+          padding-bottom: set-calc(24);
+        }
+      }
+
+      &-work {
+        height: set-calc(290);
+        border-radius: set-calc(8);
+
+        @include set-media(md) {
+          width: set-calc(0, true, 50%);
         }
 
-        a {
-          display: block;
-
-          color: $text-grey;
+        &-empty {
+          display: flex;
+          flex-flow: column;
+          justify-content: center;
+          align-items: center;
+          background: $beige;
+          color: $grey-inactive;
+          padding: 0 set-calc(16);
+          text-align: center;
         }
+      }
 
-        a:not(:last-child) {
-          padding-bottom: set-calc(16);
-        }
+      &-subtitle {
+        margin-top: set-calc(16);
+        color: $text-grey
       }
     }
 
-    .lesson-chat {
-      margin: 0 0 set-calc(80);
-      padding: set-calc(8) 0 0;
+    &-list {
+      grid-column: 5 / 13;
 
-      border-top: set-calc(calc($s-gap / 2)) solid $black-new;
+      @include set-media(md) {
+        margin-top: set-calc(40);
+      }
 
-      &-link {
-        grid-column: 4 / 5;
-        margin-right: 0;
-        margin-left: auto;
+      &-title {
+        padding-bottom: set-calc(40);
+
+        @include set-media(md) {
+          padding-bottom: set-calc(24);
+        }
+      }
+
+      &-inner {
+        display: flex;
+        flex-wrap: wrap;
+      }
+
+      .lesson-works-work {
+        margin: 0 set-calc(8) set-calc(24) 0;
+        width: set-calc(-8, true, 25%);
+
+        @include set-media(md) {
+          width: set-calc(-8, true, 50%);
+        }
+
+        &-card {
+          width: 100%;
+
+          &-preview {
+            position: relative;
+            height: set-calc(290);
+            margin-bottom: set-calc(8);
+            border-radius: set-calc(8);
+            background: $beige;
+            overflow: hidden;
+
+            .image {
+              height: 100%;
+              object-fit: cover;
+              object-position: center;
+              width: 100%;
+            }
+          }
+
+          &-user {
+            display: flex;
+            align-items: center;
+
+            &-image {
+              flex: 0 0 set-calc(32);
+              align-items: center;
+              width: set-calc(32);
+              height: set-calc(32);
+              margin-right: set-calc(8);
+              border-radius: 50%;
+              overflow: hidden;
+              background: $beige;
+              fill: $black-new;
+
+              .image {
+                height: 100%;
+                object-fit: cover;
+                object-position: center;
+                width: 100%;
+              }
+
+              .svg-user {
+                height: 100%;
+                width: 100%;
+                overflow: hidden;
+              }
+            }
+
+            &-name {
+              white-space: nowrap;
+              overflow: hidden;
+              text-overflow: ellipsis;
+            }
+          }
+        }
+
+        &-hidden {
+          .work-card-overlay {
+            backdrop-filter: blur(30px);
+            position: absolute;
+            left: 0;
+            top: 0;
+            width: 100%;
+            height: 100%;
+            border-radius: set-calc(8);
+            background: rgba(23, 22, 27, 0.24);
+          }
+        }
       }
     }
   }

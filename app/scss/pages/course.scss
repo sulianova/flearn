@@ -129,10 +129,6 @@
   }
 }
 
-.program-blocks {
-  grid-column: span 12;
-}
-
 .description-wrapper {
   padding-top: set-calc(140);
 
@@ -1048,22 +1044,9 @@
 
     background-color: $blue;
     border-radius: set-calc(20);
-    cursor: pointer;
-
-    transition: color $d-hover,background-color $d-hover,opacity $d-hover;
 
     @include set-media(md) {
       height: set-calc(38);
-    }
-
-    &:hover {
-      background-color: $blue-hover;
-    }
-
-    @include set-media(md) {
-      &:active {
-        background-color: $blue-hover;
-      }
     }
   }
   

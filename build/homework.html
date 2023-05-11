@@ -1,0 +1,306 @@
+<!DOCTYPE html>
+<html lang="ru">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>lesson</title>
+    <link rel="stylesheet" href="styles/app.css">
+  </head>
+  <body>
+    <div class="page">
+      <div class="header">
+        <div class="header-desk is-grid-12">
+          <div class="header-logo">
+            <div class="header-logo-wrapper"><a class="s-text-24" href="#">flearn</a></div>
+          </div>
+          <div class="header-nav">
+            <div class="header-nav-item"><a class="inline-link" href="profile.html#profile">Moe обучение</a></div>
+            <div class="header-nav-item"><a class="inline-link" href="#page-description">Бесплатно</a></div>
+            <div class="header-nav-item"><a class="inline-link" href="#page-description">Программы обучения</a></div>
+          </div>
+          <div class="header-nav-login"><a class="inline-link" href="#page-description">Войти</a></div>
+          <div class="header-humburger"></div>
+        </div>
+        <div class="header-mob"> 
+          <div class="header-mob-menu-main">
+            <div class="header-mob-item"> <a class="inline-link s-text-24"><span class="inline-text">Мое обучение</span></a></div>
+            <div class="header-mob-item"> <a class="inline-link s-text-24"><span class="inline-text">Бесплатно</span></a></div>
+            <div class="header-mob-item"> <a class="inline-link s-text-24"><span class="inline-text">Программы обучения</span></a></div>
+          </div>
+          <div class="header-mob-spacing"></div>
+          <div class="header-mob-menu-controls"><a class="header-login-btn s-text-24">Войти</a></div>
+        </div>
+      </div>
+      <main class="page-content">
+        <section class="lesson-wrapper">
+          <div class="lesson-header is-grid-4">
+            <div class="lesson-header-title-col"> 
+              <h1 class="lesson-header-title s-text-21">Как рисовать свободно</h1>
+              <div class="s-text-21">23 мая — 23 июня</div>
+            </div>
+            <div class="lesson-header-lesson">
+              <div class="lesson-header-lesson-number s-text-21">Задание</div>
+              <div class="lesson-header-lesson-nav"><a class="inline-link lesson-header-lesson-nav-link s-text-21-uppercase" href="lessons.html"><span class="inline-link-text">Все уроки</span><span class="inline-link-arrow">→</span></a><a class="inline-link lesson-header-lesson-nav-link s-text-21-uppercase blue"><span class="inline-link-text">Следующий урок</span><span class="inline-link-arrow">→</span></a></div>
+            </div>
+          </div>
+          <div class="lesson-content"> 
+            <h2 class="lesson-content-title s-text-56">Задание недели. Тема 1</h2>
+            <div class="lesson-content-upload">
+              <div class="lesson-content-upload-deadline s-text-21-uppercase">
+                 сдать до воскресенья,<br>4 сентября</div><a class="lesson-content-upload-btn s-text-21-uppercase" href="#upload-form">Загрузить работу</a>
+            </div>
+            <div class="lesson-content-content-section">
+              <section class="video-section is-grid-4">
+                <div class="video-player">
+                  <div class="plyr">
+                    <div class="plyr-video-wrapper plyr-video-embed">
+                      <iframe src="https://www.youtube.com/embed/ag6PuGjJdbU?loop=1" title="YouTube video player" frameborder="0" allow="accelerometer; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+                    </div>
+                  </div>
+                </div>
+              </section>
+              <section class="text-section is-grid-4"> 
+                <h2 class="text-section-title s-text-21-uppercase">описание</h2>
+                <div class="text-section-content">
+                  <p class="s-text-21"> Поговорим о свободе в рисунке, сделаем упражнения и 3-4 законченные работы. Будем анализировать рисовальный опыт, отмечать, что вызывает сопротивление, скуку, интерес.</p>
+                </div>
+              </section>
+              <section class="text-section is-grid-4"> 
+                <h2 class="text-section-title s-text-21-uppercase">материалы</h2>
+                <div class="text-section-content"><a class="inline-link s-text-21"> Скачать презентацию</a></div>
+              </section>
+              <div class="lesson-chat is-grid-4"> <a class="lesson-chat-link blue inline-link s-text-21-uppercase"><span class="inline-link-text">Задать вопрос</span><span class="inline-link-arrow">→</span></a></div>
+            </div>
+          </div>
+          <div class="lesson-upload">
+            <form class="lesson-upload-form is-black" action="" id="upload-form">
+              <div class="lesson-upload-form-inner">
+                <div class="lesson-upload-fields"> 
+                  <div class="lesson-upload-fields-title s-text-36">Загрузка работы</div>
+                  <div class="lesson-upload-fields-inner">
+                    <div class="text-area">
+                      <div class="text-area-content">
+                        <label class="s-text-18">Описание</label>
+                        <div class="text-area-content-inner s-text-18">
+                          <textarea rows="1" placeholder="Комментарий к работе"></textarea>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="input">
+                      <div class="input-content"> 
+                        <label class="s-text-18">Ссылка</label>
+                        <input placeholder="https://" type="text">
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="lesson-upload-files">
+                  <div class="lesson-upload-files-header"> 
+                    <div class="lesson-upload-files-header-title s-text-36">Файлы</div>
+                    <input type="file" multiple="multiple" hidden="hidden" id="added-files">
+                    <label class="s-hoverable lesson-upload-files-header-btn" for="added-files">Добавить</label>
+                  </div>
+                  <div class="lesson-upload-files-content">
+                    <div class="lesson-upload-file"> 
+                      <div class="file"> <img class="file-preview" src="./images/3.jpg">
+                        <div class="file-name s-text-18">3.jpg</div>
+                        <button class="file-remove s-text-14">Удалить</button>
+                      </div>
+                    </div>
+                    <div class="lesson-upload-file"> 
+                      <div class="file"> <img class="file-preview" src="./images/5.jpg">
+                        <div class="file-name s-text-18">5.jpg</div>
+                        <button class="file-remove s-text-14">Удалить</button>
+                      </div>
+                    </div>
+                    <div class="lesson-upload-file"> 
+                      <div class="file"> <img class="file-preview" src="./images/6.jpg">
+                        <div class="file-name s-text-18">6.jpg</div>
+                        <button class="file-remove s-text-14">Удалить</button>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="lesson-upload-submit">
+                <button class="lesson-upload-submit-btn s-text-18" type="submit" disabled="disabled">Отправить на проверку</button>
+                <div class="lesson-upload-submit-description s-text-14">После отправки задания вы сможете смотреть работы других студентов</div>
+              </div>
+            </form>
+          </div>
+          <div class="lesson-works"> 
+            <div class="lesson-works-wrapper is-grid-12">
+              <div class="lesson-works-own"> 
+                <div class="lesson-works-own-title s-text-36">Моя работа</div>
+                <div class="lesson-works-own-work lesson-works-own-work-empty"> 
+                  <div class="s-text-14">Когда вы сдадите работу, она появится здесь</div>
+                </div>
+                <div class="lesson-works-own-subtitle s-text-16">Нужно сдать до 4 сентября</div>
+              </div>
+              <div class="lesson-works-list"> 
+                <div class="lesson-works-list-title s-text-36">Работы других студентов</div>
+                <div class="lesson-works-list-inner"> 
+                  <div class="lesson-works-work"> 
+                    <div class="lesson-works-work-card lesson-works-work-hidden">
+                      <div class="lesson-works-work-card-preview">
+                        <picture> <img class="image" src="./images/3.jpg"></picture>
+                        <div class="work-card-overlay"></div>
+                      </div><a class="lesson-works-work-card-user">
+                        <div class="lesson-works-work-card-user-image">
+                          <svg class="svg-user" width="32" height="31" viewBox="0 0 32 31" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M24 23C24 24 20.4183 24 16 24C11.5817 24 8 24 8 23C8 18.5817 11.5817 15 16 15C20.4183 15 24 18.5817 24 23Z" fill="#131313"></path>
+                            <ellipse cx="16" cy="9.88615" rx="4" ry="3.88615" fill="#131313"></ellipse>
+                          </svg>
+                        </div>
+                        <div class="lesson-works-work-card-user-name s-text-16">Лиза Смирнова</div></a>
+                    </div>
+                  </div>
+                  <div class="lesson-works-work"> 
+                    <div class="lesson-works-work-card lesson-works-work-hidden">
+                      <div class="lesson-works-work-card-preview">
+                        <picture> <img class="image" src="./images/3.jpg"></picture>
+                        <div class="work-card-overlay"></div>
+                      </div><a class="lesson-works-work-card-user">
+                        <div class="lesson-works-work-card-user-image">
+                          <picture> <img class="image" src="./images/author.png"></picture>
+                        </div>
+                        <div class="lesson-works-work-card-user-name s-text-16">Лиза Смирнова</div></a>
+                    </div>
+                  </div>
+                  <div class="lesson-works-work"> 
+                    <div class="lesson-works-work-card lesson-works-work-hidden">
+                      <div class="lesson-works-work-card-preview">
+                        <picture> <img class="image" src="./images/3.jpg"></picture>
+                        <div class="work-card-overlay"></div>
+                      </div><a class="lesson-works-work-card-user">
+                        <div class="lesson-works-work-card-user-image">
+                          <picture> <img class="image" src="./images/author.png"></picture>
+                        </div>
+                        <div class="lesson-works-work-card-user-name s-text-16">Лиза Смирнова</div></a>
+                    </div>
+                  </div>
+                  <div class="lesson-works-work"> 
+                    <div class="lesson-works-work-card lesson-works-work-hidden">
+                      <div class="lesson-works-work-card-preview">
+                        <picture> <img class="image" src="./images/3.jpg"></picture>
+                        <div class="work-card-overlay"></div>
+                      </div><a class="lesson-works-work-card-user">
+                        <div class="lesson-works-work-card-user-image">
+                          <picture> <img class="image" src="./images/author.png"></picture>
+                        </div>
+                        <div class="lesson-works-work-card-user-name s-text-16">Лиза Смирнова</div></a>
+                    </div>
+                  </div>
+                  <div class="lesson-works-work"> 
+                    <div class="lesson-works-work-card lesson-works-work-hidden">
+                      <div class="lesson-works-work-card-preview">
+                        <picture> <img class="image" src="./images/3.jpg"></picture>
+                        <div class="work-card-overlay"></div>
+                      </div><a class="lesson-works-work-card-user">
+                        <div class="lesson-works-work-card-user-image">
+                          <picture> <img class="image" src="./images/author.png"></picture>
+                        </div>
+                        <div class="lesson-works-work-card-user-name s-text-16">Лиза Смирнова</div></a>
+                    </div>
+                  </div>
+                  <div class="lesson-works-work"> 
+                    <div class="lesson-works-work-card lesson-works-work-hidden">
+                      <div class="lesson-works-work-card-preview">
+                        <picture> <img class="image" src="./images/3.jpg"></picture>
+                        <div class="work-card-overlay"></div>
+                      </div><a class="lesson-works-work-card-user">
+                        <div class="lesson-works-work-card-user-image">
+                          <picture> <img class="image" src="./images/author.png"></picture>
+                        </div>
+                        <div class="lesson-works-work-card-user-name s-text-16">Лиза Смирнова</div></a>
+                    </div>
+                  </div>
+                  <div class="lesson-works-work"> 
+                    <div class="lesson-works-work-card lesson-works-work-hidden">
+                      <div class="lesson-works-work-card-preview">
+                        <picture> <img class="image" src="./images/3.jpg"></picture>
+                        <div class="work-card-overlay"></div>
+                      </div><a class="lesson-works-work-card-user">
+                        <div class="lesson-works-work-card-user-image">
+                          <picture> <img class="image" src="./images/author.png"></picture>
+                        </div>
+                        <div class="lesson-works-work-card-user-name s-text-16">Лиза Смирнова</div></a>
+                    </div>
+                  </div>
+                  <div class="lesson-works-work"> 
+                    <div class="lesson-works-work-card lesson-works-work-hidden">
+                      <div class="lesson-works-work-card-preview">
+                        <picture> <img class="image" src="./images/3.jpg"></picture>
+                        <div class="work-card-overlay"></div>
+                      </div><a class="lesson-works-work-card-user">
+                        <div class="lesson-works-work-card-user-image">
+                          <picture> <img class="image" src="./images/author.png"></picture>
+                        </div>
+                        <div class="lesson-works-work-card-user-name s-text-16">Лиза Смирнова</div></a>
+                    </div>
+                  </div>
+                  <div class="lesson-works-work"> 
+                    <div class="lesson-works-work-card lesson-works-work-hidden">
+                      <div class="lesson-works-work-card-preview">
+                        <picture> <img class="image" src="./images/3.jpg"></picture>
+                        <div class="work-card-overlay"></div>
+                      </div><a class="lesson-works-work-card-user">
+                        <div class="lesson-works-work-card-user-image">
+                          <picture> <img class="image" src="./images/author.png"></picture>
+                        </div>
+                        <div class="lesson-works-work-card-user-name s-text-16">Лиза Смирнова</div></a>
+                    </div>
+                  </div>
+                  <div class="lesson-works-work"> 
+                    <div class="lesson-works-work-card lesson-works-work-hidden">
+                      <div class="lesson-works-work-card-preview">
+                        <picture> <img class="image" src="./images/3.jpg"></picture>
+                        <div class="work-card-overlay"></div>
+                      </div><a class="lesson-works-work-card-user">
+                        <div class="lesson-works-work-card-user-image">
+                          <picture> <img class="image" src="./images/author.png"></picture>
+                        </div>
+                        <div class="lesson-works-work-card-user-name s-text-16">Лиза Смирнова</div></a>
+                    </div>
+                  </div>
+                  <div class="lesson-works-work"> 
+                    <div class="lesson-works-work-card lesson-works-work-hidden">
+                      <div class="lesson-works-work-card-preview">
+                        <picture> <img class="image" src="./images/3.jpg"></picture>
+                        <div class="work-card-overlay"></div>
+                      </div><a class="lesson-works-work-card-user">
+                        <div class="lesson-works-work-card-user-image">
+                          <picture> <img class="image" src="./images/author.png"></picture>
+                        </div>
+                        <div class="lesson-works-work-card-user-name s-text-16">Лиза Смирнова</div></a>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+      </main>
+      <div class="footer">
+        <div class="footer-inner"> 
+          <div class="footer-left"> 
+            <div class="footer-row"> 
+              <div class="logo footer-row-item s-text-24">flearn</div>
+            </div>
+          </div>
+          <div class="footer-references"> 
+            <div class="footer-row"> <a class="footer-row-item s-text-18">Курсы</a><a class="footer-row-item s-text-18">Рекомендуемые книги</a><a class="footer-row-item s-text-18">Статьи</a><a class="footer-row-item s-text-18">Отзывы студентов</a></div>
+          </div>
+          <div class="footer-social">
+            <div class="footer-row"> <a class="footer-row-item s-text-18" href="https://t.me/sofiulyanova" target="_blank">Telegram</a><a class="footer-row-item s-text-18" href="https://www.youtube.com/@sofiulyanova/featured" target="_blank">YouTube</a><a class="footer-row-item s-text-18" href="https://dzen.ru/id/63e1220500d5cb197f2baf8b" target="_blank">Dzen</a><a class="footer-row-item s-text-18" href="https://vk.com/club186282121" target="_blank">Vkontakte</a></div>
+          </div>
+          <div class="footer-right"> 
+            <div class="footer-row"> <a class="footer-row-item s-text-18">Политика конфидициальности</a><a class="footer-row-item s-text-18">Условия использования</a></div>
+          </div>
+          <div class="footer-author"> <a class="footer-author-title s-text-18">Made by Sofiia Ulianova</a></div>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>

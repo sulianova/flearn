@@ -1,0 +1,226 @@
+doctype html
+html(lang="ru")
+  head
+    meta(charset="UTF-8")
+    meta(name="viewport", content="width=device-width, initial-scale=1.0")
+    meta(http-equiv="X-UA-Compatible", content="IE=edge")
+    title lesson
+    link(rel="stylesheet", href="styles/app.css")
+  body
+    .page
+      include components/header.pug
+      main.page-content
+        section.lesson-wrapper
+          .lesson-header.is-grid-4
+            .lesson-header-title-col 
+              h1.lesson-header-title.s-text-21 Как рисовать свободно
+              .s-text-21 23 мая — 23 июня
+            .lesson-header-lesson
+              .lesson-header-lesson-number.s-text-21 Задание
+              .lesson-header-lesson-nav
+                a.inline-link.lesson-header-lesson-nav-link.s-text-21-uppercase(href="lessons.html")
+                  span.inline-link-text Все уроки
+                  span.inline-link-arrow →
+                a.inline-link.lesson-header-lesson-nav-link.s-text-21-uppercase.blue
+                  span.inline-link-text Следующий урок
+                  span.inline-link-arrow →
+          .lesson-content 
+            h2.lesson-content-title.s-text-56 Задание недели. Тема 1
+            .lesson-content-upload
+              .lesson-content-upload-deadline.s-text-21-uppercase 
+                 | сдать до воскресенья,
+                 br
+                 | 4 сентября
+              a(href="#upload-form").lesson-content-upload-btn.s-text-21-uppercase Загрузить работу
+            .lesson-content-content-section
+              section.video-section.is-grid-4
+                .video-player
+                      .plyr
+                        .plyr-video-wrapper.plyr-video-embed
+                          iframe(src="https://www.youtube.com/embed/ag6PuGjJdbU?loop=1" title="YouTube video player" frameborder="0" allow="accelerometer; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen)
+              section.text-section.is-grid-4 
+                h2.text-section-title.s-text-21-uppercase описание
+                .text-section-content
+                  p.s-text-21  Поговорим о свободе в рисунке, сделаем упражнения и 3-4 законченные работы. Будем анализировать рисовальный опыт, отмечать, что вызывает сопротивление, скуку, интерес.
+              section.text-section.is-grid-4 
+                h2.text-section-title.s-text-21-uppercase материалы
+                .text-section-content
+                  a.inline-link.s-text-21  Скачать презентацию
+              .lesson-chat.is-grid-4 
+                a.lesson-chat-link.blue.inline-link.s-text-21-uppercase
+                  span.inline-link-text Задать вопрос
+                  span.inline-link-arrow →
+          .lesson-upload
+            form.lesson-upload-form(action="" id="upload-form").is-black
+              .lesson-upload-form-inner
+                .lesson-upload-fields 
+                  .lesson-upload-fields-title.s-text-36 Загрузка работы
+                  .lesson-upload-fields-inner
+                    .text-area
+                      .text-area-content
+                        label.s-text-18 Описание
+                        .text-area-content-inner.s-text-18
+                          textarea(rows="1" placeholder="Комментарий к работе")
+                    .input
+                      .input-content 
+                        label.s-text-18 Ссылка
+                        input(placeholder="https://" type="text")
+                .lesson-upload-files
+                  .lesson-upload-files-header 
+                    .lesson-upload-files-header-title.s-text-36 Файлы
+                    input(type="file" multiple="multiple" hidden="hidden" id="added-files")
+                    label(for="added-files").s-hoverable.lesson-upload-files-header-btn Добавить
+                  .lesson-upload-files-content
+                    .lesson-upload-file 
+                      .file 
+                        img(src="./images/3.jpg").file-preview
+                        .file-name.s-text-18 3.jpg
+                        button.file-remove.s-text-14 Удалить
+                    .lesson-upload-file 
+                      .file 
+                        img(src="./images/5.jpg").file-preview
+                        .file-name.s-text-18 5.jpg
+                        button.file-remove.s-text-14 Удалить
+                    .lesson-upload-file 
+                      .file 
+                        img(src="./images/6.jpg").file-preview
+                        .file-name.s-text-18 6.jpg
+                        button.file-remove.s-text-14 Удалить
+                    //- .lesson-uppload-empty
+                    //-   .s-text-18 Перетащите сюда файлы
+              .lesson-upload-submit
+                  button.lesson-upload-submit-btn.s-text-18(type="submit" disabled="disabled") Отправить на проверку
+                  .lesson-upload-submit-description.s-text-14 После отправки задания вы сможете смотреть работы других студентов
+          .lesson-works 
+            .lesson-works-wrapper.is-grid-12
+              .lesson-works-own 
+                .lesson-works-own-title.s-text-36 Моя работа
+                .lesson-works-own-work.lesson-works-own-work-empty 
+                  .s-text-14 Когда вы сдадите работу, она появится здесь
+                .lesson-works-own-subtitle.s-text-16 Нужно сдать до 4 сентября
+              .lesson-works-list 
+                .lesson-works-list-title.s-text-36 Работы других студентов
+                .lesson-works-list-inner 
+                  .lesson-works-work 
+                    .lesson-works-work-card.lesson-works-work-hidden
+                      .lesson-works-work-card-preview
+                        picture 
+                          img(src="./images/3.jpg").image
+                        .work-card-overlay
+                      a.lesson-works-work-card-user
+                        .lesson-works-work-card-user-image
+                          svg(width="32" height="31" viewBox="0 0 32 31" fill="none" xmlns="http://www.w3.org/2000/svg").svg-user
+                            path(d="M24 23C24 24 20.4183 24 16 24C11.5817 24 8 24 8 23C8 18.5817 11.5817 15 16 15C20.4183 15 24 18.5817 24 23Z" fill="#131313")
+                            ellipse(cx="16" cy="9.88615" rx="4" ry="3.88615" fill="#131313")
+                        .lesson-works-work-card-user-name.s-text-16 Лиза Смирнова
+                  .lesson-works-work 
+                    .lesson-works-work-card.lesson-works-work-hidden
+                      .lesson-works-work-card-preview
+                        picture 
+                          img(src="./images/3.jpg").image
+                        .work-card-overlay
+                      a.lesson-works-work-card-user
+                        .lesson-works-work-card-user-image
+                          picture 
+                            img(src="./images/author.png").image
+                        .lesson-works-work-card-user-name.s-text-16 Лиза Смирнова
+                  .lesson-works-work 
+                    .lesson-works-work-card.lesson-works-work-hidden
+                      .lesson-works-work-card-preview
+                        picture 
+                          img(src="./images/3.jpg").image
+                        .work-card-overlay
+                      a.lesson-works-work-card-user
+                        .lesson-works-work-card-user-image
+                          picture 
+                            img(src="./images/author.png").image
+                        .lesson-works-work-card-user-name.s-text-16 Лиза Смирнова
+                  .lesson-works-work 
+                    .lesson-works-work-card.lesson-works-work-hidden
+                      .lesson-works-work-card-preview
+                        picture 
+                          img(src="./images/3.jpg").image
+                        .work-card-overlay
+                      a.lesson-works-work-card-user
+                        .lesson-works-work-card-user-image
+                          picture 
+                            img(src="./images/author.png").image
+                        .lesson-works-work-card-user-name.s-text-16 Лиза Смирнова
+                  .lesson-works-work 
+                    .lesson-works-work-card.lesson-works-work-hidden
+                      .lesson-works-work-card-preview
+                        picture 
+                          img(src="./images/3.jpg").image
+                        .work-card-overlay
+                      a.lesson-works-work-card-user
+                        .lesson-works-work-card-user-image
+                          picture 
+                            img(src="./images/author.png").image
+                        .lesson-works-work-card-user-name.s-text-16 Лиза Смирнова
+                  .lesson-works-work 
+                    .lesson-works-work-card.lesson-works-work-hidden
+                      .lesson-works-work-card-preview
+                        picture 
+                          img(src="./images/3.jpg").image
+                        .work-card-overlay
+                      a.lesson-works-work-card-user
+                        .lesson-works-work-card-user-image
+                          picture 
+                            img(src="./images/author.png").image
+                        .lesson-works-work-card-user-name.s-text-16 Лиза Смирнова
+                  .lesson-works-work 
+                    .lesson-works-work-card.lesson-works-work-hidden
+                      .lesson-works-work-card-preview
+                        picture 
+                          img(src="./images/3.jpg").image
+                        .work-card-overlay
+                      a.lesson-works-work-card-user
+                        .lesson-works-work-card-user-image
+                          picture 
+                            img(src="./images/author.png").image
+                        .lesson-works-work-card-user-name.s-text-16 Лиза Смирнова
+                  .lesson-works-work 
+                    .lesson-works-work-card.lesson-works-work-hidden
+                      .lesson-works-work-card-preview
+                        picture 
+                          img(src="./images/3.jpg").image
+                        .work-card-overlay
+                      a.lesson-works-work-card-user
+                        .lesson-works-work-card-user-image
+                          picture 
+                            img(src="./images/author.png").image
+                        .lesson-works-work-card-user-name.s-text-16 Лиза Смирнова
+                  .lesson-works-work 
+                    .lesson-works-work-card.lesson-works-work-hidden
+                      .lesson-works-work-card-preview
+                        picture 
+                          img(src="./images/3.jpg").image
+                        .work-card-overlay
+                      a.lesson-works-work-card-user
+                        .lesson-works-work-card-user-image
+                          picture 
+                            img(src="./images/author.png").image
+                        .lesson-works-work-card-user-name.s-text-16 Лиза Смирнова
+                  .lesson-works-work 
+                    .lesson-works-work-card.lesson-works-work-hidden
+                      .lesson-works-work-card-preview
+                        picture 
+                          img(src="./images/3.jpg").image
+                        .work-card-overlay
+                      a.lesson-works-work-card-user
+                        .lesson-works-work-card-user-image
+                          picture 
+                            img(src="./images/author.png").image
+                        .lesson-works-work-card-user-name.s-text-16 Лиза Смирнова
+                  .lesson-works-work 
+                    .lesson-works-work-card.lesson-works-work-hidden
+                      .lesson-works-work-card-preview
+                        picture 
+                          img(src="./images/3.jpg").image
+                        .work-card-overlay
+                      a.lesson-works-work-card-user
+                        .lesson-works-work-card-user-image
+                          picture 
+                            img(src="./images/author.png").image
+                        .lesson-works-work-card-user-name.s-text-16 Лиза Смирнова
+      include components/footer.pug
