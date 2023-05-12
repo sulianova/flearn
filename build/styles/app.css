@@ -1,5 +1,5 @@
 :root {
-  --scale: 100vw/1440;
+  --scale: 100vw/1600;
 }
 
 @media (max-width: 767.98px) {
@@ -18,10 +18,10 @@
 @font-face {
   font-weight: 500;
   font-family: TTInterphasesPro;
-  src: url("../fonts/InterphasesPro-Medium.ttf");
+  src: url("../fonts/TTInterphasesPro-Medium.ttf");
 }
 html {
-  font-family: TTInterphasesPro, sans-serif;
+  font-family: TTInterphasesPro, sans-serif !important;
   font-size: calc(var(--scale) * 18);
   line-height: calc(var(--scale) * 28);
   font-weight: 500;
@@ -172,7 +172,7 @@ button:hover {
   display: grid;
   grid-gap: 0 calc(var(--scale) * 8);
   grid-template-columns: repeat(12, minmax(0, 1fr));
-  padding: 0 calc(var(--scale) * 48);
+  padding: 0 calc(var(--scale) * 56);
 }
 @media (max-width: 767.98px) {
   .program-wrapper {
@@ -192,10 +192,10 @@ button:hover {
 
 .is-black {
   position: relative;
-  left: calc(var(--scale) * -48);
-  width: calc(100% + var(--scale) * 96);
+  left: calc(var(--scale) * -56);
+  width: calc(100% + var(--scale) * 112);
   margin-top: calc(var(--scale) * 120);
-  padding: calc(var(--scale) * 72) calc(var(--scale) * 48);
+  padding: calc(var(--scale) * 72) calc(var(--scale) * 56);
   background-color: #131313;
   border-radius: calc(var(--scale) * 20);
 }
@@ -239,7 +239,7 @@ button:hover {
   display: grid;
   grid-gap: calc(var(--scale) * 8);
   grid-template-columns: repeat(12, minmax(0, 1fr));
-  padding: 0 calc(var(--scale) * 48);
+  padding: 0 calc(var(--scale) * 56);
 }
 
 .inline-link {
@@ -466,7 +466,7 @@ button:hover {
   position: relative;
   display: flex;
   justify-content: space-between;
-  padding: calc(var(--scale) * 4) calc(var(--scale) * 48) calc(var(--scale) * 8);
+  padding: calc(var(--scale) * 4) calc(var(--scale) * 56) calc(var(--scale) * 8);
   background-color: rgba(255, 255, 255, 0);
 }
 @media (max-width: 767.98px) {
@@ -568,7 +568,6 @@ button:hover {
   width: 100%;
   color: #fff;
   height: calc(var(--scale) * 68);
-  font-family: TTInterphasesPro, sans-serif !important;
   background-color: #131313;
   border-radius: calc(var(--scale) * 20);
   cursor: pointer;
@@ -587,7 +586,7 @@ button:hover {
 
 .footer {
   display: block;
-  padding: 0 calc(var(--scale) * 48) calc(var(--scale) * 32);
+  padding: 0 calc(var(--scale) * 56) calc(var(--scale) * 32);
   margin-top: calc(var(--scale) * 32);
   border-bottom: 0.056rem solid rgb(70, 70, 70);
 }
@@ -821,18 +820,40 @@ button:hover {
 .description-wrapper .description-list .description-list-item {
   grid-column: span 4;
 }
+.description-wrapper .description-list .description-list-item-question-wrapper {
+  position: relative;
+  grid-column: span 1;
+  padding-right: calc(var(--scale) * 60);
+  display: flex;
+}
+@media (max-width: 767.98px) {
+  .description-wrapper .description-list .description-list-item-question-wrapper {
+    padding-right: 0;
+  }
+}
 .description-wrapper .description-list .description-list-item-question {
-  grid-column: span 3;
-  padding-top: calc(var(--scale) * 4);
-  border-top: calc(var(--scale) * 4) solid #131313;
+  position: relative;
+  background-color: #F3F3F3;
+  padding: calc(var(--scale) * 16) calc(var(--scale) * 16) calc(var(--scale) * 24);
+  border-radius: calc(var(--scale) * 20);
+  margin-bottom: auto;
+  width: 100%;
+  text-align: center;
+}
+@media (max-width: 767.98px) {
+  .description-wrapper .description-list .description-list-item-question {
+    text-align: left;
+    padding: calc(var(--scale) * 8) 0 calc(var(--scale) * 4);
+    border-radius: 0;
+    background-color: #fff;
+    border-top: calc(var(--scale) * 4) solid #131313;
+  }
 }
 .description-wrapper .description-list .description-list-item-answear {
-  grid-column: 4/-1;
-  padding-top: calc(var(--scale) * 4);
-  border-top: calc(var(--scale) * 4) solid #131313;
+  grid-column: 2/-1;
 }
 .description-wrapper .description-list .description-list-item:not(:last-child) {
-  margin-bottom: calc(var(--scale) * 60);
+  margin-bottom: calc(var(--scale) * 80);
 }
 @media (max-width: 767.98px) {
   .description-wrapper .description-list .description-list-item:not(:last-child) {
@@ -1001,12 +1022,14 @@ button:hover {
   flex-direction: column;
   grid-column: span 6;
   justify-content: center;
-  padding-right: calc(var(--scale) * 48);
+  padding-right: calc(var(--scale) * 100);
+  padding-left: calc(var(--scale) * 32);
   padding-bottom: calc(var(--scale) * 40);
 }
 @media (max-width: 767.98px) {
   .explain-wrapper .explain-quote {
     padding-right: calc(var(--scale) * 0);
+    padding-left: calc(var(--scale) * 0);
   }
 }
 .explain-wrapper .content-block-embed {
@@ -1129,10 +1152,10 @@ button:hover {
   .teachers-wrapper .teachers-list-item {
     position: relative;
     display: grid;
-    grid-column-gap: calc(var(--scale) * 16);
+    grid-column-gap: calc(var(--scale) * 20);
     grid-template-columns: calc(var(--scale) * 130) 1fr;
     min-height: calc(var(--scale) * 170);
-    padding: calc(var(--scale) * 16) calc(var(--scale) * 16);
+    padding: calc(var(--scale) * 16) calc(var(--scale) * 24) calc(var(--scale) * 16) calc(var(--scale) * 16);
     background: #F3F3F3;
     border-radius: calc(var(--scale) * 20);
   }
@@ -1184,7 +1207,6 @@ button:hover {
 .teachers-wrapper .teachers-list-item-link a {
   position: relative;
   display: block;
-  font-family: TTInterphasesPro, sans-serif;
   text-align: right;
 }
 .teachers-wrapper .teachers-list-item-link a:hover {
@@ -1198,6 +1220,7 @@ button:hover {
 
 .gallery {
   position: relative;
+  padding-top: calc(var(--scale) * 0);
   display: block;
 }
 .gallery-btns {
@@ -1214,7 +1237,6 @@ button:hover {
 .gallery-paginationBtn {
   padding: 0;
   color: #aaa;
-  font-family: TTInterphasesPro, sans-serif;
   background: none;
   border: none;
   outline: none;
@@ -1230,9 +1252,9 @@ button:hover {
   margin-right: 0;
 }
 .gallery-container {
-  left: calc(var(--scale) * -48);
-  width: calc(100% + var(--scale) * 96);
-  padding: 0 calc(var(--scale) * 48);
+  left: calc(var(--scale) * -56);
+  width: calc(100% + var(--scale) * 112);
+  padding: 0 calc(var(--scale) * 56);
 }
 @media (max-width: 767.98px) {
   .gallery-container {
@@ -1542,7 +1564,6 @@ button:hover {
   height: calc(var(--scale) * 68);
   padding: 0 calc(var(--scale) * 40);
   color: #fff;
-  font-family: TTInterphasesPro, sans-serif !important;
   background-color: #1F59F5;
   border-radius: calc(var(--scale) * 20);
 }
@@ -1618,7 +1639,7 @@ button:hover {
 }
 .faq-wrapper .faq-list-item {
   position: relative;
-  grid-column: span 6;
+  grid-column: span 4;
   height: auto;
   padding: calc(var(--scale) * 32);
   background-color: #F3F3F3;
@@ -1641,7 +1662,7 @@ button:hover {
 }
 
 .profile-wrapper {
-  padding: calc(var(--scale) * 40) calc(var(--scale) * 48) 0;
+  padding: calc(var(--scale) * 40) calc(var(--scale) * 56) 0;
 }
 @media (max-width: 767.98px) {
   .profile-wrapper {
@@ -1794,7 +1815,7 @@ button:hover {
 }
 
 .lessons-wrapper {
-  padding: 0 calc(var(--scale) * 48);
+  padding: 0 calc(var(--scale) * 56);
 }
 @media (max-width: 767.98px) {
   .lessons-wrapper {
@@ -1877,7 +1898,7 @@ button:hover {
 }
 
 .lesson-wrapper {
-  padding: 0 calc(var(--scale) * 48);
+  padding: 0 calc(var(--scale) * 56);
 }
 @media (max-width: 767.98px) {
   .lesson-wrapper {

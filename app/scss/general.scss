@@ -5,12 +5,19 @@
 @font-face {
   font-weight: 500;
   font-family: TTInterphasesPro;
-  src: url("../fonts/InterphasesPro-Medium.ttf");
+  src: url("../fonts/TTInterphasesPro-Medium.ttf");
 }
 
 
+// @font-face {
+//   font-weight: 500;
+//   font-family: TTInterphasesPro;
+//   src: url("../fonts/TTInterphasesPro-DemiBold.ttf");
+// }
+
+
 html {
-  font-family: $font-family;
+  font-family: $font-family !important;
   font-size: set-calc(18);
   line-height: set-calc(28);
   font-weight: 500;

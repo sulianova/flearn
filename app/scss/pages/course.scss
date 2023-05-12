@@ -148,23 +148,44 @@
     .description-list-item {
       grid-column: span 4;
 
-      &-question {
-        grid-column: span 3;
-        padding-top: set-calc(calc($s-gap / 2));
+      &-question-wrapper {
+        position: relative;
+        grid-column: span 1;
+        padding-right: set-calc(60);
+        display: flex;
 
-        border-top: set-calc(calc($s-gap / 2)) solid $black-new;
+        @include set-media(md) {
+          padding-right: 0;
+          // left: set-calc(-$padding-x-mob-page);
+          // width: set-calc($padding-x-mob-page * 2, true, 100%);
+        }
+      }
+
+      &-question {
+        position: relative;
+        background-color: $beige;
+        padding: set-calc(16) set-calc(16) set-calc(24);
+        border-radius: set-calc(20);
+        margin-bottom: auto;
+        width: 100%;
+        text-align: center;
+
+        @include set-media(md) {
+          text-align: left;
+          padding: set-calc(8) 0 set-calc(4);
+          border-radius: 0;
+          background-color: $white;
+          border-top: set-calc(calc($s-gap / 2)) solid $black-new;
+        }
       }
   
       &-answear {
-        grid-column: 4/-1;
-        padding-top: set-calc(calc($s-gap / 2));
-
-        border-top: set-calc(calc($s-gap /2)) solid $black-new;
+        grid-column: 2 / -1;
       }
     }
 
     .description-list-item:not(:last-child) {
-      margin-bottom: set-calc(60);
+      margin-bottom: set-calc(80);
     }
 
     @include set-media(md) {
@@ -364,11 +385,13 @@
     flex-direction: column;
     grid-column: span 6;
     justify-content: center;
-    padding-right: set-calc(48);
+    padding-right: set-calc(100);
+    padding-left: set-calc(32);
     padding-bottom: set-calc(40);
 
     @include set-media(md) {
       padding-right: set-calc(0);
+      padding-left: set-calc(0);
     }
   }
 
@@ -500,7 +523,6 @@
 
     @include set-media(md) {
       left: set-calc(-$padding-x-mob-page);
-
       width: set-calc(2 * $padding-x-mob-page, true, 100%);
     }
   }
@@ -518,10 +540,10 @@
       position: relative;
 
       display: grid;
-      grid-column-gap: set-calc(16);
+      grid-column-gap: set-calc(20);
       grid-template-columns: set-calc(130) 1fr;
       min-height: set-calc(170);
-      padding: set-calc($padding-x-mob-page) set-calc($padding-x-mob-page);
+      padding: set-calc($padding-x-mob-page) set-calc(24) set-calc($padding-x-mob-page) set-calc($padding-x-mob-page);
 
       background: $beige;
       border-radius: set-calc(20);
@@ -583,8 +605,6 @@
         position: relative;
 
         display: block;
-
-        font-family: $font-family;
         text-align: right;
       }
 
@@ -602,6 +622,7 @@
 
 .gallery {
   position: relative;
+  padding-top: set-calc(0);
 
   display: block;
 
@@ -609,6 +630,7 @@
     display: flex;
     flex-wrap: wrap;
     align-items: baseline;
+    // justify-content: flex-end;
     padding: set-calc(60) 0 set-calc(8);
 
     @include set-media(md) {
@@ -620,7 +642,6 @@
     padding: 0;
 
     color: $grey;
-    font-family: $font-family;
 
     background: none;
 
@@ -1040,8 +1061,6 @@
 
     color: $white;
 
-    font-family: $font-family!important;
-
     background-color: $blue;
     border-radius: set-calc(20);
 
@@ -1128,7 +1147,7 @@
   .faq-list-item {
     position: relative;
 
-    grid-column: span 6;
+    grid-column: span 4;
     height: auto;
     padding: set-calc(32);
 
