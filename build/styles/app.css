@@ -16,14 +16,12 @@
 }
 
 @font-face {
-  font-weight: 600;
+  font-weight: 500;
   font-family: TTInterphasesPro;
-  src: url("../fonts/TTInterphasesPro-DemiBold.ttf");
+  src: url("../fonts/InterphasesPro-Medium.ttf");
 }
 html {
-  color: #222;
   font-family: TTInterphasesPro, sans-serif;
-  background-color: #fff;
   font-size: calc(var(--scale) * 18);
   line-height: calc(var(--scale) * 28);
   font-weight: 500;
@@ -31,6 +29,8 @@ html {
   -webkit-text-size-adjust: 100%;
   -moz-osx-font-smoothing: grayscale;
   -webkit-font-smoothing: antialiased;
+  color: #222;
+  background-color: #fff;
 }
 
 body,
@@ -44,8 +44,12 @@ button {
   padding: 0;
 }
 
+.ss01 {
+  font-feature-settings: "ss01" 1;
+}
+
 h1 {
-  font-weight: 700;
+  font-weight: 500;
   font-size: calc(var(--scale) * 88);
   line-height: calc(var(--scale) * 96);
   text-transform: inherit;
@@ -53,7 +57,7 @@ h1 {
 }
 @media (max-width: 767.98px) {
   h1 {
-    font-weight: 700;
+    font-weight: 500;
     font-size: calc(var(--scale) * 48);
     line-height: calc(var(--scale) * 52);
     text-transform: inherit;
@@ -61,7 +65,7 @@ h1 {
 }
 
 h2 {
-  font-weight: 700;
+  font-weight: 500;
   font-size: calc(var(--scale) * 56);
   line-height: calc(var(--scale) * 61);
   text-transform: inherit;
@@ -69,7 +73,7 @@ h2 {
 }
 @media (max-width: 767.98px) {
   h2 {
-    font-weight: 700;
+    font-weight: 500;
     font-size: calc(var(--scale) * 40);
     line-height: calc(var(--scale) * 44);
     text-transform: inherit;
@@ -77,14 +81,14 @@ h2 {
 }
 
 h3 {
-  font-weight: 700;
+  font-weight: 500;
   font-size: calc(var(--scale) * 48);
   line-height: calc(var(--scale) * 55.2);
   text-transform: inherit;
 }
 @media (max-width: 767.98px) {
   h3 {
-    font-weight: 700;
+    font-weight: 500;
     font-size: calc(var(--scale) * 32);
     line-height: calc(var(--scale) * 36.8);
     text-transform: inherit;
@@ -275,21 +279,21 @@ button:hover {
 }
 
 .s-text-14 {
-  font-weight: 600;
+  font-weight: 500;
   font-size: calc(var(--scale) * 14);
   line-height: calc(var(--scale) * 19);
   text-transform: inherit;
 }
 
 .s-text-16 {
-  font-weight: 600;
+  font-weight: 500;
   font-size: calc(var(--scale) * 16);
   line-height: calc(var(--scale) * 22);
   text-transform: inherit;
 }
 @media (max-width: 767.98px) {
   .s-text-16 {
-    font-weight: 600;
+    font-weight: 500;
     font-size: calc(var(--scale) * 14);
     line-height: calc(var(--scale) * 19);
     text-transform: inherit;
@@ -297,14 +301,14 @@ button:hover {
 }
 
 .s-text-18 {
-  font-weight: 600;
+  font-weight: 500;
   font-size: calc(var(--scale) * 18);
   line-height: calc(var(--scale) * 24);
   text-transform: inherit;
 }
 @media (max-width: 767.98px) {
   .s-text-18 {
-    font-weight: 600;
+    font-weight: 500;
     font-size: calc(var(--scale) * 16);
     line-height: calc(var(--scale) * 22);
     text-transform: inherit;
@@ -312,7 +316,7 @@ button:hover {
 }
 
 .s-text-20-uppercase {
-  font-weight: 600;
+  font-weight: 500;
   font-size: calc(var(--scale) * 20);
   line-height: calc(var(--scale) * 26);
   text-transform: inherit;
@@ -320,7 +324,7 @@ button:hover {
 }
 @media (max-width: 767.98px) {
   .s-text-20-uppercase {
-    font-weight: 600;
+    font-weight: 500;
     font-size: calc(var(--scale) * 18);
     line-height: calc(var(--scale) * 24);
     text-transform: inherit;
@@ -329,14 +333,14 @@ button:hover {
 }
 
 .s-text-21 {
-  font-weight: 600;
+  font-weight: 500;
   font-size: calc(var(--scale) * 21);
   line-height: calc(var(--scale) * 28);
   text-transform: inherit;
 }
 @media (max-width: 767.98px) {
   .s-text-21 {
-    font-weight: 600;
+    font-weight: 500;
     font-size: calc(var(--scale) * 16);
     line-height: calc(var(--scale) * 22);
     text-transform: inherit;
@@ -344,7 +348,7 @@ button:hover {
 }
 
 .s-text-21-uppercase {
-  font-weight: 600;
+  font-weight: 500;
   font-size: calc(var(--scale) * 21);
   line-height: calc(var(--scale) * 28);
   text-transform: inherit;
@@ -352,7 +356,7 @@ button:hover {
 }
 @media (max-width: 767.98px) {
   .s-text-21-uppercase {
-    font-weight: 600;
+    font-weight: 500;
     font-size: calc(var(--scale) * 18);
     line-height: calc(var(--scale) * 24);
     text-transform: inherit;
@@ -361,14 +365,14 @@ button:hover {
 }
 
 .s-text-24 {
-  font-weight: 600;
+  font-weight: 500;
   font-size: calc(var(--scale) * 24);
   line-height: calc(var(--scale) * 32);
   text-transform: inherit;
 }
 @media (max-width: 767.98px) {
   .s-text-24 {
-    font-weight: 600;
+    font-weight: 500;
     font-size: calc(var(--scale) * 20);
     line-height: calc(var(--scale) * 28);
     text-transform: inherit;
@@ -376,14 +380,14 @@ button:hover {
 }
 
 .s-text-28 {
-  font-weight: 600;
+  font-weight: 500;
   font-size: calc(var(--scale) * 28);
   line-height: calc(var(--scale) * 37);
   text-transform: inherit;
 }
 @media (max-width: 767.98px) {
   .s-text-28 {
-    font-weight: 600;
+    font-weight: 500;
     font-size: calc(var(--scale) * 20);
     line-height: calc(var(--scale) * 28);
     text-transform: inherit;
@@ -391,14 +395,14 @@ button:hover {
 }
 
 .s-text-36 {
-  font-weight: 600;
+  font-weight: 500;
   font-size: calc(var(--scale) * 36);
   line-height: calc(var(--scale) * 39);
   text-transform: inherit;
 }
 @media (max-width: 767.98px) {
   .s-text-36 {
-    font-weight: 600;
+    font-weight: 500;
     font-size: calc(var(--scale) * 24);
     line-height: calc(var(--scale) * 26);
     text-transform: inherit;
@@ -406,7 +410,7 @@ button:hover {
 }
 
 .s-text-56 {
-  font-weight: 600;
+  font-weight: 500;
   font-size: calc(var(--scale) * 56);
   line-height: calc(var(--scale) * 61);
   text-transform: inherit;
@@ -414,7 +418,7 @@ button:hover {
 }
 @media (max-width: 767.98px) {
   .s-text-56 {
-    font-weight: 600;
+    font-weight: 500;
     font-size: calc(var(--scale) * 40);
     line-height: calc(var(--scale) * 44);
     text-transform: inherit;
@@ -422,7 +426,7 @@ button:hover {
 }
 
 .s-text-88 {
-  font-weight: 600;
+  font-weight: 500;
   font-size: calc(var(--scale) * 88);
   line-height: calc(var(--scale) * 96);
   text-transform: inherit;
@@ -430,7 +434,7 @@ button:hover {
 }
 @media (max-width: 767.98px) {
   .s-text-88 {
-    font-weight: 600;
+    font-weight: 500;
     font-size: calc(var(--scale) * 48);
     line-height: calc(var(--scale) * 52);
     text-transform: inherit;
@@ -440,7 +444,7 @@ button:hover {
 .header {
   position: relative;
   z-index: 1000;
-  font-weight: 600;
+  font-weight: 500;
   font-size: calc(var(--scale) * 18);
   line-height: calc(var(--scale) * 24);
   text-transform: inherit;
@@ -452,7 +456,7 @@ button:hover {
     left: 0;
     width: 100%;
     transition: top 0.5s, transform 0.5s;
-    font-weight: 600;
+    font-weight: 500;
     font-size: calc(var(--scale) * 20);
     line-height: calc(var(--scale) * 28);
     text-transform: inherit;
@@ -2157,14 +2161,14 @@ button:hover {
 }
 .lesson-wrapper .lesson-upload-fields .text-area-content textarea::placeholder {
   color: #aaa;
-  font-weight: 600;
+  font-weight: 500;
   font-size: calc(var(--scale) * 18);
   line-height: calc(var(--scale) * 24);
   text-transform: inherit;
 }
 @media (max-width: 767.98px) {
   .lesson-wrapper .lesson-upload-fields .text-area-content textarea::placeholder {
-    font-weight: 600;
+    font-weight: 500;
     font-size: calc(var(--scale) * 16);
     line-height: calc(var(--scale) * 22);
     text-transform: inherit;
@@ -2207,14 +2211,14 @@ button:hover {
 }
 .lesson-wrapper .lesson-upload-fields .input-content input::placeholder {
   color: #aaa;
-  font-weight: 600;
+  font-weight: 500;
   font-size: calc(var(--scale) * 18);
   line-height: calc(var(--scale) * 24);
   text-transform: inherit;
 }
 @media (max-width: 767.98px) {
   .lesson-wrapper .lesson-upload-fields .input-content input::placeholder {
-    font-weight: 600;
+    font-weight: 500;
     font-size: calc(var(--scale) * 16);
     line-height: calc(var(--scale) * 22);
     text-transform: inherit;

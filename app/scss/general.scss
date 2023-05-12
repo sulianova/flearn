@@ -3,18 +3,14 @@
 }
 
 @font-face {
-  font-weight: 600;
+  font-weight: 500;
   font-family: TTInterphasesPro;
-  src: url("../fonts/TTInterphasesPro-DemiBold.ttf");
+  src: url("../fonts/InterphasesPro-Medium.ttf");
 }
 
 
 html {
-  color: $black;
   font-family: $font-family;
-
-  background-color: $white;
-
   font-size: set-calc(18);
   line-height: set-calc(28);
   font-weight: 500;
@@ -22,6 +18,9 @@ html {
   -webkit-text-size-adjust: 100%;
   -moz-osx-font-smoothing: grayscale;
   -webkit-font-smoothing: antialiased;
+
+  color: $black;
+  background-color: $white;
 }
 
 body,
@@ -35,29 +34,33 @@ button {
   padding: 0;
 }
 
+.ss01 {
+  font-feature-settings: "ss01" 1;
+}
+
 h1 {
-  @include set-typography(88, 96, 700);
+  @include set-typography(88, 96, 500);
   letter-spacing: -.01rem;
 
   @include set-media(md) {
-    @include set-typography(48, 52, 700)
+    @include set-typography(48, 52, 500)
   }
 }
 
 h2 {
-  @include set-typography(56, 61, 700);
+  @include set-typography(56, 61, 500);
   letter-spacing: -.01rem;
 
   @include set-media(md) {
-    @include set-typography(40, 44, 700)
+    @include set-typography(40, 44, 500)
   }
 }
 
 h3 {
-  @include set-typography(48, 55.2, 700);
+  @include set-typography(48, 55.2, 500);
 
   @include set-media(md) {
-    @include set-typography(32, 36.8, 700);
+    @include set-typography(32, 36.8, 500);
   }
 }
 

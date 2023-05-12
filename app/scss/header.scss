@@ -2,7 +2,7 @@
   position: relative;
   z-index: 1000;
 
-  @include set-typography(18, 24, 600);
+  @include set-typography(18, 24, 500);
 
   @include set-media(md) {
     position: absolute;
@@ -10,7 +10,7 @@
     left: 0;
     width: 100%;
     transition: top .5s,transform .5s;
-    @include set-typography(20, 28, 600);
+    @include set-typography(20, 28, 500);
   }
 
   .header-desk {
