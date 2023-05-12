@@ -1,0 +1,59 @@
+doctype html
+html(lang="ru")
+  head
+    meta(charset="UTF-8")
+    meta(name="viewport", content="width=device-width, initial-scale=1.0")
+    meta(http-equiv="X-UA-Compatible", content="IE=edge")
+    title lessons
+    link(rel="stylesheet", href="styles/app.css")
+  body
+    .page
+      include components/header.pug
+      main.page-content
+        section.work-profile-wrapper
+          .work-profile-title-wrapper
+            h1.s-text-88 София Ульянова
+          .work-profile-menu
+            .work-profile-menu-link-wrapper
+              a(href="#" aria-current="page").work-profile-menu-link-wrapper-link.s-text-20-uppercase.nuxt-link-exact-active.isActive Моя работа
+            .work-profile-menu-link-wrapper
+              a(href="#" aria-current="page").work-profile-menu-link-wrapper-link.s-text-20-uppercase Комментарий преподавателя
+          .work-profile-content 
+            .work-profile-content-upload
+              .work-profile-content-upload-deadline.s-text-21-uppercase 
+                 | сдать до воскресенья,
+                 br
+                 | 4 сентября
+              a(href="#upload-form").work-profile-content-upload-btn.s-text-21-uppercase Редактировать работу
+            h2.work-profile-content-title.s-text-56 Задание недели. Тема 1
+          .work-profile-content-content-section 
+            section.text-section.is-grid-4 
+                h2.text-section-title.s-text-21-uppercase описание
+                .text-section-content
+                  p.s-text-21  Поговорим о свободе в рисунке, сделаем упражнения и 3-4 законченные работы. Будем анализировать рисовальный опыт, отмечать, что вызывает сопротивление, скуку, интерес.
+            section.text-section.is-grid-4 
+              h2.text-section-title.s-text-21-uppercase Ссылка
+              .text-section-content
+                a.inline-link.s-text-21  Скачать презентацию
+          include components/gallery
+          .work-profile-content 
+            .work-profile-content-upload-mobile
+            a(href="#upload-form").work-profile-content-upload-mobile-btn.s-text-21-uppercase Редактировать работу
+            .work-profile-content-upload-mobile-deadline.s-text-16
+                | сдать до воскресенья,
+                br
+                | 4 сентября
+          .work-profile-header.is-grid-4
+            .work-profile-header-title-col 
+              h1.work-profile-header-title.s-text-21 Как рисовать свободно
+              .s-text-21 23 мая — 23 июня
+            .work-profile-header-lesson
+              .work-profile-header-lesson-nav
+                a(href="homework.html").inline-link.work-profile-header-lesson-nav-link.s-text-21-uppercase.blue
+                  span.inline-link-arrow-left &larr;
+                  span.inline-link-text Вернуться к заданию
+                a.inline-link.work-profile-header-lesson-nav-link.s-text-21-uppercase(href="lessons.html")
+                  span.inline-link-arrow-left &larr;
+                  span.inline-link-text Все уроки
+              .work-profile-header-lesson-number.s-text-21 Урок 1
+      include components/footer.pug

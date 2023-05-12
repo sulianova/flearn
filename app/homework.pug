@@ -107,7 +107,7 @@ html(lang="ru")
                         picture 
                           img(src="./images/3.jpg").image
                         .work-card-overlay
-                      a.lesson-works-work-card-user
+                      a(href="lesson-work-profile.html").lesson-works-work-card-user
                         .lesson-works-work-card-user-image
                           svg(width="32" height="31" viewBox="0 0 32 31" fill="none" xmlns="http://www.w3.org/2000/svg").svg-user
                             path(d="M24 23C24 24 20.4183 24 16 24C11.5817 24 8 24 8 23C8 18.5817 11.5817 15 16 15C20.4183 15 24 18.5817 24 23Z" fill="#131313")
@@ -223,4 +223,8 @@ html(lang="ru")
                           picture 
                             img(src="./images/author.png").image
                         .lesson-works-work-card-user-name.s-text-16 Лиза Смирнова
+                .lesson-works-list-show-more.is-grid-3
+                  button.lesson-works-list-show-more-btn.s-text-21-uppercase.inline-link
+                    span.inline-link-text показать больше
+                    span.inline-link-arrow ↓
       include components/footer.pug

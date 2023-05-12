@@ -107,6 +107,7 @@ button {
   padding: 0;
   background: none;
   outline: none;
+  font-family: $font-family !important;
 
   cursor: pointer;
   transition: color $d-hover,background-color $d-hover,opacity $d-hover;
@@ -187,6 +188,18 @@ button {
   }
 }
 
+.is-grid-3 {
+  display: grid;
+  grid-gap: 0 set-calc($s-gap);
+  grid-template-columns: repeat(3,minmax(0,1fr));
+
+  @include set-media(md) {
+    display: flex;
+    flex-direction: column;
+    grid-gap: set-calc($s-gap);
+  }
+}
+
 .is-grid-4 {
   display: grid;
   grid-gap: 0 set-calc(2 * $s-gap);
@@ -237,15 +250,27 @@ button {
   }
   
   &-arrow {
-      display: inline-block;
-      vertical-align: top;
-      line-height: set-calc(28);
-      margin-left: set-calc(6);
-  
-      @include set-media(md) {
-        line-height: set-calc(22);
-      }
+    display: inline-block;
+    vertical-align: top;
+    line-height: set-calc(28);
+    margin-left: set-calc(6);
+
+    @include set-media(md) {
+      line-height: set-calc(22);
+    }
   }
+
+  &-arrow-left {
+    display: inline-block;
+    vertical-align: top;
+    line-height: set-calc(28);
+    margin-right: set-calc(6);
+
+    @include set-media(md) {
+      line-height: set-calc(22);
+    }
+  }
+
 }
 
 .s-hoverable {
