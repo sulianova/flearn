@@ -847,9 +847,9 @@ button:hover {
 }
 .description-wrapper .description-list .description-list-item-question-wrapper {
   position: relative;
+  display: flex;
   grid-column: span 1;
   padding-right: calc(var(--scale) * 60);
-  display: flex;
 }
 @media (max-width: 767.98px) {
   .description-wrapper .description-list .description-list-item-question-wrapper {
@@ -858,20 +858,20 @@ button:hover {
 }
 .description-wrapper .description-list .description-list-item-question {
   position: relative;
-  background-color: #F3F3F3;
-  padding: calc(var(--scale) * 16) calc(var(--scale) * 16) calc(var(--scale) * 24);
-  border-radius: calc(var(--scale) * 20);
-  margin-bottom: auto;
   width: 100%;
+  margin-bottom: auto;
+  padding: calc(var(--scale) * 16) calc(var(--scale) * 16) calc(var(--scale) * 24);
   text-align: center;
+  background-color: #F3F3F3;
+  border-radius: calc(var(--scale) * 20);
 }
 @media (max-width: 767.98px) {
   .description-wrapper .description-list .description-list-item-question {
-    text-align: left;
     padding: calc(var(--scale) * 8) 0 calc(var(--scale) * 4);
-    border-radius: 0;
+    text-align: left;
     background-color: #fff;
     border-top: calc(var(--scale) * 4) solid #131313;
+    border-radius: 0;
   }
 }
 .description-wrapper .description-list .description-list-item-answear {
@@ -1048,8 +1048,8 @@ button:hover {
   grid-column: span 6;
   justify-content: center;
   padding-right: calc(var(--scale) * 100);
-  padding-left: calc(var(--scale) * 32);
   padding-bottom: calc(var(--scale) * 40);
+  padding-left: calc(var(--scale) * 32);
 }
 @media (max-width: 767.98px) {
   .explain-wrapper .explain-quote {
@@ -1245,8 +1245,8 @@ button:hover {
 
 .gallery {
   position: relative;
-  padding-top: calc(var(--scale) * 0);
   display: block;
+  padding-top: calc(var(--scale) * 0);
 }
 .gallery-btns {
   display: flex;
@@ -2008,8 +2008,8 @@ button:hover {
 }
 .lesson-wrapper .lesson-content-upload {
   display: grid;
-  grid-template-columns: repeat(8, minmax(0, 1fr));
   grid-column-gap: calc(var(--scale) * 12);
+  grid-template-columns: repeat(8, minmax(0, 1fr));
   margin: calc(var(--scale) * 64) 0 calc(var(--scale) * 16);
 }
 @media (max-width: 767.98px) {
@@ -2028,15 +2028,15 @@ button:hover {
   }
 }
 .lesson-wrapper .lesson-content-upload-btn {
-  grid-column: 7/9;
-  max-height: calc(var(--scale) * 48);
-  width: auto;
   position: relative;
   display: flex;
+  grid-column: 7/9;
   align-items: center;
   justify-content: center;
-  background: #131313;
+  width: auto;
+  max-height: calc(var(--scale) * 48);
   color: #fff;
+  background: #131313;
   border-radius: calc(var(--scale) * 30);
 }
 @media (max-width: 767.98px) {
@@ -2104,11 +2104,11 @@ button:hover {
   padding-bottom: calc(var(--scale) * 16);
 }
 .lesson-wrapper .lesson-upload-form {
-  display: flex;
   position: relative;
+  display: flex;
   flex-direction: column;
-  color: #F3F3F3;
   min-height: 100vh;
+  color: #F3F3F3;
 }
 @media (max-width: 767.98px) {
   .lesson-wrapper .lesson-upload-form {
@@ -2116,8 +2116,8 @@ button:hover {
   }
 }
 .lesson-wrapper .lesson-upload-form-inner {
-  display: flex;
   position: relative;
+  display: flex;
 }
 @media (max-width: 767.98px) {
   .lesson-wrapper .lesson-upload-form-inner {
@@ -2126,8 +2126,8 @@ button:hover {
 }
 .lesson-wrapper .lesson-upload-fields {
   display: flex;
-  flex-flow: column;
   flex: 1;
+  flex-flow: column;
   padding-right: calc(var(--scale) * 88);
 }
 @media (max-width: 767.98px) {
@@ -2147,9 +2147,9 @@ button:hover {
   margin-bottom: calc(var(--scale) * 56);
 }
 .lesson-wrapper .lesson-upload-fields .text-area {
-  border-bottom: calc(var(--scale) * 2) solid #aaa;
-  text-align: left;
   padding-bottom: calc(var(--scale) * 16);
+  text-align: left;
+  border-bottom: calc(var(--scale) * 2) solid #aaa;
 }
 .lesson-wrapper .lesson-upload-fields .text-area-content {
   position: relative;
@@ -2166,10 +2166,10 @@ button:hover {
   }
 }
 .lesson-wrapper .lesson-upload-fields .text-area-content-inner {
+  display: grid;
+  flex: 1;
   max-width: calc(100% + var(--scale) * -210);
   overflow: hidden;
-  flex: 1;
-  display: grid;
 }
 @media (max-width: 767.98px) {
   .lesson-wrapper .lesson-upload-fields .text-area-content-inner {
@@ -2177,23 +2177,23 @@ button:hover {
   }
 }
 .lesson-wrapper .lesson-upload-fields .text-area-content-inner::after {
-  padding: 0;
   grid-area: 1/1/2/2;
-  content: attr(data-replicated-value) " ";
+  padding: 0;
   white-space: pre-wrap;
   visibility: hidden;
+  content: attr(data-replicated-value) " ";
 }
 .lesson-wrapper .lesson-upload-fields .text-area-content textarea {
-  resize: none;
-  overflow: hidden;
-  padding: 0;
   grid-area: 1/1/2/2;
-  background: none;
-  border: none;
   margin: 0;
-  outline: none;
+  padding: 0;
+  overflow: hidden;
   color: #F3F3F3;
   font: inherit;
+  background: none;
+  border: none;
+  outline: none;
+  resize: none;
 }
 .lesson-wrapper .lesson-upload-fields .text-area-content textarea::placeholder {
   color: #aaa;
@@ -2212,9 +2212,9 @@ button:hover {
 }
 .lesson-wrapper .lesson-upload-fields .input {
   margin-top: calc(var(--scale) * 24);
-  border-bottom: calc(var(--scale) * 2) solid #aaa;
-  text-align: left;
   padding-bottom: calc(var(--scale) * 16);
+  text-align: left;
+  border-bottom: calc(var(--scale) * 2) solid #aaa;
 }
 .lesson-wrapper .lesson-upload-fields .input-content {
   position: relative;
@@ -2237,13 +2237,13 @@ button:hover {
 }
 .lesson-wrapper .lesson-upload-fields .input-content input {
   flex: 1;
+  margin: 0;
+  padding: 0;
+  color: #F3F3F3;
+  font: inherit;
   background: none;
   border: none;
-  padding: 0;
-  margin: 0;
   outline: none;
-  font: inherit;
-  color: #F3F3F3;
 }
 .lesson-wrapper .lesson-upload-fields .input-content input::placeholder {
   color: #aaa;
@@ -2265,23 +2265,23 @@ button:hover {
 }
 @media (max-width: 767.98px) {
   .lesson-wrapper .lesson-upload-submit {
-    padding: 0 calc(var(--scale) * 16);
-    width: auto;
     order: 3;
+    width: auto;
     margin-top: calc(var(--scale) * 40);
+    padding: 0 calc(var(--scale) * 16);
   }
 }
 .lesson-wrapper .lesson-upload-submit-btn {
-  padding: calc(var(--scale) * 4) calc(var(--scale) * 40);
-  border-radius: calc(var(--scale) * 20);
-  background: #707070;
-  color: #222;
-  pointer-events: none;
   position: relative;
   display: flex;
   align-items: center;
   justify-content: center;
   min-height: calc(var(--scale) * 48);
+  padding: calc(var(--scale) * 4) calc(var(--scale) * 40);
+  color: #222;
+  background: #707070;
+  border-radius: calc(var(--scale) * 20);
+  pointer-events: none;
 }
 @media (max-width: 767.98px) {
   .lesson-wrapper .lesson-upload-submit-btn {
@@ -2295,20 +2295,20 @@ button:hover {
 }
 @media (max-width: 767.98px) {
   .lesson-wrapper .lesson-upload-submit-description {
-    text-align: center;
     width: 100%;
+    text-align: center;
   }
 }
 .lesson-wrapper .lesson-upload-files {
   display: flex;
   flex-flow: column;
-  overflow: hidden;
   width: 520px;
+  overflow: hidden;
 }
 @media (max-width: 767.98px) {
   .lesson-wrapper .lesson-upload-files {
-    width: 100%;
     flex-direction: column;
+    width: 100%;
     padding: 0;
   }
 }
@@ -2319,8 +2319,8 @@ button:hover {
 }
 @media (max-width: 767.98px) {
   .lesson-wrapper .lesson-upload-files-header {
-    width: 100%;
     flex-direction: column;
+    width: 100%;
     margin-bottom: calc(var(--scale) * 40);
   }
 }
@@ -2331,33 +2331,33 @@ button:hover {
 }
 .lesson-wrapper .lesson-upload-files-header-btn {
   display: flex;
-  justify-content: center;
   align-items: center;
-  border: calc(var(--scale) * 1) solid #F3F3F3;
-  color: #F3F3F3;
-  padding: calc(var(--scale) * 4) calc(var(--scale) * 30);
-  text-align: center;
-  border-radius: calc(var(--scale) * 30);
+  justify-content: center;
   max-height: calc(var(--scale) * 48);
+  padding: calc(var(--scale) * 4) calc(var(--scale) * 30);
+  color: #F3F3F3;
+  text-align: center;
+  border: calc(var(--scale) * 1) solid #F3F3F3;
+  border-radius: calc(var(--scale) * 30);
 }
 .lesson-wrapper .lesson-upload-files-content {
   display: flex;
+  flex: 1;
   flex-wrap: wrap;
   overflow: auto;
-  flex: 1;
 }
 .lesson-wrapper .lesson-upload-files-content .lesson-upload-file {
   width: calc(50% + var(--scale) * -20);
   margin: 0 calc(var(--scale) * 20) calc(var(--scale) * 20) 0;
 }
 .lesson-wrapper .lesson-upload-files-content .file-preview {
-  max-height: calc(var(--scale) * 300);
-  margin-bottom: calc(var(--scale) * 16);
-  border-radius: calc(var(--scale) * 8);
   display: block;
   width: 100%;
+  max-height: calc(var(--scale) * 300);
+  margin-bottom: calc(var(--scale) * 16);
   object-fit: cover;
   object-position: center;
+  border-radius: calc(var(--scale) * 8);
 }
 @media (max-width: 767.98px) {
   .lesson-wrapper .lesson-upload-files-content .file-preview {
@@ -2373,10 +2373,10 @@ button:hover {
 .lesson-wrapper .lesson-upload-files .lesson-uppload-empty {
   display: flex;
   flex-flow: column;
-  height: 100%;
-  margin: 0 auto;
   align-items: center;
   justify-content: center;
+  height: 100%;
+  margin: 0 auto;
   color: #aaa;
   text-align: center;
 }
@@ -2414,12 +2414,12 @@ button:hover {
 .lesson-wrapper .lesson-works-own-work-empty {
   display: flex;
   flex-flow: column;
-  justify-content: center;
   align-items: center;
-  background: #F3F3F3;
-  color: #707070;
+  justify-content: center;
   padding: 0 calc(var(--scale) * 16);
+  color: #707070;
   text-align: center;
+  background: #F3F3F3;
 }
 .lesson-wrapper .lesson-works-own-subtitle {
   margin-top: calc(var(--scale) * 16);
@@ -2446,8 +2446,8 @@ button:hover {
   flex-wrap: wrap;
 }
 .lesson-wrapper .lesson-works-list .lesson-works-work {
-  margin: 0 calc(var(--scale) * 8) calc(var(--scale) * 24) 0;
   width: calc(25% + var(--scale) * -8);
+  margin: 0 calc(var(--scale) * 8) calc(var(--scale) * 24) 0;
 }
 @media (max-width: 767.98px) {
   .lesson-wrapper .lesson-works-list .lesson-works-work {
@@ -2461,15 +2461,15 @@ button:hover {
   position: relative;
   height: calc(var(--scale) * 320);
   margin-bottom: calc(var(--scale) * 8);
-  border-radius: calc(var(--scale) * 8);
-  background: #F3F3F3;
   overflow: hidden;
+  background: #F3F3F3;
+  border-radius: calc(var(--scale) * 8);
 }
 .lesson-wrapper .lesson-works-list .lesson-works-work-card-preview .image {
+  width: 100%;
   height: 100%;
   object-fit: cover;
   object-position: center;
-  width: 100%;
 }
 .lesson-wrapper .lesson-works-list .lesson-works-work-card-user {
   display: flex;
@@ -2481,36 +2481,36 @@ button:hover {
   width: calc(var(--scale) * 32);
   height: calc(var(--scale) * 32);
   margin-right: calc(var(--scale) * 8);
-  border-radius: 50%;
   overflow: hidden;
   background: #F3F3F3;
+  border-radius: 50%;
   fill: #131313;
 }
 .lesson-wrapper .lesson-works-list .lesson-works-work-card-user-image .image {
+  width: 100%;
   height: 100%;
   object-fit: cover;
   object-position: center;
-  width: 100%;
 }
 .lesson-wrapper .lesson-works-list .lesson-works-work-card-user-image .svg-user {
-  height: 100%;
   width: 100%;
+  height: 100%;
   overflow: hidden;
 }
 .lesson-wrapper .lesson-works-list .lesson-works-work-card-user-name {
-  white-space: nowrap;
   overflow: hidden;
+  white-space: nowrap;
   text-overflow: ellipsis;
 }
 .lesson-wrapper .lesson-works-list .lesson-works-work-hidden .work-card-overlay {
-  backdrop-filter: blur(30px);
   position: absolute;
-  left: 0;
   top: 0;
+  left: 0;
   width: 100%;
   height: 100%;
-  border-radius: calc(var(--scale) * 8);
   background: rgba(23, 22, 27, 0.24);
+  border-radius: calc(var(--scale) * 8);
+  backdrop-filter: blur(30px);
 }
 .lesson-wrapper .lesson-works-list-show-more {
   margin: 0 0 calc(var(--scale) * 140);
@@ -2534,8 +2534,8 @@ button:hover {
 .homework-editor-wrapper .homework-editor-title-wrapper {
   position: relative;
   display: block;
-  padding-bottom: calc(var(--scale) * 16);
   margin-top: calc(var(--scale) * 40);
+  padding-bottom: calc(var(--scale) * 16);
 }
 @media (max-width: 767.98px) {
   .homework-editor-wrapper .homework-editor-title-wrapper {
@@ -2576,8 +2576,8 @@ button:hover {
 }
 .homework-editor-wrapper .homework-editor-content-upload {
   display: grid;
-  grid-template-columns: repeat(8, minmax(0, 1fr));
   grid-column-gap: calc(var(--scale) * 12);
+  grid-template-columns: repeat(8, minmax(0, 1fr));
   margin: 0 0 calc(var(--scale) * 16);
 }
 @media (max-width: 767.98px) {
@@ -2594,15 +2594,15 @@ button:hover {
   }
 }
 .homework-editor-wrapper .homework-editor-content-upload-btn {
-  grid-column: 7/9;
-  max-height: calc(var(--scale) * 48);
-  width: auto;
   position: relative;
   display: flex;
+  grid-column: 7/9;
   align-items: center;
   justify-content: center;
-  background: #131313;
+  width: auto;
+  max-height: calc(var(--scale) * 48);
   color: #fff;
+  background: #131313;
   border-radius: calc(var(--scale) * 30);
 }
 @media (max-width: 767.98px) {
@@ -2626,8 +2626,8 @@ button:hover {
 @media (max-width: 767.98px) {
   .homework-editor-wrapper .homework-editor-content-upload-mobile-deadline {
     display: block;
-    text-align: center;
     padding-top: calc(var(--scale) * 16);
+    text-align: center;
   }
 }
 .homework-editor-wrapper .homework-editor-content-upload-mobile-btn {
@@ -2635,18 +2635,18 @@ button:hover {
 }
 @media (max-width: 767.98px) {
   .homework-editor-wrapper .homework-editor-content-upload-mobile-btn {
-    display: none;
-    grid-column: 7/9;
-    max-height: calc(var(--scale) * 48);
-    width: auto;
     position: relative;
+    display: none;
     display: flex;
+    grid-column: 7/9;
     align-items: center;
     justify-content: center;
-    background: #131313;
-    color: #fff;
-    border-radius: calc(var(--scale) * 30);
+    width: auto;
     min-height: calc(var(--scale) * 48);
+    max-height: calc(var(--scale) * 48);
+    color: #fff;
+    background: #131313;
+    border-radius: calc(var(--scale) * 30);
   }
 }
 .homework-editor-wrapper .homework-editor-content-title {
@@ -2734,8 +2734,8 @@ button:hover {
   grid-column: span 2;
 }
 .homework-editor-wrapper .homework-editor-header-title-col {
-  grid-column: 3/5;
   grid-row: 1;
+  grid-column: 3/5;
   text-align: end;
 }
 @media (max-width: 767.98px) {
@@ -2746,10 +2746,10 @@ button:hover {
 .homework-editor-wrapper .homework-editor-header-lesson {
   display: flex;
   flex-direction: row;
+  grid-row: 1;
+  grid-column: 1/3;
   align-items: flex-start;
   justify-content: space-between;
-  grid-column: 1/3;
-  grid-row: 1;
 }
 @media (max-width: 767.98px) {
   .homework-editor-wrapper .homework-editor-header-lesson {

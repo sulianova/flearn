@@ -94,8 +94,8 @@
 
     &-upload {
       display: grid;
-      grid-template-columns: repeat(8,minmax(0,1fr));
       grid-column-gap: set-calc($s-gap * 1.5);
+      grid-template-columns: repeat(8,minmax(0,1fr));
       margin: set-calc(64) 0 set-calc(16);
   
       @include set-media(md) {
@@ -113,15 +113,18 @@
       }
   
       &-btn {
-        grid-column: 7 / 9;
-        max-height: set-calc(48);
-        width: auto;
         position: relative;
+
         display: flex;
+        grid-column: 7 / 9;
         align-items: center;
         justify-content: center;
-        background: $black-new;
+        width: auto;
+        max-height: set-calc(48);
+
         color: $white;
+
+        background: $black-new;
         border-radius: set-calc(30);
   
         @include set-media(md) {
@@ -215,21 +218,23 @@
   }
 
   .lesson-upload {
-
     &-form {
-      display: flex;
       position: relative;
+
+      display: flex;
       flex-direction: column;
-      color: $beige;
       min-height: 100vh;
+
+      color: $beige;
 
       @include set-media(md) {
         padding: set-calc(2 * $padding-x-mob-page) set-calc($padding-x-mob-page);
       }
 
       &-inner {
-        display: flex;
         position: relative;
+
+        display: flex;
 
         @include set-media(md) {
           flex-direction: column;
@@ -239,8 +244,8 @@
 
     &-fields {
       display: flex;
-      flex-flow: column;
       flex: 1;
+      flex-flow: column;
       padding-right: set-calc(88);
 
       @include set-media(md) {
@@ -260,17 +265,21 @@
       }
 
       .text-area {
-        border-bottom: set-calc(2) solid $grey;
-        text-align: left;
         padding-bottom: set-calc(16);
+
+        text-align: left;
+
+        border-bottom: set-calc(2) solid $grey;
   
         &-content {
           position: relative;
+
           display: flex;
   
           label {
             width: set-calc(210);
             margin-right: set-calc(4);
+
             color: $grey;
   
             @include set-media(md) {
@@ -279,10 +288,10 @@
           }
   
           &-inner {
+            display: grid;
+            flex: 1;
             max-width: set-calc(-210, true, 100%);
             overflow: hidden;
-            flex: 1;
-            display: grid;
   
             @include set-media(md) {
               min-width: 100%;
@@ -290,24 +299,30 @@
           }
   
           &-inner::after {
-            padding: 0;
             grid-area: 1 / 1 / 2 / 2;
-            content: attr(data-replicated-value) " ";
+            padding: 0;
+
             white-space: pre-wrap;
+
             visibility: hidden;
+
+            content: attr(data-replicated-value) " ";
           }
   
           textarea {
-            resize: none;
-            overflow: hidden;
-            padding: 0;
             grid-area: 1 / 1 / 2 / 2;
-            background: none;
-            border: none;
             margin: 0;
-            outline: none;
+            padding: 0;
+            overflow: hidden;
+
             color: $beige;
             font: inherit;
+
+            background: none;
+            border: none;
+            outline: none;
+
+            resize: none;
           }
   
           textarea::placeholder {
@@ -324,12 +339,15 @@
   
       .input {
         margin-top: set-calc(24);
-        border-bottom: set-calc(2) solid $grey;
-        text-align: left;
         padding-bottom: set-calc(16);
+
+        text-align: left;
+
+        border-bottom: set-calc(2) solid $grey;
   
         &-content {
           position: relative;
+
           display: flex;
   
           @include set-media(md) {
@@ -339,6 +357,7 @@
           label {
             width: set-calc(210);
             margin-right: set-calc(4);
+
             color: $grey;
   
             @include set-media(md) {
@@ -348,13 +367,15 @@
   
           input {
             flex: 1;
+            margin: 0;
+            padding: 0;
+
+            color: $beige;
+            font: inherit;
+
             background: none;
             border: none;
-            padding: 0;
-            margin: 0;
             outline: none;
-            font: inherit;
-            color: $beige;
           }
   
           input::placeholder {
@@ -374,25 +395,28 @@
       margin-top: auto;
 
       @include set-media(md) {
-        padding: 0 set-calc($padding-x-mob-page);
-        width: auto;
         order: 3;
+        width: auto;
         margin-top: set-calc(40);
+        padding: 0 set-calc($padding-x-mob-page);
       }
 
       &-btn {
-        padding: set-calc(4) set-calc(40);
-        border-radius: set-calc(20);
-
-        background: $grey-inactive;
-        color: $black;
-        pointer-events: none;
 
         position: relative;
+
         display: flex;
         align-items: center;
         justify-content: center;
         min-height: set-calc(48);
+        padding: set-calc(4) set-calc(40);
+
+        color: $black;
+
+        background: $grey-inactive;
+        border-radius: set-calc(20);
+
+        pointer-events: none;
 
         @include set-media(md) {
           width: 100%;
@@ -402,11 +426,13 @@
       &-description {
         width: set-calc(440);
         margin-top: set-calc(16);
+
         color: $grey;
 
         @include set-media(md) {
-          text-align: center;
           width: 100%;
+
+          text-align: center;
         }
       }
     }
@@ -414,12 +440,12 @@
     &-files {
       display: flex;
       flex-flow: column;
-      overflow: hidden;
       width: 520px;
+      overflow: hidden;
 
       @include set-media(md) {
-        width: 100%;
         flex-direction: column;
+        width: 100%;
         padding: 0;
       }
 
@@ -429,8 +455,8 @@
         margin-bottom: set-calc(56);
 
         @include set-media(md) {
-          width: 100%;
           flex-direction: column;
+          width: 100%;
           margin-bottom: set-calc(40);
         }
 
@@ -442,22 +468,24 @@
 
         &-btn {
           display: flex;
-          justify-content: center;
           align-items: center;
-          border: set-calc(1) solid $beige;
-          color: $beige;
-          padding: set-calc(4) set-calc(30);
-          text-align: center;
-          border-radius: set-calc(30);
+          justify-content: center;
           max-height: set-calc(48);
+          padding: set-calc(4) set-calc(30);
+
+          color: $beige;
+          text-align: center;
+
+          border: set-calc(1) solid $beige;
+          border-radius: set-calc(30);
         }
       }
 
       &-content {
         display: flex;
+        flex: 1;
         flex-wrap: wrap;
         overflow: auto;
-        flex: 1;
 
         .lesson-upload-file {
           width: set-calc(-20, true, 50%);
@@ -466,18 +494,19 @@
     
         .file {
           &-preview {
+    
+            display: block;
+            width: 100%;
             max-height: set-calc(300);
             margin-bottom: set-calc(16);
+            object-fit: cover;
+            object-position: center;
+
             border-radius: set-calc(8);
 
             @include set-media(md) {
               height: set-calc(250);
             }
-    
-            display: block;
-            width: 100%;
-            object-fit: cover;
-            object-position: center;
           }
     
           &-name {
@@ -493,10 +522,11 @@
       .lesson-uppload-empty {
         display: flex;
         flex-flow: column;
-        height: 100%;
-        margin: 0 auto;
         align-items: center;
         justify-content: center;
+        height: 100%;
+        margin: 0 auto;
+
         color: $grey;
         text-align: center;
       }
@@ -527,6 +557,7 @@
 
       &-work {
         height: set-calc(320);
+
         border-radius: set-calc(8);
 
         @include set-media(md) {
@@ -536,17 +567,20 @@
         &-empty {
           display: flex;
           flex-flow: column;
-          justify-content: center;
           align-items: center;
-          background: $beige;
-          color: $grey-inactive;
+          justify-content: center;
           padding: 0 set-calc(16);
+
+          color: $grey-inactive;
           text-align: center;
+
+          background: $beige;
         }
       }
 
       &-subtitle {
         margin-top: set-calc(16);
+
         color: $text-grey
       }
     }
@@ -572,8 +606,8 @@
       }
 
       .lesson-works-work {
-        margin: 0 set-calc(8) set-calc(24) 0;
         width: set-calc(-8, true, 25%);
+        margin: 0 set-calc(8) set-calc(24) 0;
 
         @include set-media(md) {
           width: set-calc(-8, true, 50%);
@@ -584,17 +618,19 @@
 
           &-preview {
             position: relative;
+
             height: set-calc(320);
             margin-bottom: set-calc(8);
-            border-radius: set-calc(8);
-            background: $beige;
             overflow: hidden;
 
+            background: $beige;
+            border-radius: set-calc(8);
+
             .image {
+              width: 100%;
               height: 100%;
               object-fit: cover;
               object-position: center;
-              width: 100%;
             }
           }
 
@@ -608,28 +644,31 @@
               width: set-calc(32);
               height: set-calc(32);
               margin-right: set-calc(8);
-              border-radius: 50%;
               overflow: hidden;
+
               background: $beige;
+              border-radius: 50%;
+
               fill: $black-new;
 
               .image {
+                width: 100%;
                 height: 100%;
                 object-fit: cover;
                 object-position: center;
-                width: 100%;
               }
 
               .svg-user {
-                height: 100%;
                 width: 100%;
+                height: 100%;
                 overflow: hidden;
               }
             }
 
             &-name {
-              white-space: nowrap;
               overflow: hidden;
+
+              white-space: nowrap;
               text-overflow: ellipsis;
             }
           }
@@ -637,14 +676,16 @@
 
         &-hidden {
           .work-card-overlay {
-            backdrop-filter: blur(30px);
             position: absolute;
-            left: 0;
             top: 0;
+            left: 0;
+
             width: 100%;
             height: 100%;
+
+            background: rgb(23 22 27 / 24%);
             border-radius: set-calc(8);
-            background: rgba(23, 22, 27, 0.24);
+            backdrop-filter: blur(30px);
           }
         }
       }
@@ -652,6 +693,7 @@
       &-show-more {
         margin: 0 0 set-calc(140);
         padding: set-calc(8) 0 0;
+
         border-top: set-calc(calc($s-gap / 2)) solid $black-new;
 
         &-btn {
