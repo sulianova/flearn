@@ -2103,16 +2103,6 @@ button:hover {
 .lesson-wrapper .lesson-content-content-section .text-section-content a:not(:last-child) {
   padding-bottom: calc(var(--scale) * 16);
 }
-.lesson-wrapper .lesson-content-content-section .lesson-chat {
-  margin: 0 0 calc(var(--scale) * 80);
-  padding: calc(var(--scale) * 8) 0 0;
-  border-top: calc(var(--scale) * 4) solid #131313;
-}
-.lesson-wrapper .lesson-content-content-section .lesson-chat-link {
-  grid-column: 4/5;
-  margin-right: 0;
-  margin-left: auto;
-}
 .lesson-wrapper .lesson-upload-form {
   display: flex;
   position: relative;
@@ -2391,7 +2381,7 @@ button:hover {
   text-align: center;
 }
 .lesson-wrapper .lesson-works {
-  padding: calc(var(--scale) * 140) 0;
+  padding: calc(var(--scale) * 80) 0;
 }
 @media (max-width: 767.98px) {
   .lesson-wrapper .lesson-works {
@@ -2523,7 +2513,7 @@ button:hover {
   background: rgba(23, 22, 27, 0.24);
 }
 .lesson-wrapper .lesson-works-list-show-more {
-  margin: 0 0 calc(var(--scale) * 80);
+  margin: 0 0 calc(var(--scale) * 140);
   padding: calc(var(--scale) * 8) 0 0;
   border-top: calc(var(--scale) * 4) solid #131313;
 }
@@ -2533,91 +2523,26 @@ button:hover {
   margin-left: auto;
 }
 
-.work-profile-wrapper {
+.homework-editor-wrapper {
   padding: 0 calc(var(--scale) * 56);
 }
 @media (max-width: 767.98px) {
-  .work-profile-wrapper {
+  .homework-editor-wrapper {
     padding: 0 calc(var(--scale) * 16);
   }
 }
-.work-profile-wrapper .work-profile-header {
-  margin-top: calc(var(--scale) * 140);
-  padding: calc(var(--scale) * 4) 0 calc(var(--scale) * 8);
-  border-top: calc(var(--scale) * 4) solid #131313;
-}
-@media (max-width: 767.98px) {
-  .work-profile-wrapper .work-profile-header {
-    grid-gap: 0;
-    margin-top: calc(var(--scale) * 80);
-  }
-}
-.work-profile-wrapper .work-profile-header-title {
-  grid-column: span 2;
-}
-.work-profile-wrapper .work-profile-header-title-col {
-  grid-column: 3/5;
-  grid-row: 1;
-  text-align: end;
-}
-@media (max-width: 767.98px) {
-  .work-profile-wrapper .work-profile-header-title-col {
-    display: none;
-  }
-}
-.work-profile-wrapper .work-profile-header-lesson {
-  display: flex;
-  flex-direction: row;
-  align-items: flex-start;
-  justify-content: space-between;
-  grid-column: 1/3;
-  grid-row: 1;
-}
-@media (max-width: 767.98px) {
-  .work-profile-wrapper .work-profile-header-lesson {
-    display: block;
-  }
-}
-.work-profile-wrapper .work-profile-header-lesson-number {
-  display: none;
-}
-@media (max-width: 767.98px) {
-  .work-profile-wrapper .work-profile-header-lesson-number {
-    display: none;
-  }
-}
-.work-profile-wrapper .work-profile-header-lesson-nav {
-  display: flex;
-  flex-direction: row;
-  justify-content: space-between;
-  margin-top: 0;
-  margin-right: auto;
-}
-.work-profile-wrapper .work-profile-header-lesson-nav-link:not(:first-child) {
-  margin-left: calc(var(--scale) * 24);
-}
-@media (max-width: 767.98px) {
-  .work-profile-wrapper .work-profile-header-lesson-nav {
-    margin-top: 0;
-    margin-left: 0;
-  }
-  .work-profile-wrapper .work-profile-header-lesson-nav .lesson-header-lesson-nav-link:last-child {
-    margin-right: 0;
-    margin-left: auto;
-  }
-}
-.work-profile-wrapper .work-profile-title-wrapper {
+.homework-editor-wrapper .homework-editor-title-wrapper {
   position: relative;
   display: block;
   padding-bottom: calc(var(--scale) * 16);
   margin-top: calc(var(--scale) * 40);
 }
 @media (max-width: 767.98px) {
-  .work-profile-wrapper .work-profile-title-wrapper {
+  .homework-editor-wrapper .homework-editor-title-wrapper {
     margin-top: 0;
   }
 }
-.work-profile-wrapper .work-profile-menu {
+.homework-editor-wrapper .homework-editor-menu {
   position: relative;
   display: grid;
   grid-column-gap: calc(var(--scale) * 12);
@@ -2625,12 +2550,12 @@ button:hover {
   padding-bottom: calc(var(--scale) * 80);
   border-top: calc(var(--scale) * 4) solid #131313;
 }
-.work-profile-wrapper .work-profile-menu-link-wrapper {
+.homework-editor-wrapper .homework-editor-menu-link-wrapper {
   position: relative;
   grid-column: span 4;
   padding-top: calc(var(--scale) * 8);
 }
-.work-profile-wrapper .work-profile-menu-link-wrapper:not(:last-child)::after {
+.homework-editor-wrapper .homework-editor-menu-link-wrapper:not(:last-child)::after {
   position: absolute;
   top: -1px;
   right: 0;
@@ -2640,35 +2565,35 @@ button:hover {
   background-color: #131313;
   content: "";
 }
-.work-profile-wrapper .work-profile-menu-link {
+.homework-editor-wrapper .homework-editor-menu-link {
   text-decoration: none;
   transition: 0.2s color;
 }
-.work-profile-wrapper .work-profile-menu .nuxt-link-exact-active {
+.homework-editor-wrapper .homework-editor-menu .nuxt-link-exact-active {
   color: #ff2800 !important;
   cursor: default;
   pointer-events: none;
 }
-.work-profile-wrapper .work-profile-content-upload {
+.homework-editor-wrapper .homework-editor-content-upload {
   display: grid;
   grid-template-columns: repeat(8, minmax(0, 1fr));
   grid-column-gap: calc(var(--scale) * 12);
-  margin: calc(var(--scale) * 64) 0 calc(var(--scale) * 16);
+  margin: 0 0 calc(var(--scale) * 16);
 }
 @media (max-width: 767.98px) {
-  .work-profile-wrapper .work-profile-content-upload {
+  .homework-editor-wrapper .homework-editor-content-upload {
     display: none;
   }
 }
-.work-profile-wrapper .work-profile-content-upload-deadline {
+.homework-editor-wrapper .homework-editor-content-upload-deadline {
   grid-column: 1/3;
 }
 @media (max-width: 767.98px) {
-  .work-profile-wrapper .work-profile-content-upload-deadline {
+  .homework-editor-wrapper .homework-editor-content-upload-deadline {
     display: none;
   }
 }
-.work-profile-wrapper .work-profile-content-upload-btn {
+.homework-editor-wrapper .homework-editor-content-upload-btn {
   grid-column: 7/9;
   max-height: calc(var(--scale) * 48);
   width: auto;
@@ -2681,35 +2606,35 @@ button:hover {
   border-radius: calc(var(--scale) * 30);
 }
 @media (max-width: 767.98px) {
-  .work-profile-wrapper .work-profile-content-upload-btn {
+  .homework-editor-wrapper .homework-editor-content-upload-btn {
     display: none;
   }
 }
-.work-profile-wrapper .work-profile-content-upload-mobile {
+.homework-editor-wrapper .homework-editor-content-upload-mobile {
   display: none;
 }
 @media (max-width: 767.98px) {
-  .work-profile-wrapper .work-profile-content-upload-mobile {
+  .homework-editor-wrapper .homework-editor-content-upload-mobile {
     display: flex;
     flex-direction: column;
     margin: 0 0 calc(var(--scale) * 80);
   }
 }
-.work-profile-wrapper .work-profile-content-upload-mobile-deadline {
+.homework-editor-wrapper .homework-editor-content-upload-mobile-deadline {
   display: none;
 }
 @media (max-width: 767.98px) {
-  .work-profile-wrapper .work-profile-content-upload-mobile-deadline {
+  .homework-editor-wrapper .homework-editor-content-upload-mobile-deadline {
     display: block;
     text-align: center;
     padding-top: calc(var(--scale) * 16);
   }
 }
-.work-profile-wrapper .work-profile-content-upload-mobile-btn {
+.homework-editor-wrapper .homework-editor-content-upload-mobile-btn {
   display: none;
 }
 @media (max-width: 767.98px) {
-  .work-profile-wrapper .work-profile-content-upload-mobile-btn {
+  .homework-editor-wrapper .homework-editor-content-upload-mobile-btn {
     display: none;
     grid-column: 7/9;
     max-height: calc(var(--scale) * 48);
@@ -2724,48 +2649,138 @@ button:hover {
     min-height: calc(var(--scale) * 48);
   }
 }
-.work-profile-wrapper .work-profile-content-title {
+.homework-editor-wrapper .homework-editor-content-title {
   padding-bottom: calc(var(--scale) * 64);
 }
 @media (max-width: 767.98px) {
-  .work-profile-wrapper .work-profile-content-title {
+  .homework-editor-wrapper .homework-editor-content-title {
     padding-bottom: calc(var(--scale) * 8);
   }
 }
-.work-profile-wrapper .work-profile-content-content-section .text-section {
+.homework-editor-wrapper .homework-editor-content-content-section .text-section {
   margin: 0 0 calc(var(--scale) * 140);
   padding: calc(var(--scale) * 8) 0 0;
   border-top: calc(var(--scale) * 4) solid #131313;
 }
 @media (max-width: 767.98px) {
-  .work-profile-wrapper .work-profile-content-content-section .text-section {
+  .homework-editor-wrapper .homework-editor-content-content-section .text-section {
     margin: 0 0 calc(var(--scale) * 80);
   }
 }
-.work-profile-wrapper .work-profile-content-content-section .text-section-title {
+.homework-editor-wrapper .homework-editor-content-content-section .text-section-title {
   grid-column: 1;
   padding-bottom: calc(var(--scale) * 8);
 }
-.work-profile-wrapper .work-profile-content-content-section .text-section-content {
+.homework-editor-wrapper .homework-editor-content-content-section .text-section-content {
   grid-column: 3/5;
 }
-.work-profile-wrapper .work-profile-content-content-section .text-section-content p:not(:last-child) {
+.homework-editor-wrapper .homework-editor-content-content-section .text-section-content p:not(:last-child) {
   padding-bottom: calc(var(--scale) * 16);
 }
-.work-profile-wrapper .work-profile-content-content-section .text-section-content a {
+.homework-editor-wrapper .homework-editor-content-content-section .text-section-content a {
   display: block;
   color: #C4C4C4;
 }
-.work-profile-wrapper .work-profile-content-content-section .text-section-content a:not(:last-child) {
+.homework-editor-wrapper .homework-editor-content-content-section .text-section-content a:not(:last-child) {
   padding-bottom: calc(var(--scale) * 16);
 }
-.work-profile-wrapper .work-profile-content-content-section .lesson-chat {
-  margin: 0 0 calc(var(--scale) * 80);
+.homework-editor-wrapper .homework-editor-results .text-section {
+  margin: 0 0 calc(var(--scale) * 140);
   padding: calc(var(--scale) * 8) 0 0;
   border-top: calc(var(--scale) * 4) solid #131313;
 }
-.work-profile-wrapper .work-profile-content-content-section .lesson-chat-link {
-  grid-column: 4/5;
-  margin-right: 0;
-  margin-left: auto;
+@media (max-width: 767.98px) {
+  .homework-editor-wrapper .homework-editor-results .text-section {
+    margin: 0 0 calc(var(--scale) * 80);
+  }
+}
+.homework-editor-wrapper .homework-editor-results .text-section-title {
+  grid-column: 1;
+  padding-bottom: calc(var(--scale) * 8);
+}
+.homework-editor-wrapper .homework-editor-results .text-section-content {
+  grid-column: 3/5;
+}
+.homework-editor-wrapper .homework-editor-results .text-section-content p:not(:last-child) {
+  padding-bottom: calc(var(--scale) * 16);
+}
+.homework-editor-wrapper .homework-editor-results .text-section-content a {
+  display: block;
+  color: #C4C4C4;
+}
+.homework-editor-wrapper .homework-editor-results .text-section-content a:not(:last-child) {
+  padding-bottom: calc(var(--scale) * 16);
+}
+.homework-editor-wrapper .homework-editor-results .text-section-content img {
+  width: auto;
+  height: calc(var(--scale) * 520);
+  border-radius: calc(var(--scale) * 20);
+}
+.homework-editor-wrapper .homework-editor-results .text-section-content img:not(:last-child) {
+  padding-bottom: calc(var(--scale) * 24);
+}
+.homework-editor-wrapper .homework-editor-header {
+  margin-top: calc(var(--scale) * 140);
+  padding: calc(var(--scale) * 4) 0 calc(var(--scale) * 8);
+  border-top: calc(var(--scale) * 4) solid #131313;
+}
+@media (max-width: 767.98px) {
+  .homework-editor-wrapper .homework-editor-header {
+    grid-gap: 0;
+    margin-top: calc(var(--scale) * 80);
+  }
+}
+.homework-editor-wrapper .homework-editor-header-title {
+  grid-column: span 2;
+}
+.homework-editor-wrapper .homework-editor-header-title-col {
+  grid-column: 3/5;
+  grid-row: 1;
+  text-align: end;
+}
+@media (max-width: 767.98px) {
+  .homework-editor-wrapper .homework-editor-header-title-col {
+    display: none;
+  }
+}
+.homework-editor-wrapper .homework-editor-header-lesson {
+  display: flex;
+  flex-direction: row;
+  align-items: flex-start;
+  justify-content: space-between;
+  grid-column: 1/3;
+  grid-row: 1;
+}
+@media (max-width: 767.98px) {
+  .homework-editor-wrapper .homework-editor-header-lesson {
+    display: block;
+  }
+}
+.homework-editor-wrapper .homework-editor-header-lesson-number {
+  display: none;
+}
+@media (max-width: 767.98px) {
+  .homework-editor-wrapper .homework-editor-header-lesson-number {
+    display: none;
+  }
+}
+.homework-editor-wrapper .homework-editor-header-lesson-nav {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  margin-top: 0;
+  margin-right: auto;
+}
+.homework-editor-wrapper .homework-editor-header-lesson-nav-link:not(:first-child) {
+  margin-left: calc(var(--scale) * 24);
+}
+@media (max-width: 767.98px) {
+  .homework-editor-wrapper .homework-editor-header-lesson-nav {
+    margin-top: 0;
+    margin-left: 0;
+  }
+  .homework-editor-wrapper .homework-editor-header-lesson-nav .homework-editor-lesson-nav-link:last-child {
+    margin-right: 0;
+    margin-left: auto;
+  }
 }

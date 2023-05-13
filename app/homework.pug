@@ -28,9 +28,9 @@ html(lang="ru")
             h2.lesson-content-title.s-text-56 Задание недели. Тема 1
             .lesson-content-upload
               .lesson-content-upload-deadline.s-text-21-uppercase 
-                 | сдать до воскресенья,
+                 | загрузить до воскресенья,
                  br
-                 | 4 сентября
+                 | 4 сентября, 23:59 по мск
               a(href="#upload-form").lesson-content-upload-btn.s-text-21-uppercase Загрузить работу
             .lesson-content-content-section
               section.video-section.is-grid-4
@@ -46,10 +46,6 @@ html(lang="ru")
                 h2.text-section-title.s-text-21-uppercase материалы
                 .text-section-content
                   a.inline-link.s-text-21  Скачать презентацию
-              .lesson-chat.is-grid-4 
-                a.lesson-chat-link.blue.inline-link.s-text-21-uppercase
-                  span.inline-link-text Задать вопрос
-                  span.inline-link-arrow →
           .lesson-upload
             form.lesson-upload-form(action="" id="upload-form").is-black
               .lesson-upload-form-inner
@@ -95,19 +91,19 @@ html(lang="ru")
             .lesson-works-wrapper.is-grid-12
               .lesson-works-own 
                 .lesson-works-own-title.s-text-36 Моя работа
-                .lesson-works-own-work.lesson-works-own-work-empty 
+                a(href="homework-editor.html").lesson-works-own-work.lesson-works-own-work-empty 
                   .s-text-14 Когда вы сдадите работу, она появится здесь
                 .lesson-works-own-subtitle.s-text-16 Нужно сдать до 4 сентября
               .lesson-works-list 
                 .lesson-works-list-title.s-text-36 Работы других студентов
                 .lesson-works-list-inner 
                   .lesson-works-work 
-                    .lesson-works-work-card.lesson-works-work-hidden
+                    a(href="homework-editor.html").lesson-works-work-card.lesson-works-work-hidden
                       .lesson-works-work-card-preview
                         picture 
                           img(src="./images/3.jpg").image
                         .work-card-overlay
-                      a(href="lesson-work-profile.html").lesson-works-work-card-user
+                      .lesson-works-work-card-user
                         .lesson-works-work-card-user-image
                           svg(width="32" height="31" viewBox="0 0 32 31" fill="none" xmlns="http://www.w3.org/2000/svg").svg-user
                             path(d="M24 23C24 24 20.4183 24 16 24C11.5817 24 8 24 8 23C8 18.5817 11.5817 15 16 15C20.4183 15 24 18.5817 24 23Z" fill="#131313")
