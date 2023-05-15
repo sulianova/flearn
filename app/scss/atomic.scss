@@ -88,3 +88,12 @@
     @include set-typography(48, 52, 500);
   }
 }
+
+.s-text-256 {
+  @include set-typography(256, 256, 500);
+  letter-spacing: -.01rem;
+
+  @include set-media(md) {
+    @include set-typography(64, 58, 500);
+  }
+}

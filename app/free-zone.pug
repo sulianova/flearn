@@ -1,0 +1,117 @@
+doctype html
+html(lang="ru")
+  head
+    meta(charset="UTF-8")
+    meta(name="viewport", content="width=device-width, initial-scale=1.0")
+    meta(http-equiv="X-UA-Compatible", content="IE=edge")
+    title free zone
+    link(rel="stylesheet", href="styles/app.css")
+  body
+    .page
+      include components/header.pug
+      main.page-content
+        .free-zone-wrapper 
+          .free-zone-intro
+            .free-zone-intro-title.is-grid-12
+              h1.free-zone-intro-title-1.s-text-256 Freedom
+              h1.free-zone-intro-title-2.s-text-256 to Learn
+              h1.free-zone-intro-title-3.s-text-256 the Arts
+          .free-zone-header
+            .free-zone-header-title.s-text-88 Бесплатно
+            .free-zone-header-description-wrapper.is-grid-4
+              .free-zone-header-description.s-text-21 Пройти профориентацию, познакомиться с профессиями, погрузиться в конкретные темы и познакомиться с преподавателями школы
+          .free-zone-content
+            .free-zone-filters-wrapper 
+              .filters-inner
+                .filters-categories
+                  a.filters-categories-item.is-active.nuxt-link-exact-active.s-text-21 Все материалы
+                  a.filters-categories-item.s-text-21 Посмотреть обзоры на материалы
+                  a.filters-categories-item.s-text-21 Узнать про конкурсы и выставки
+                  a.filters-categories-item.s-text-21 Освоить навыки
+                  a.filters-categories-item.s-text-21 Увидеть прекрасное
+                  a.filters-categories-item.s-text-21 Послушать беседы про иллюстрацию
+                .filters-type
+                  label.is-active.filters-type-item.s-text-21
+                    svg(width="15" height="16" viewBox="0 0 15 16" fill="none" xmlns="http://www.w3.org/2000/svg").filters-type-item-icon
+                      circle(cx="7.5" cy="8" r="6.5" stroke="#131313" stroke-width="2")
+                      circle(cx="7.5" cy="8" r="3.5" fill="#131313")
+                    input(type="radio" value="all")
+                    p.s-text-21 Все категории
+                  label.filters-type-item.s-text-21
+                    svg(width="15" height="16" viewBox="0 0 15 16" fill="none" xmlns="http://www.w3.org/2000/svg").filters-type-item-icon
+                      circle(cx="7.5" cy="8" r="6.5" stroke="#131313" stroke-width="2")
+                      circle(cx="7.5" cy="8" r="3.5" fill="none")
+                    input(type="radio" value="vebinar")
+                    p.s-text-21 Вебинар
+                  label.is-active.filters-type-item.s-text-21
+                    svg(width="15" height="16" viewBox="0 0 15 16" fill="none" xmlns="http://www.w3.org/2000/svg").filters-type-item-icon
+                      circle(cx="7.5" cy="8" r="6.5" stroke="#131313" stroke-width="2")
+                      circle(cx="7.5" cy="8" r="3.5" fill="none")
+                    input(type="radio" value="course")
+                    p.s-text-21 Курс
+                  label.filters-type-item.s-text-21
+                    svg(width="15" height="16" viewBox="0 0 15 16" fill="none" xmlns="http://www.w3.org/2000/svg").filters-type-item-icon
+                      circle(cx="7.5" cy="8" r="6.5" stroke="#131313" stroke-width="2")
+                      circle(cx="7.5" cy="8" r="3.5" fill="none")
+                    input(type="radio" value="guid")
+                    p.s-text-21 Гайд
+                  label.filters-type-item.s-text-21
+                    svg(width="15" height="16" viewBox="0 0 15 16" fill="none" xmlns="http://www.w3.org/2000/svg").filters-type-item-icon
+                      circle(cx="7.5" cy="8" r="6.5" stroke="#131313" stroke-width="2")
+                      circle(cx="7.5" cy="8" r="3.5" fill="none")
+                    input(type="radio" value="video")
+                    p.s-text-21 Видео
+                .filters-search
+                  .filters-search-input-field
+                    span.filters-search-input-icon
+                      svg(width="15" height="18" viewBox="0 0 15 18" fill="none" xmlns="http://www.w3.org/2000/svg")
+                        circle(cx="7.5" cy="8" r="6.25" stroke="#131313" stroke-width="2.5")
+                        line(x1="10.8839" y1="12.6161" x2="13.8839" y2="15.6161" stroke="#131313" stroke-width="2.5")
+                    label.input-sizer
+                      input.filters-search-input(type="text" size="4" placeholder="Поиск").s-text-21
+            .free-zone-content-list.is-grid-3 
+              article.free-zone-card
+                a.free-zone-card-link(href="#") 
+                  .free-zone-card-preview 
+                    img(src="./images/5.jpg")
+                  .free-zone-card-content
+                    h3.free-zone-card-title.s-text-24 Как начать рисунок. придумываем ограничения
+                    .free-zone-card-description.s-text-18 Разберемся, как рисовать с чистого листа
+                    .free-zone-card-date.s-text-18 Изучайте в любое время
+                    .free-zone-card-tags
+                      span.free-zone-card-tag.s-text-18 Посмотреть обзоры на материалы
+                      span.free-zone-card-tag.s-text-18 Видео
+              article.free-zone-card
+                a.free-zone-card-link(href="#") 
+                  .free-zone-card-preview 
+                    img(src="./images/5.jpg")
+                  .free-zone-card-content
+                    h3.free-zone-card-title.s-text-24 Как начать рисунок. придумываем ограничения
+                    .free-zone-card-description.s-text-18 Разберемся, как рисовать с чистого листа
+                    .free-zone-card-date.s-text-18 Изучайте в любое время
+                    .free-zone-card-tags
+                      span.free-zone-card-tag.s-text-18 Посмотреть обзоры на материалы
+                      span.free-zone-card-tag.s-text-18 Видео
+              article.free-zone-card
+                a.free-zone-card-link(href="#") 
+                  .free-zone-card-preview 
+                    img(src="./images/5.jpg")
+                  .free-zone-card-content
+                    h3.free-zone-card-title.s-text-24 Как начать рисунок. придумываем ограничения
+                    .free-zone-card-description.s-text-18 Разберемся, как рисовать с чистого листа
+                    .free-zone-card-date.s-text-18 Изучайте в любое время
+                    .free-zone-card-tags
+                      span.free-zone-card-tag.s-text-18 Посмотреть обзоры на материалы
+                      span.free-zone-card-tag.s-text-18 Видео
+              article.free-zone-card
+                a.free-zone-card-link(href="#") 
+                  .free-zone-card-preview 
+                    img(src="./images/5.jpg")
+                  .free-zone-card-content
+                    h3.free-zone-card-title.s-text-24 Как начать рисунок. придумываем ограничения
+                    .free-zone-card-description.s-text-18 Разберемся, как рисовать с чистого листа
+                    .free-zone-card-date.s-text-18 Изучайте в любое время
+                    .free-zone-card-tags
+                      span.free-zone-card-tag.s-text-18 Посмотреть обзоры на материалы
+                      span.free-zone-card-tag.s-text-18 Видео
+      include components/footer.pug
