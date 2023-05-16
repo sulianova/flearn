@@ -697,7 +697,7 @@
         border-top: set-calc(calc($s-gap / 2)) solid $black-new;
 
         &-btn {
-          grid-column: 3/4;
+          grid-column: 3 / 4;
           margin-right: 0;
           margin-left: auto;
         }

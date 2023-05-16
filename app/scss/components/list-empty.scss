@@ -1,0 +1,25 @@
+.list-empty {
+  grid-column: 5 / 9;
+  display: flex;
+  flex-direction: column;
+
+  text-align: center;
+  align-items: center;
+  padding: set-calc(80) 0;
+
+  &-title {
+    padding-bottom: set-calc(24);
+  }
+
+  &-text {
+    padding-bottom: set-calc(40);
+  }
+
+  &-button {
+    width: set-calc(294);
+    height: set-calc(48);
+    border-radius: set-calc(20);
+    background-color: $blue;
+    color: $white;
+  }
+}

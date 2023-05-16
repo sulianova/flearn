@@ -1,0 +1,101 @@
+doctype html
+html(lang="ru")
+  head
+    meta(charset="UTF-8")
+    meta(name="viewport", content="width=device-width, initial-scale=1.0")
+    meta(http-equiv="X-UA-Compatible", content="IE=edge")
+    title catalogue
+    link(rel="stylesheet", href="styles/app.css")
+  body
+    .page
+      include components/header.pug
+      main.page-content
+        .catalogue-wrapper
+          .catalogue-header 
+            h1.catalogue-header-title.s-text-88 Программы обучения
+            .catalogue-header-description-wrapper.is-grid-4
+              .catalogue-header-description.s-text-21 Пройти профориентацию, познакомиться с профессиями, погрузиться в конкретные темы и познакомиться с преподавателями школы
+          .catalogue-filters
+            .filters-inner
+              .filters-categories
+                a.filters-categories-item.is-active.nuxt-link-exact-active.s-text-21 Все курсы
+                a.filters-categories-item.s-text-21 Иллюстрация
+                a.filters-categories-item.s-text-21 Adobe
+              .filters-type
+                label.is-active.filters-type-item.s-text-21
+                  svg(width="15" height="16" viewBox="0 0 15 16" fill="none" xmlns="http://www.w3.org/2000/svg").filters-type-item-icon
+                    circle(cx="7.5" cy="8" r="6.5" stroke="#131313" stroke-width="2")
+                    circle(cx="7.5" cy="8" r="3.5" fill="#131313")
+                  input(type="radio" value="all")
+                  p.s-text-21 Всем
+                label.filters-type-item.s-text-21
+                  svg(width="15" height="16" viewBox="0 0 15 16" fill="none" xmlns="http://www.w3.org/2000/svg").filters-type-item-icon
+                    circle(cx="7.5" cy="8" r="6.5" stroke="#131313" stroke-width="2")
+                    circle(cx="7.5" cy="8" r="3.5" fill="none")
+                  input(type="radio" value="beginner")
+                  p.s-text-21 С нуля
+                label.is-active.filters-type-item.s-text-21
+                  svg(width="15" height="16" viewBox="0 0 15 16" fill="none" xmlns="http://www.w3.org/2000/svg").filters-type-item-icon
+                    circle(cx="7.5" cy="8" r="6.5" stroke="#131313" stroke-width="2")
+                    circle(cx="7.5" cy="8" r="3.5" fill="none")
+                  input(type="radio" value="advanced")
+                  p.s-text-21 С опытом
+              .filters-search
+                .filters-search-input-field
+                  span.filters-search-input-icon
+                    svg(width="15" height="18" viewBox="0 0 15 18" fill="none" xmlns="http://www.w3.org/2000/svg")
+                      circle(cx="7.5" cy="8" r="6.25" stroke="#131313" stroke-width="2.5")
+                      line(x1="10.8839" y1="12.6161" x2="13.8839" y2="15.6161" stroke="#131313" stroke-width="2.5")
+                  label.input-sizer
+                    input.filters-search-input(type="text" size="4" placeholder="Поиск").s-text-21
+          //- include components/list-empty.pug
+          .catalogue-list-wrapper.is-grid-12
+            .catalogue-list-item
+              .course-card-wrapper
+                a(href="course.html")
+                .course-card-tags 
+                  .course-card-tags-item.s-text-16 Иллюстрация
+                  .course-card-tags-item.s-text-16 С нуля • Освоить навык
+                .course-card-title.s-text-36 Как рисовать свободно
+                .course-card-duration.s-text-16 24 апреля&nbsp
+                  span.s-text-16 • 4 недели
+                .course-card-discount.s-text-16 -30%
+                .course-card-cover
+                  img(src="./images/free-draw.png" alt loading="lazy" decoding="async")
+            .catalogue-list-item
+              .course-card-wrapper
+                a(href="course.html")
+                .course-card-tags 
+                  .course-card-tags-item.s-text-16 Иллюстрация
+                  .course-card-tags-item.s-text-16 С нуля • Освоить навык
+                .course-card-title.s-text-36 Как рисовать свободно
+                .course-card-duration.s-text-16 24 апреля&nbsp
+                  span.s-text-16 • 4 недели
+                .course-card-discount.s-text-16 -30%
+                .course-card-cover
+                  img(src="./images/free-draw.png" alt loading="lazy" decoding="async")
+            .catalogue-list-item
+              .course-card-wrapper
+                a(href="course.html")
+                .course-card-tags 
+                  .course-card-tags-item.s-text-16 Иллюстрация
+                  .course-card-tags-item.s-text-16 С нуля • Освоить навык
+                .course-card-title.s-text-36 Как рисовать свободно, ну очень свободно
+                .course-card-duration.s-text-16 24 апреля&nbsp
+                  span.s-text-16 • 4 недели
+                .course-card-discount.s-text-16 -30%
+                .course-card-cover
+                  img(src="./images/free-draw.png" alt loading="lazy" decoding="async")
+            .catalogue-list-item
+              .course-card-wrapper
+                a(href="course.html")
+                .course-card-tags 
+                  .course-card-tags-item.s-text-16 Иллюстрация
+                  .course-card-tags-item.s-text-16 С нуля • Освоить навык
+                .course-card-title.s-text-36 Как рисовать свободно
+                .course-card-duration.s-text-16 24 апреля&nbsp
+                  span.s-text-16 • 4 недели
+                .course-card-discount.s-text-16 -30%
+                .course-card-cover
+                  img(src="./images/free-draw.png" alt loading="lazy" decoding="async")
+      include components/footer.pug

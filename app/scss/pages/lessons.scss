@@ -49,19 +49,21 @@
   .lessons-list {
     margin: 0;
     padding: 0;
-
     list-style: none;
-
     counter-reset: lessonsCounter;
 
     &-item {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
       position: relative;
-
       padding: set-calc(8) 0;
-
       border-top: set-calc(calc($s-gap / 2)) solid $black-new;
-
       counter-increment: lessonsCounter;
+
+      .results {
+        color: $orange;
+      }
     }
 
     &-item::before {
