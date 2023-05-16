@@ -1,5 +1,6 @@
 .catalogue-wrapper {
   position: relative;
+
   display: block;
   padding: set-calc(40) set-calc($padding-x-desk-page) 0;
 
@@ -37,6 +38,7 @@
 
 .catalogue-filters {
   position: relative;
+
   display: block;
 
   .filters-inner {
@@ -259,37 +261,42 @@
 .course-card {
   &-wrapper {
     position: relative;
+    left: 0;
+
     display: flex;
     flex-direction: column;
     align-items: flex-start;
   
-    padding: set-calc(32) set-calc(32) set-calc(16);
+    width: 100%;
+    height: set-calc(564);
     margin-bottom: set-calc(8);
   
-    border-radius: set-calc(20);
-    background: $beige;
+    padding: set-calc(32) set-calc(32) set-calc(16);
     overflow: hidden;
+
+    background: $beige;
   
-    width: 100%;
-    left: 0;
-    height: set-calc(564);
+    border-radius: set-calc(20);
+
     transition: box-shadow $d-hover;
 
     @include set-media(md) {
+      left: set-calc(-15);
+
       width: set-calc($padding-x-mob-page * 2, true, 100%);
       height: set-calc(423);
-      left: set-calc(-15);
-      padding: set-calc(32) set-calc($padding-x-mob-page) set-calc(16);
       margin-bottom: 0;
+      padding: set-calc(32) set-calc($padding-x-mob-page) set-calc(16);
     }
   
     a {
       position: absolute;
-      width: 100%;
-      height: 100%;
       top: 0;
       left: 0;
       z-index: 200;
+
+      width: 100%;
+      height: 100%;
     }
   
     &:hover {
@@ -299,14 +306,17 @@
 
   &-tags {
     position: relative;
+
     display: block;
     padding-bottom: set-calc(20);
 
     &-item {
       position: relative;
+
       display: flex;
       flex-wrap: wrap;
       margin-right: set-calc(4);
+
       color: $grey-inactive;
 
       &:not(:last-child) {
@@ -320,13 +330,15 @@
   }
 
   &-description {
-    padding-bottom: set-calc(24);
     max-width: set-calc(-60, true, 100%);
+    padding-bottom: set-calc(24);
+
     color: $grey-inactive;
   }
 
   &-duration {
     position: relative;
+
     display: flex;
     align-items: flex-end;
 
@@ -339,29 +351,35 @@
 
   &-discount {
     position: relative;
-    margin-top: set-calc(8);
-    background: $white;
-    border-radius: set-calc(30);
-    color: $orange;
-    height: set-calc(28);
+
     display: inline-block;
+    height: set-calc(28);
+    margin-top: set-calc(8);
 
     padding: set-calc(2) set-calc(12);
+
+    color: $orange;
+
+    background: $white;
+    border-radius: set-calc(30);
   }
 
   &-cover {
     position: relative;
+
     display: flex;
+    flex: 1;
     align-items: flex-end;
     justify-content: center;
-    flex: 1;
     width: 100%;
 
     img {
       position: relative;
+
       display: block;
-      max-height: set-calc(300);
       width: auto;
+      max-height: set-calc(300);
+
       border-radius: 0;
 
       @include set-media(md) {

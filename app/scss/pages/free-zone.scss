@@ -1,5 +1,6 @@
 .free-zone-wrapper {
   position: relative;
+
   display: block;
   padding: 0 set-calc($padding-x-desk-page);
 
@@ -307,28 +308,28 @@
 .free-zone-card {
   grid-column: span 4;
   margin-bottom: set-calc(24);
+
   will-change: transform;
 
   &-link {
     position: absolute;
+    inset: 0;
     z-index: 1;
-    top: 0;
-    right: 0;
-    bottom: 0;
-    left: 0;
   }
 
   &-preview {
     position: relative;
-    margin-bottom: set-calc(16);
 
-    aspect-ratio: 1.4 / 1;
     width: 100%;
+    margin-bottom: set-calc(16);
     overflow: hidden;
-    border-radius: set-calc(30);
+
     background-color: $beige;
+    border-radius: set-calc(30);
 
     transition: opacity .35s ease;
+
+    aspect-ratio: 1.4 / 1;
 
     @include set-media(md) {
       margin-bottom: set-calc(8);
@@ -336,10 +337,7 @@
 
     img {
       position: absolute;
-      top: 0;
-      right: 0;
-      bottom: 0;
-      left: 0;
+      inset: 0;
 
       display: block;
       width: 100%;
@@ -360,8 +358,8 @@
 
     .free-zone-card-tags {
       display: flex;
-      align-items: flex-start;
       flex-wrap: wrap;
+      align-items: flex-start;
     }
 
     .free-zone-card-tag {
@@ -385,6 +383,7 @@
     .free-zone-card-title:hover {
       text-decoration: underline;
       text-underline-offset: set-calc(4);
+
       opacity: 1;
     }
 
