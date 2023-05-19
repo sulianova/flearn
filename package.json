@@ -1,4 +1,8 @@
 {
+  "scripts": {
+    "lint": "npx stylelint --fix ./app/scss/**/*.scss & npx pug-lint ./app/**/*.pug",
+    "build": "npx gulp build"
+  },
   "dependencies": {
     "browser-sync": "^2.29.1",
     "del": "^7.0.0",
