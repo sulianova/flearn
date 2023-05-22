@@ -5,16 +5,14 @@
 @font-face {
   font-weight: 500;
   font-family: TTInterphasesPro;
-  src: url("../fonts/TTInterphasesPro-Medium.ttf");
+  src: url('../fonts/TTInterphasesPro-Medium.ttf');
 }
-
 
 // @font-face {
 //   font-weight: 500;
 //   font-family: TTInterphasesPro;
 //   src: url("../fonts/TTInterphasesPro-DemiBold.ttf");
 // }
-
 
 html {
   font-family: $font-family !important;
@@ -42,24 +40,24 @@ button {
 }
 
 .ss01 {
-  font-feature-settings: "ss01" 1;
+  font-feature-settings: 'ss01' 1;
 }
 
 h1 {
   @include set-typography(88, 96, 500);
-  letter-spacing: -.01rem;
+  letter-spacing: -0.01rem;
 
   @include set-media(md) {
-    @include set-typography(48, 52, 500)
+    @include set-typography(48, 52, 500);
   }
 }
 
 h2 {
   @include set-typography(56, 61, 500);
-  letter-spacing: -.01rem;
+  letter-spacing: -0.01rem;
 
   @include set-media(md) {
-    @include set-typography(40, 44, 500)
+    @include set-typography(40, 44, 500);
   }
 }
 
@@ -75,7 +73,7 @@ p {
   @include set-typography(24, 32, 500);
 
   @include set-media(md) {
-    @include set-typography(20, 28, 500)
+    @include set-typography(20, 28, 500);
   }
 }
 
@@ -99,8 +97,6 @@ a {
   }
 }
 
-
-
 button {
   word-spacing: 1px;
   border: none;
@@ -110,7 +106,7 @@ button {
   font-family: $font-family !important;
 
   cursor: pointer;
-  transition: color $d-hover,background-color $d-hover,opacity $d-hover;
+  transition: color $d-hover, background-color $d-hover, opacity $d-hover;
 
   -ms-text-size-adjust: 100%;
   -webkit-text-size-adjust: 100%;
@@ -148,7 +144,7 @@ button {
 .program-wrapper {
   display: grid;
   grid-gap: 0 set-calc($s-gap);
-  grid-template-columns: repeat(12,minmax(0,1fr));;
+  grid-template-columns: repeat(12, minmax(0, 1fr));
   padding: 0 set-calc($padding-x-desk-page);
 
   @include set-media(md) {
@@ -167,7 +163,6 @@ button {
 }
 
 .is-black {
-
   position: relative;
   left: set-calc(-$padding-x-desk-page);
 
@@ -191,7 +186,7 @@ button {
 .is-grid-3 {
   display: grid;
   grid-gap: 0 set-calc($s-gap);
-  grid-template-columns: repeat(3,minmax(0,1fr));
+  grid-template-columns: repeat(3, minmax(0, 1fr));
 
   @include set-media(md) {
     display: flex;
@@ -203,7 +198,7 @@ button {
 .is-grid-4 {
   display: grid;
   grid-gap: 0 set-calc(2 * $s-gap);
-  grid-template-columns: repeat(4,minmax(0,1fr));
+  grid-template-columns: repeat(4, minmax(0, 1fr));
 
   @include set-media(md) {
     display: flex;
@@ -215,7 +210,7 @@ button {
 .is-grid-12 {
   display: grid;
   grid-gap: 0 set-calc($s-gap);
-  grid-template-columns: repeat(12,minmax(0,1fr));
+  grid-template-columns: repeat(12, minmax(0, 1fr));
 
   @include set-media(md) {
     display: flex;
@@ -227,7 +222,7 @@ button {
 .is-grid-outer {
   display: grid;
   grid-gap: set-calc($s-gap);
-  grid-template-columns: repeat(12,minmax(0,1fr));
+  grid-template-columns: repeat(12, minmax(0, 1fr));
   padding: 0 set-calc($padding-x-desk-page);
 }
 
@@ -248,7 +243,7 @@ button {
     vertical-align: top;
     color: inherit;
   }
-  
+
   &-arrow {
     display: inline-block;
     vertical-align: top;
@@ -270,7 +265,6 @@ button {
       line-height: set-calc(22);
     }
   }
-
 }
 
 .s-hoverable {

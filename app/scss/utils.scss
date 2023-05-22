@@ -1,10 +1,10 @@
-@use "sass:math";
-@use "sass:list";
-@use "sass:map";
-@use "sass:meta";
+@use 'sass:math';
+@use 'sass:list';
+@use 'sass:map';
+@use 'sass:meta';
 
 $colors: (
-  "blue": $blue,
+  'blue': $blue,
 );
 
 @function px-to-rem($list) {
@@ -19,15 +19,10 @@ $colors: (
   @return #{$rem-list};
 }
 
-@mixin set-typography(
-  $font-size,
-  $line-height: $font-size,
-  $font-weight: 400,
-  $text-transform: inherit
-) {
+@mixin set-typography($font-size, $line-height: $font-size, $font-weight: 400, $text-transform: inherit) {
   font-weight: $font-weight;
-  font-size: calc(var(--scale)*$font-size);
-  line-height: calc(var(--scale)*$line-height);
+  font-size: calc(var(--scale) * $font-size);
+  line-height: calc(var(--scale) * $line-height);
   text-transform: $text-transform;
 }
 
@@ -39,13 +34,13 @@ $colors: (
 
 @mixin add-scale {
   :root {
-     --scale: 100vw/1600;
+    --scale: 100vw/1600;
   }
 }
 
 @mixin add-scale-md {
   :root {
-     --scale: 100vw/414;
+    --scale: 100vw/414;
   }
 }
 
@@ -55,14 +50,12 @@ $colors: (
   @include add-scale-md;
 }
 
-@function set-calc(
-  $value,
-  $bollean: false,
-  $value2: 0%
-  ) {
-    @if $bollean {
-      @return calc($value2 + var(--scale) * $value);
-    } @else { @return calc(var(--scale) * $value) }
+@function set-calc($value, $bollean: false, $value2: 0%) {
+  @if $bollean {
+    @return calc($value2 + var(--scale) * $value);
+  } @else {
+    @return calc(var(--scale) * $value);
+  }
 }
 
 @each $color-name, $color in $colors {

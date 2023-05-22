@@ -15,7 +15,6 @@
     width: set-calc(2 * $padding-x-mob-page, true, 100%);
     min-height: 100%;
   }
-
 }
 
 .program-intro-inner {
@@ -55,7 +54,7 @@
   }
 
   .program-intro-categories-item {
-    margin-bottom: set-calc(8);  
+    margin-bottom: set-calc(8);
     padding: 0 set-calc($padding-x-mob-page);
 
     border: set-calc(2) solid $black;
@@ -63,13 +62,13 @@
   }
 
   .program-intro-title {
-    z-index: 200;;
+    z-index: 200;
 
     max-width: set-calc(620);
     padding-bottom: set-calc(32);
 
     @include set-media(md) {
-      padding-bottom: set-calc(32);;
+      padding-bottom: set-calc(32);
     }
   }
 
@@ -103,7 +102,7 @@
         opacity: 1;
       }
     }
-  
+
     &-discount {
       height: set-calc(40);
       padding: 0 set-calc(48);
@@ -185,7 +184,7 @@
           border-radius: 0;
         }
       }
-  
+
       &-answear {
         grid-column: 2 / -1;
       }
@@ -331,7 +330,7 @@
     height: set-calc(340);
   }
 
-  .modules-list-item-media-src  img[data-v-desktop-2]{
+  .modules-list-item-media-src img[data-v-desktop-2] {
     position: relative;
 
     display: block;
@@ -366,7 +365,7 @@
 
   display: grid;
   grid-column-gap: set-calc($s-gap);
-  grid-template-columns: repeat(12,minmax(0,1fr));
+  grid-template-columns: repeat(12, minmax(0, 1fr));
   width: 100%;
   padding-top: set-calc(140);
 
@@ -432,7 +431,7 @@
     direction: ltr;
     text-shadow: none;
 
-    transition: box-shadow .3s ease;
+    transition: box-shadow 0.3s ease;
     -moz-osx-font-smoothing: grayscale;
     -webkit-font-smoothing: antialiased;
     font-variant-numeric: tabular-nums;
@@ -443,11 +442,10 @@
       background: $black;
       border-radius: set-calc(20);
     }
-  
+
     &-full-ui {
       box-sizing: border-box;
     }
-
 
     &-video-embed {
       height: 0;
@@ -498,7 +496,6 @@
       padding-top: set-calc(8);
     }
   }
-  
 }
 
 .teachers-wrapper {
@@ -522,7 +519,7 @@
 
     display: grid;
     grid-gap: set-calc($s-gap);
-    grid-template-columns: repeat(12,minmax(0,1fr));
+    grid-template-columns: repeat(12, minmax(0, 1fr));
     width: 100%;
 
     background: $beige;
@@ -543,7 +540,7 @@
     grid-template-columns: set-calc(181) set-calc(376) auto;
     min-height: set-calc(214);
     padding: set-calc(32);
-    
+
     @include set-media(md) {
       position: relative;
 
@@ -567,7 +564,7 @@
       width: set-calc(181);
       height: set-calc(251);
       padding-bottom: set-calc(8);
-  
+
       @include set-media(md) {
         grid-row: 1/5;
         grid-column: 1/1;
@@ -608,7 +605,6 @@
       align-items: flex-end;
       justify-content: space-between;
 
-
       a {
         position: relative;
 
@@ -624,7 +620,6 @@
       @include set-media(md) {
         display: none;
       }
-
     }
   }
 }
@@ -717,7 +712,7 @@
     display: flex;
     flex-direction: column;
     align-items: flex-start;
-    width: auto!important;
+    width: auto !important;
     margin-right: set-calc(8);
     overflow: hidden;
 
@@ -757,7 +752,7 @@
 
   display: grid;
   grid-column-gap: set-calc($s-gap);
-  grid-template-columns: repeat(12,minmax(0,1fr));
+  grid-template-columns: repeat(12, minmax(0, 1fr));
   width: 100%;
   padding-top: set-calc(140);
 
@@ -787,7 +782,7 @@
     border-radius: set-calc(20);
   }
 
-  .plyr { 
+  .plyr {
     &-video-embed {
       padding-bottom: 56.25%;
     }
@@ -836,14 +831,13 @@
   display: grid;
   grid-gap: set-calc($s-gap);
   grid-column: span 12;
-  grid-template-columns: repeat(12,minmax(0,1fr));
+  grid-template-columns: repeat(12, minmax(0, 1fr));
 
   @include set-media(md) {
     display: block;
   }
 
   .decision-form-info {
-
     position: relative;
     left: 0;
 
@@ -912,7 +906,6 @@
     }
 
     &-credit-price-discount {
-
       position: absolute;
       top: set-calc(-24);
       right: set-calc(-70);
@@ -1039,19 +1032,19 @@
       cursor: pointer;
     }
 
-    input[type="checkbox"] {
+    input[type='checkbox'] {
       box-sizing: border-box;
       margin: set-calc(3) set-calc(3) set-calc(3) set-calc(4);
       padding: initial;
-  
+
       background-color: initial;
       border: initial;
       cursor: default;
-  
+
       appearance: auto;
     }
 
-    input[type="checkbox"]:not(:checked )+ label #checkmark {
+    input[type='checkbox']:not(:checked) + label #checkmark {
       display: none;
 
       transition: display $d-hover linear;
@@ -1059,7 +1052,6 @@
   }
 
   .decision-form-choice-submit-button {
-
     position: relative;
 
     display: flex;
@@ -1078,7 +1070,6 @@
       height: set-calc(38);
     }
   }
-  
 }
 
 .faq-wrapper {
@@ -1137,7 +1128,7 @@
 
     display: grid;
     grid-gap: set-calc($s-gap) set-calc($s-gap);
-    grid-template-columns: repeat(12,minmax(0,1fr));
+    grid-template-columns: repeat(12, minmax(0, 1fr));
     width: 100%;
 
     padding-top: set-calc(60);

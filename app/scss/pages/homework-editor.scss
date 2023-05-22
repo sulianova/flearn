@@ -22,7 +22,7 @@
 
     display: grid;
     grid-column-gap: set-calc(1.5 * $s-gap);
-    grid-template-columns: repeat(8,minmax(0,1fr));
+    grid-template-columns: repeat(8, minmax(0, 1fr));
     padding-bottom: set-calc(80);
 
     border-top: set-calc(calc($s-gap / 2)) solid $black-new;
@@ -44,7 +44,7 @@
 
         background-color: $black-new;
 
-        content: "";
+        content: '';
       }
     }
 
@@ -67,21 +67,21 @@
     &-upload {
       display: grid;
       grid-column-gap: set-calc($s-gap * 1.5);
-      grid-template-columns: repeat(8,minmax(0,1fr));
+      grid-template-columns: repeat(8, minmax(0, 1fr));
       margin: 0 0 set-calc(16);
-  
+
       @include set-media(md) {
         display: none;
       }
-  
+
       &-deadline {
         grid-column: 1 / 3;
-        
+
         @include set-media(md) {
           display: none;
         }
       }
-  
+
       &-btn {
         position: relative;
 
@@ -96,7 +96,7 @@
 
         background: $black-new;
         border-radius: set-calc(30);
-  
+
         @include set-media(md) {
           display: none;
         }
@@ -105,16 +105,16 @@
 
     &-upload-mobile {
       display: none;
-  
+
       @include set-media(md) {
         display: flex;
         flex-direction: column;
         margin: 0 0 set-calc(80);
       }
-  
+
       &-deadline {
         display: none;
-        
+
         @include set-media(md) {
           display: block;
           padding-top: set-calc(16);
@@ -122,10 +122,10 @@
           text-align: center;
         }
       }
-  
+
       &-btn {
         display: none;
-  
+
         @include set-media(md) {
           position: relative;
 
@@ -158,31 +158,31 @@
       .text-section {
         margin: 0 0 set-calc(140);
         padding: set-calc(8) 0 0;
-  
+
         border-top: set-calc(calc($s-gap / 2)) solid $black-new;
-  
+
         @include set-media(md) {
           margin: 0 0 set-calc(80);
         }
-  
+
         &-title {
           grid-column: 1;
           padding-bottom: set-calc(8);
         }
-  
+
         &-content {
           grid-column: 3 / 5;
-  
+
           p:not(:last-child) {
             padding-bottom: set-calc(16);
           }
-  
+
           a {
             display: block;
 
             color: $text-grey;
           }
-  
+
           a:not(:last-child) {
             padding-bottom: set-calc(16);
           }
@@ -303,7 +303,6 @@
             margin-right: 0;
             margin-left: auto;
           }
-
         }
       }
     }

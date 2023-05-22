@@ -66,7 +66,6 @@
             margin-right: 0;
             margin-left: auto;
           }
-
         }
       }
     }
@@ -95,23 +94,23 @@
     &-upload {
       display: grid;
       grid-column-gap: set-calc($s-gap * 1.5);
-      grid-template-columns: repeat(8,minmax(0,1fr));
+      grid-template-columns: repeat(8, minmax(0, 1fr));
       margin: set-calc(64) 0 set-calc(16);
-  
+
       @include set-media(md) {
         display: flex;
         flex-direction: column;
         margin: set-calc(40) 0 set-calc(24);
       }
-  
+
       &-deadline {
         grid-column: 1 / 3;
-        
+
         @include set-media(md) {
           padding-bottom: set-calc(16);
         }
       }
-  
+
       &-btn {
         position: relative;
 
@@ -126,9 +125,8 @@
 
         background: $black-new;
         border-radius: set-calc(30);
-  
+
         @include set-media(md) {
-  
           min-height: set-calc(48);
         }
       }
@@ -137,84 +135,83 @@
     &-content-section {
       .video-section {
         margin: set-calc(16) 0 set-calc(80);
-  
+
         .video-player {
           left: 0;
-  
+
           grid-column: 1 / 3;
           width: 100%;
           overflow: hidden;
-  
+
           border-radius: set-calc(20);
         }
-  
-        .plyr { 
+
+        .plyr {
           &-video-embed {
             padding-bottom: 56.25%;
           }
-      
+
           &-video-wrapper {
             position: relative;
-      
+
             width: 100%;
             height: 100%;
             margin: auto;
             overflow: hidden;
-      
+
             background: $black;
           }
         }
-      
+
         .plyr-video-embed iframe {
           position: absolute;
           top: 0;
           left: 0;
-  
+
           border: 0;
         }
-      
+
         .plyr iframe {
           display: block;
           width: 100%;
           height: 100%;
         }
       }
-  
+
       .text-section {
         margin: 0 0 set-calc(140);
         padding: set-calc(8) 0 0;
-  
+
         border-top: set-calc(calc($s-gap / 2)) solid $black-new;
-  
+
         @include set-media(md) {
           margin: 0 0 set-calc(80);
         }
-  
+
         &-title {
           grid-column: 1;
           padding-bottom: set-calc(8);
         }
-  
+
         &-content {
           grid-column: 3 / 5;
-  
+
           p:not(:last-child) {
             padding-bottom: set-calc(16);
           }
-  
+
           a {
             display: block;
-  
+
             color: $text-grey;
           }
-  
+
           a:not(:last-child) {
             padding-bottom: set-calc(16);
           }
         }
       }
     }
-  
   }
 
   .lesson-upload {
@@ -270,34 +267,34 @@
         text-align: left;
 
         border-bottom: set-calc(2) solid $grey;
-  
+
         &-content {
           position: relative;
 
           display: flex;
-  
+
           label {
             width: set-calc(210);
             margin-right: set-calc(4);
 
             color: $grey;
-  
+
             @include set-media(md) {
               display: none;
             }
           }
-  
+
           &-inner {
             display: grid;
             flex: 1;
             max-width: set-calc(-210, true, 100%);
             overflow: hidden;
-  
+
             @include set-media(md) {
               min-width: 100%;
             }
           }
-  
+
           &-inner::after {
             grid-area: 1 / 1 / 2 / 2;
             padding: 0;
@@ -306,9 +303,9 @@
 
             visibility: hidden;
 
-            content: attr(data-replicated-value) " ";
+            content: attr(data-replicated-value) ' ';
           }
-  
+
           textarea {
             grid-area: 1 / 1 / 2 / 2;
             margin: 0;
@@ -324,19 +321,19 @@
 
             resize: none;
           }
-  
+
           textarea::placeholder {
             color: $grey;
-            
+
             @include set-typography(18, 24, 500);
-  
+
             @include set-media(md) {
-              @include set-typography(16, 22, 500)
+              @include set-typography(16, 22, 500);
             }
           }
         }
       }
-  
+
       .input {
         margin-top: set-calc(24);
         padding-bottom: set-calc(16);
@@ -344,27 +341,27 @@
         text-align: left;
 
         border-bottom: set-calc(2) solid $grey;
-  
+
         &-content {
           position: relative;
 
           display: flex;
-  
+
           @include set-media(md) {
             min-width: 100%;
           }
-  
+
           label {
             width: set-calc(210);
             margin-right: set-calc(4);
 
             color: $grey;
-  
+
             @include set-media(md) {
               display: none;
             }
           }
-  
+
           input {
             flex: 1;
             margin: 0;
@@ -377,14 +374,14 @@
             border: none;
             outline: none;
           }
-  
+
           input::placeholder {
             color: $grey;
-  
+
             @include set-typography(18, 24, 500);
-  
+
             @include set-media(md) {
-              @include set-typography(16, 22, 500)
+              @include set-typography(16, 22, 500);
             }
           }
         }
@@ -402,7 +399,6 @@
       }
 
       &-btn {
-
         position: relative;
 
         display: flex;
@@ -491,10 +487,9 @@
           width: set-calc(-20, true, 50%);
           margin: 0 set-calc(20) set-calc(20) 0;
         }
-    
+
         .file {
           &-preview {
-    
             display: block;
             width: 100%;
             max-height: set-calc(300);
@@ -508,11 +503,11 @@
               height: set-calc(250);
             }
           }
-    
+
           &-name {
             color: $beige;
           }
-    
+
           &-remove {
             color: $grey-inactive;
           }
@@ -581,7 +576,7 @@
       &-subtitle {
         margin-top: set-calc(16);
 
-        color: $text-grey
+        color: $text-grey;
       }
     }
 

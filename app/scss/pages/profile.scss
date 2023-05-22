@@ -9,7 +9,7 @@
     position: relative;
 
     display: block;
-  
+
     padding-bottom: set-calc(16);
   }
 
@@ -18,7 +18,7 @@
 
     display: grid;
     grid-column-gap: set-calc(1.5 * $s-gap);
-    grid-template-columns: repeat(8,minmax(0,1fr));
+    grid-template-columns: repeat(8, minmax(0, 1fr));
     padding-bottom: set-calc(80);
 
     border-top: set-calc(calc($s-gap / 2)) solid $black-new;
@@ -40,7 +40,7 @@
 
         background-color: $black-new;
 
-        content: "";
+        content: '';
       }
     }
 
@@ -81,7 +81,7 @@
       padding: set-calc($s-gap) 0 0;
 
       border-top: set-calc(calc($s-gap / 2)) solid $black-new;
-      
+
       &:not(:last-child) {
         padding-bottom: set-calc(80);
       }
@@ -185,7 +185,6 @@
       }
 
       &-logout-btn {
-
         position: relative;
 
         display: flex;
